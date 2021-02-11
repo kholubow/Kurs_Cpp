@@ -1,6 +1,6 @@
 [Project]
-FileName=Kurs cz.42 Klasy.dev
-Name=Kurs cz.42 Klasy
+FileName=Kurs cz.43 Klasy - statyczne zmienne oraz funkcje.dev
+Name=Projekt5
 Type=1
 Ver=2
 ObjFiles=
@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000000000000
-UnitCount=3
+UnitCount=1
 
 [VersionInfo]
 Major=1
@@ -52,26 +52,6 @@ SyncProduct=1
 
 [Unit1]
 FileName=main.cpp
-CompileCpp=1
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit2]
-FileName=Klasa.h
-CompileCpp=1
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit3]
-FileName=Klasa.cpp
 CompileCpp=1
 Folder=
 Compile=1
