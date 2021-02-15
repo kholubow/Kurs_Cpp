@@ -1,6 +1,6 @@
 [Project]
-FileName=Projekt9.dev
-Name=Projekt9
+FileName=Projekt11.dev
+Name=Projekt11
 Type=1
 Ver=2
 ObjFiles=
@@ -61,7 +61,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit2]
-FileName=Kopiarka.cpp
+FileName=punkt.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -71,7 +71,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=Kopiarka.h
+FileName=punkt.h
 CompileCpp=1
 Folder=
 Compile=1
