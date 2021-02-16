@@ -30,8 +30,65 @@ void operacjeNaPunktach()// Definicja procedury
 	// Pierw x = 145, ale potem klasa pochodna nadpisze na 10
 	// Przy destruktorze pierw wywo³ywane s¹ te z klas pochodnych a na koniec z bazowych.
 	
-	
-	
-	cout << "x: ";
+	cout << "[Punkt] x: ";
+	cout << punkt.getX() << endl;		
+	cout << "[Punkt2D] x: ";
 	cout << punkt2d.getX() << endl;
+	cout << "[Punkt2D] y: ";
+	cout << punkt2d.getY() << endl;	
+	punkt2d.setY(44500);
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << "po zmianie Y na 44500: " << endl;
+	cout << "[Punkt] x: ";
+	cout << punkt.getX() << endl;		
+	cout << "[Punkt2D] x: ";
+	cout << punkt2d.getX() << endl;
+	cout << "[Punkt2D] y: ";
+	cout << punkt2d.getY() << endl;	
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+
+
+
+
+	punkt2d.setXY(467, 789);
+	cout << "po zmianie X na 467, Y na 789: " << endl;
+	cout << "[Punkt] x: ";
+	cout << punkt.getX() << endl;		
+	cout << "[Punkt2D] x: ";
+	cout << punkt2d.getX() << endl;
+	cout << "[Punkt2D] y: ";
+	cout << punkt2d.getY() << endl;	
+	
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	
+	cout << "po zmianie x na 34 w klasie bazowej: " << endl;
+	punkt2d.Punkt::setX(34);
+	cout << "[Punkt] x: ";
+	cout << punkt.getX() << endl;		
+	cout << "[Punkt2D] x: ";
+	cout << punkt2d.getX() << endl;	
 }

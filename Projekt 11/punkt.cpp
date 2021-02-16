@@ -27,6 +27,7 @@ int Punkt::getX()
 
 void Punkt::setX(int x)
 {
+	cout << "[setX z Punkt]" << endl;
 	this->x = x;
 }
 
@@ -39,4 +40,29 @@ Punkt2D::Punkt2D(int x, int y) : Punkt(x) // Punkt(x) wywo³anie konstruktora w k
 Punkt2D::~Punkt2D()
 {
 	cout << "Zostal wywolany destruktor z klasy pochodnej - Punkt2D " << endl;
+}
+
+int Punkt2D::getY()
+{
+	return this->y;
+}
+
+void Punkt2D::setY(int y)
+{
+	this->y = y;
+}
+
+void Punkt2D::setXY(int x, int y)
+{
+	// this->x = x;
+	// this->y = y;
+	// LUB:
+	setX(x);
+	setY(y);
+}
+
+void Punkt2D::setX(int x)
+{
+	cout << "[setX z Punkt2D]" << endl;
+	this->x = x;
 }

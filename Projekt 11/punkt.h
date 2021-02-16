@@ -16,12 +16,28 @@ class Punkt2D : public Punkt // Dziedziczenie w sposób publiczny, klasa dziecko,
 	// Kopiowanie nastêpuje wszystkiego, co jest pod public i protected.
 	// bez private
 	// protected = tak samo jak private, ale maj¹ dostêp klasy dziedzicz¹ce.
-	int y;
+	protected:
+		int y;
 	public:
 		Punkt2D(int = 0, int = 0);
 		~Punkt2D();
+		int getY();
+		/*
+			setX -> procedura ustawiaj¹ca X, przeci¹¿enie 
+			polimorfizm
+			je¿eli setXY, to kompilator wykorzysta setX() z Punkt2D
+			Je¿eli setX, to te¿ z Punkt2D.
+			Trzeba zasiêgn¹æ do metody poprzez operator zasiêgu ::
+		*/
+		void setX(int);
+		void setY(int);
+		void setXY(int, int);
 };
 
+class Punkt3D : public Punkt2D // Dziedziczenie z dwóch powy¿szych klas
+{
+	
+};
 /*
 	class Punkt2D : public Punkt
 	
