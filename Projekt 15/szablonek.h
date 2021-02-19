@@ -31,10 +31,24 @@ T Punkt<T>::getX()
 }
 
 template<>
+double Punkt<double>::getX()
+{
+	cout << "getX(), do szablonu wyslano typ double" << endl;
+	return this->x;
+}
+
+template<>
 class Punkt<char>
 {
 	public:
 		Punkt(char a = 0) { cout << "Nie wolno tworzyc z tego szablonu typu char" << endl; }	
+};
+
+template<typename TYP>
+class Punkt<TYP*>
+{
+	public:
+		Punkt() { cout << "Przekazywanie wskaznikow do tego szablonu jest zabronione." << endl; };
 };
 
 

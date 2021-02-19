@@ -62,7 +62,26 @@ int main(int argc, char *argv[])
 		
 		
 		Ale wzglêdem konkretnej metody:
+		template<>
+		double Punkt<double>::getX()
+		{
+			cout << "getX(), do szablonu wyslano typ double" << endl;
+			return this->x;
+		}
+		Do szablonu klasy Punkt wysy³amy dane typu wszelakiego, ale mo¿emy oddzielnie reagowaæ
+		na dane okreœlonego typu.
 		
+		
+		
+		Mo¿na te¿ tworzyæ swojego rodzaju wyj¹tki, których szablon nie przyjmie, np. wskaŸników:
+		
+		template<typename TYP>
+		class Punkt<TYP*>
+		{
+			public:
+				Punkt() { cout << "Przekazywanie wskaznikow do tego szablonu jest zabronione." << endl; };
+		};
+
 	*/    
 	typedef Punkt<int> PunktInt; // Zdefiniowany w³asny typ
 	typedef Punkt<double> PunktDouble;
@@ -119,7 +138,24 @@ int main(int argc, char *argv[])
 	
 	
 	Punkt<char> punktChar(49);
-
+    cout << endl;
+     cout << endl;
+      cout << endl;
+       cout << endl;
+        cout << endl;
+         cout << endl; 
+    cout << endl;
+     cout << endl;
+      cout << endl;
+       cout << endl;
+        cout << endl;
+         cout << endl; 
+         
+	
+	Punkt<int*> zmienna;
+	Punkt<float*> zmienna2;
+	
+	
     
     system("pause");
     return 0;
