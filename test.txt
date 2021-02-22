@@ -1,1 +1,4 @@
-Testowy tekst id¹cy do pliku 22
+Testowy tekst
+Testowy 22
+id¹cy do
+Tekst plik
