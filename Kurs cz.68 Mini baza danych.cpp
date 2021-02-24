@@ -22,6 +22,7 @@ void pokazOsoby();
 void zapiszOsobyDoPliku();
 void wczytajOsobyZPliku();
 void przeszukajBaze();
+void usunOsobeZBazy();
 
 int main()
 {
@@ -68,19 +69,31 @@ int main()
 		Szukanie po rekordach w tymczasowej bazie w programie po za³adowaniu pliku txt 
 		z danymi.
 		
+		
+		
+		
+		6. Usun osobe z bazy danych:
+		Usuniêcie osoby o okreœlonym indeksie (podanie przez u¿ytkownika indeksu - 1, bo 
+		oczywiœcie indeksujemy od 0), nastêpnie przesuniêcie nastêpnej osoby na miejsce
+		osoby usuniêtej i tak pozosta³e osoby.
+		Zmniejszenie iloœci osób w bazie.
+		
 	*/
 	char tescior;
 	
-	
+	// wczytajOsobyZPliku();
 	do
 	{
-		cout << "Osob w bazie: "           << ileDodanoOsob << endl;
-		cout << "MENU: "                   << endl;
-		cout << "1. Dodaj osobe "          << endl;
-		cout << "2. Pokaz osoby "          << endl;
-		cout << "3. Zapisz osoby do pliku" << endl;
-		cout << "4. Wczytaj osoby z pliku" << endl;
-		cout << "5. Przeszukaj baze"       << endl;
+		cout << "Osob w bazie: "              << ileDodanoOsob << endl;
+		cout << "MENU: "                      << endl;
+		cout << "1. Dodaj osobe "             << endl;
+		cout << "2. Pokaz osoby "             << endl;
+		cout << "3. Zapisz osoby do pliku"    << endl;
+		cout << "4. Wczytaj osoby z pliku"    << endl;
+		cout << "5. Przeszukaj baze"          << endl;
+		cout << "6. Usun osobe z bazy danych" << endl;
+		
+		
 		
 		tescior = getch();
 		
@@ -106,6 +119,10 @@ int main()
 				cout << "5. Opcja" << endl;
 				przeszukajBaze();
 				break;
+			case '6':
+				cout << "6. Opcja" << endl;
+				usunOsobeZBazy();
+				break;				
 		}	
 		
 		wymagajEnter();
@@ -246,4 +263,30 @@ void przeszukajBaze()
 	}
 	else
 		cout << "Nie ma nikogo w bazie" << endl;
+}
+
+void usunOsobeZBazy()
+{
+	if (ileDodanoOsob != 0)
+	{
+		short indeks;
+		
+		cout << "Podaj indeks osoby do usuniecia: " << endl;
+		cin  >> indeks;
+		
+		
+		for (short k = indeks; k < ileDodanoOsob; k++)
+		{
+			ludzie[k-1].imie     = ludzie[k].imie;
+			ludzie[k-1].nazwisko = ludzie[k].nazwisko;
+			ludzie[k-1].wiek     = ludzie[k].wiek;
+			ludzie[k-1].telefon  = ludzie[k].telefon;
+		}
+		
+		ileDodanoOsob--; //POSTdekrementacja, --zmienna PREdekrementacja
+		
+		cout << "Uzytkownik o indeksie " << indeks << " zostal usuniety poprawnie." << endl;
+	}
+	else
+		cout << "Nie ma nikogo w bazie do usuwania" << endl;
 }

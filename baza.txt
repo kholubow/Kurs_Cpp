@@ -1,4 +1,4 @@
-4
+2
 Imie1
 skddkos
 23
@@ -7,11 +7,3 @@ Imie2
 sdkosdk
 34
 dodko23323
-Imie3
-iddoksdd
-45
-okdodik3434342
-ImieDodanaOsobaExtra
-jsfjsdfjskfjdfk
-45
-dsjcsdj23462346327
