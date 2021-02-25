@@ -46,11 +46,66 @@ int main()
 	
 	
 	
-	cout << "Wypisanie elementow z vectora (for range auto): " << endl;	
+	cout << "Mnozenie elementow przez 10 (for range auto): " << endl;	
+	cout << "Mnozenie elementow na tymczasowej zmiennej a nie na wartosciach w vectorze: " << endl;
 	for(auto nr : wholeNumbers)
+	{
+		nr *= 10;
 		cout << nr << endl;
-
+	}
 		
+	
+		
+		
+	cout << "Pomnozone elementy vectora wholeNumbers (for range auto): " << endl;	
+	for(auto nr : wholeNumbers)
+	{
+		cout << nr << endl;
+	}
+	
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+
+	cout << "Mnozenie elementow przez 10 (for range auto): " << endl;	
+	cout << "Mnozenie elementow poprzez referencje do wartosci w vectorze: " << endl;
+	for(auto & nr : wholeNumbers)
+	{
+		nr *= 10;
+	}
+	
+	cout << "Pomnozone elementy vectora wholeNumbers (for range auto): " << endl;	
+	for(auto nr : wholeNumbers)
+	{
+		cout << nr << endl;
+	}
+			
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	// B³¹d, const, nie mo¿na wtedy zmieniaæ wartoœci w vectorze.
+	for(/*const*/ auto & nr : wholeNumbers)
+	{
+		nr *= 10;
+	}
+	
+	
 	system("PAUSE");
 	return 0;
 }
