@@ -4,6 +4,7 @@
 #include "subMenuInMainMenuLoginInfo.h"
 #include <iostream>
 #include <typeinfo>
+#include <conio.h>
 
 using namespace std;
 
@@ -20,6 +21,29 @@ namespace mainMenuDeclaration
 {
 	typedef MainMenu<int> MainMenu;
 	MainMenu menu;
+}
+
+namespace requireEnter
+{
+	void requireEnterMainMethod()
+	{
+		cout << "Click ENTER to continue." << endl;
+		while(getch() != 13);		
+	}
+}
+
+#include "welcomeMenu.h"
+namespace welcomeMenuDeclaration
+{
+	typedef WelcomeMenu<int> WelcomeMenu;
+	WelcomeMenu startMenu;
+}
+
+#include "globalStatistics.h"
+namespace globalStatisticsDeclaration
+{
+	typedef GlobalStatistics<int> GlobalStatistics;
+	GlobalStatistics globalStatisticsMenu;
 }
 
 #endif

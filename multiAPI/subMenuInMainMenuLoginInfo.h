@@ -17,9 +17,10 @@ class SubMenuInMainMenuLoginInfo
 template<typename T>
 void SubMenuInMainMenuLoginInfo<T>::subMenuInMainMenuLoginInfo()
 {
-	cout << "------------------------------------------------------------------" << endl;
-	cout << "| You have to login first. PRESS 1 and ENTER to continue         |" << endl;
-	cout << "------------------------------------------------------------------" << endl;	
+		cout << "------------------------------------------------------------------" << endl;
+		cout << "| You have to login first. PRESS 1 and ENTER to continue         |" << endl;
+		cout << "| PRESS 2 and ENTER to get global statistics                     |" << endl;
+		cout << "------------------------------------------------------------------" << endl;		
 }
 
 #endif
