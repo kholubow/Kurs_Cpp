@@ -23,10 +23,26 @@ template<typename T>
 void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 {
 	char character;
+	char ch;
+	
 	string error_msg = "Please insert data again.";
 	string * pointerToErrorMsg = &error_msg;
+	
 	string firstName;
 	string * pointerToFirstNameValue = &firstName;
+	
+	string lastName;
+	string * pointerToLastNameValue = &lastName;
+	
+	string city;
+	string * pointerToCityValue = &city;
+	
+	string email;
+	string * pointerToEmailValue = &email;
+	
+	string password;
+	string * pointerToPasswordValue = &password;
+	
 	vector<string> allRegisterDataFromForm;
 		
 	do
@@ -49,40 +65,155 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 		{
 			case 'A':
 				cout << "First name have to have only letters ('a - z' and 'A - Z')" << endl;
-				do { cout << "Please insert your first name" << endl; cin >> firstName; }while(!verifyFirstName::verifyFirstNameFunction(pointerToErrorMsg,pointerToFirstNameValue));
+				do 
+				{ 
+				
+					cout << "Please insert your first name" << endl; 
+					cin >> firstName; 
+				
+				}while(!verifyFirstName::verifyFirstNameFunction(pointerToErrorMsg,pointerToFirstNameValue));
 				break;
 			case 'a':
+				cout << "First name have to have only letters ('a - z' and 'A - Z')" << endl;
+				do 
+				{ 
 				
+					cout << "Please insert your first name" << endl; 
+					cin >> firstName; 
+				
+				}while(!verifyFirstName::verifyFirstNameFunction(pointerToErrorMsg,pointerToFirstNameValue));				
 				break;	
 			case 'T':
-				cout << "Type Data2" << endl;
+				cout << "Last name have to have only letters ('a - z' and 'A - Z')" << endl;
+				do 
+				{ 
+				
+					cout << "Please insert your last name" << endl; 
+					cin >> lastName; 
+				
+				}while(!verifyLastName::verifyLastNameFunction(pointerToErrorMsg,pointerToLastNameValue));			
 				break;
 			case 't':
-				cout << "Type Data2" << endl;
+				cout << "Last name have to have only letters ('a - z' and 'A - Z')" << endl;
+				do 
+				{ 
+				
+					cout << "Please insert your last name" << endl; 
+					cin >> lastName; 
+				
+				}while(!verifyLastName::verifyLastNameFunction(pointerToErrorMsg,pointerToLastNameValue));
 				break;
 			case 'C':
-				cout << "Type Data3" << endl;
+				cout << "City have to have only letters ('a - z' and 'A - Z')" << endl;
+				do 
+				{ 
+				
+					cout << "Please insert your city" << endl; 
+					cin >> city;
+				
+				}while(!verifyCity::verifyCityFunction(pointerToErrorMsg,pointerToCityValue));
 				break;
 			case 'c':
-				cout << "Type Data3" << endl;
+				cout << "City have to have only letters ('a - z' and 'A - Z')" << endl;
+				do 
+				{ 
+				
+					cout << "Please insert your city" << endl; 
+					cin >> city; 
+				
+				}while(!verifyCity::verifyCityFunction(pointerToErrorMsg,pointerToCityValue));
 				break;
 			case 'D':
-				cout << "Type Data4" << endl;
+				cout << "E-mail have to have only letters ('a - z' and 'A - Z') with numbers ('0' to '9') and also have to have ONE @ symbol" << endl;
+				do 
+				{ 
+				
+					cout << "Please insert your e-mail" << endl; 
+					cin >> email; 
+				
+				}while(!verifyEmail::verifyEmailFunction(pointerToErrorMsg,pointerToEmailValue));
 				break;
 			case 'd':
-				cout << "Type Data4" << endl;
+				cout << "E-mail have to have only letters ('a - z' and 'A - Z') with numbers ('0' to '9') and also have to have ONE @ symbol" << endl;
+				do 
+				{ 
+				
+					cout << "Please insert your e-mail" << endl; 
+					cin >> email; 
+				
+				}while(!verifyEmail::verifyEmailFunction(pointerToErrorMsg,pointerToEmailValue));
 				break;	
 			case 'E':
-				cout << "Type Data5" << endl;
+				cout << "Password can have all kind of symbols, letters, numbers. " << endl;
+				cout << "Password have to have atleast 10 characters, including atleast 3 numbers, 3 small letters, 3 symbols and 1 big letter. " << endl;
+				do 
+				{
+					
+					password = "";
+					cout << "Please insert your password" << endl; 
+					ch = _getch();
+					while(ch != 13)
+					{
+							
+						if (ch == 8)
+						{
+							password.pop_back();
+							cout << '\b';
+							cout << "";
+							ch = _getch();
+						}
+						else
+						{
+							password.push_back(ch);
+							cout << '*';
+							ch = _getch();							
+						}
+							
+					}
+					cout << endl;
+					
+				}while(!verifyPassword::verifyPasswordFunction(pointerToErrorMsg,pointerToPasswordValue));
 				break;
 			case 'e':
-				cout << "Type Data5" << endl;
+				cout << "Password can have all kind of symbols, letters, numbers. " << endl;
+				cout << "Password have to have atleast 10 characters, including atleast 3 numbers, 3 small letters, 3 symbols and 1 big letter. " << endl;								
+				do 
+				{ 
+					
+					password = "";
+					cout << "Please insert your password" << endl; 
+					ch = _getch();
+					while(ch != 13)
+					{
+							
+						if (ch == 8)
+						{
+							password.pop_back();
+							cout << '\b';
+							cout << "";
+							ch = _getch();
+						}
+						else
+						{
+							password.push_back(ch);
+							cout << '*';
+							ch = _getch();							
+						}
+							
+					}
+					cout << endl;
+					
+				}while(!verifyPassword::verifyPasswordFunction(pointerToErrorMsg,pointerToPasswordValue));
 				break;	
 			case 'F':
 				cout << "Type Data6" << endl;
+				
+				
 				break;
 			case 'f':
 				cout << "Type Data6" << endl;
+				
+				
 				break;	
 			case 'G':
 				cout << "Type Data7" << endl;
