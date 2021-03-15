@@ -43,6 +43,12 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 	string password;
 	string * pointerToPasswordValue = &password;
 	
+	string confirmPassword;
+	string * pointerToConfirmPasswordValue = &confirmPassword;
+	
+	string username;
+	string * pointerToUsernameValue = &username;
+	
 	vector<string> allRegisterDataFromForm;
 		
 	do
@@ -206,26 +212,98 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 				}while(!verifyPassword::verifyPasswordFunction(pointerToErrorMsg,pointerToPasswordValue));
 				break;	
 			case 'F':
-				cout << "Type Data6" << endl;
+				cout << "Confirm password. " << endl;
+				cout << "Passwords must match. " << endl;
+				do 
+				{	
 				
-				
+					confirmPassword = "";
+					cout << "Please insert your password again" << endl; 
+					ch = _getch();
+					while(ch != 13)
+					{
+							
+						if (ch == 8)
+						{
+							confirmPassword.pop_back();
+							cout << '\b';
+							cout << "";
+							ch = _getch();
+						}
+						else
+						{
+							confirmPassword.push_back(ch);
+							cout << '*';
+							ch = _getch();							
+						}
+							
+					}
+					cout << endl;
+					
+				}while(!verifyConfirmPassword::verifyConfirmPasswordFunction(pointerToErrorMsg,pointerToConfirmPasswordValue,pointerToPasswordValue));
 				break;
 			case 'f':
-				cout << "Type Data6" << endl;
+				cout << "Confirm password. " << endl;
+				cout << "Passwords must match. " << endl;
+				do 
+				{	
 				
-				
+					confirmPassword = "";
+					cout << "Please insert your password again" << endl; 
+					ch = _getch();
+					while(ch != 13)
+					{
+							
+						if (ch == 8)
+						{
+							confirmPassword.pop_back();
+							cout << '\b';
+							cout << "";
+							ch = _getch();
+						}
+						else
+						{
+							confirmPassword.push_back(ch);
+							cout << '*';
+							ch = _getch();							
+						}
+							
+					}
+					cout << endl;
+					
+				}while(!verifyConfirmPassword::verifyConfirmPasswordFunction(pointerToErrorMsg,pointerToConfirmPasswordValue,pointerToPasswordValue));
 				break;	
 			case 'G':
-				cout << "Type Data7" << endl;
+				cout << "Username can have all kind of letters, numbers. " << endl;
+				cout << "Username have to have atleast 5 characters. " << endl;								
+				do 
+				{ 
+					
+					cout << "Please insert your username" << endl; 
+					cin >> username;
+					
+				}while(!verifyUsername::verifyUsernameFunction(pointerToErrorMsg,pointerToUsernameValue));
 				break;
 			case 'g':
-				cout << "Type Data7" << endl;
+				cout << "Username can have all kind of letters, numbers. " << endl;
+				cout << "Username have to have atleast 5 characters. " << endl;								
+				do 
+				{ 
+					
+					cout << "Please insert your username" << endl; 
+					cin >> username;
+					
+				}while(!verifyUsername::verifyUsernameFunction(pointerToErrorMsg,pointerToUsernameValue));
 				break;
 			case 'H':
 				cout << "Type Data8" << endl;
+				
+				
 				break;
 			case 'h':
 				cout << "Type Data8" << endl;
+				
+				
 				break;
 			case 'I':
 				cout << "Type Data9" << endl;
