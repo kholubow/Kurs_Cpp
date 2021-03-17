@@ -356,4 +356,68 @@ namespace verifyUsername
 	}
 }
 
+
+namespace verifyAge
+{
+	bool verifyAgeFunction(string * error_msg, string * age)
+	{
+		int j = 0, k = 0, i = -1, n = 0, e = 0;
+		short len = 0;	
+		while(true)
+		{
+			j = 0; k = 0; i = -1; n = 0; e = 0;
+			len = (*age).length();
+			char char_array[len + 1];
+			strcpy(char_array, (*age).c_str());
+			while(i < len)
+			{
+				i++;
+				
+				if((char_array[i] >= ' ') && (char_array[i] <= '/'))
+					j++;
+			
+				if((char_array[i] >= '0') && (char_array[i] <= '9'))
+					k++;
+							
+				if((char_array[i] >= ':') && (char_array[i] <= '@'))
+					j++;
+				
+				if((char_array[i] >= 'A') && (char_array[i] <= 'Z'))
+					n++;
+					
+				if((char_array[i] >= '[') && (char_array[i] <= '`'))
+					j++;
+				
+				if((char_array[i] >= 'a') && (char_array[i] <= 'z'))
+					e++;
+					
+				if((char_array[i] >= '{') && (char_array[i] <= '~'))
+					j++;
+					
+				if(j != 0 || n != 0 || e != 0)
+					break;
+			}	
+				
+			if(len >= 2 && k >= 2 && e == 0 && n == 0 && j == 0)
+			{	
+				if (stoi(*age) >= 18)
+				{
+					return true;
+				}
+				else
+				{
+					cout << *error_msg << endl;
+					return false;					
+				}
+			}
+			else 
+			{
+				cout << *error_msg << endl;
+				return false;					
+			}	
+		}	
+	}
+}
+
+
 #endif

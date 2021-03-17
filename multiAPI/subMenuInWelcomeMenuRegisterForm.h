@@ -28,28 +28,32 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 	string error_msg = "Please insert data again.";
 	string * pointerToErrorMsg = &error_msg;
 	
-	string firstName;
+	string firstName = "";
 	string * pointerToFirstNameValue = &firstName;
 	
-	string lastName;
+	string lastName = "";
 	string * pointerToLastNameValue = &lastName;
 	
-	string city;
+	string city = "";
 	string * pointerToCityValue = &city;
 	
-	string email;
+	string email = "";
 	string * pointerToEmailValue = &email;
 	
-	string password;
+	string password = "";
 	string * pointerToPasswordValue = &password;
 	
-	string confirmPassword;
+	string confirmPassword = "";
 	string * pointerToConfirmPasswordValue = &confirmPassword;
 	
-	string username;
+	string username = "";
 	string * pointerToUsernameValue = &username;
 	
+	string age = "";
+	string * pointerToAgeValue = &age;
+	
 	vector<string> allRegisterDataFromForm;
+	vector<string>::iterator it = allRegisterDataFromForm.begin();
 		
 	do
 	{
@@ -296,20 +300,129 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 				}while(!verifyUsername::verifyUsernameFunction(pointerToErrorMsg,pointerToUsernameValue));
 				break;
 			case 'H':
-				cout << "Type Data8" << endl;
-				
-				
+				cout << "Age have to have only numbers." << endl;
+				cout << "Only 18+ users are available." << endl;								
+				do 
+				{ 
+					
+					cout << "Please insert your age" << endl; 
+					cin >> age;
+					
+				}while(!verifyAge::verifyAgeFunction(pointerToErrorMsg,pointerToAgeValue));
 				break;
 			case 'h':
-				cout << "Type Data8" << endl;
-				
-				
+				cout << "Age have to have only numbers." << endl;
+				cout << "Only 18+ users are available." << endl;								
+				do 
+				{ 
+					
+					cout << "Please insert your age" << endl; 
+					cin >> age;
+					
+				}while(!verifyAge::verifyAgeFunction(pointerToErrorMsg,pointerToAgeValue));
 				break;
 			case 'I':
-				cout << "Type Data9" << endl;
+				cout << "All data have to be completed." << endl;
+				cout << "==============================" << endl;
+				cout << endl;
+				cout << endl;								
+				
+				if (!firstName.empty()       &&
+					!lastName.empty()        &&
+					!city.empty()            &&
+					!email.empty()           &&
+					!password.empty()        &&
+					!confirmPassword.empty() &&
+					!username.empty()        &&
+					!age.empty())
+				{
+					
+					allRegisterDataFromForm.clear();
+					
+					allRegisterDataFromForm.push_back("Username: "         + username);
+					allRegisterDataFromForm.push_back("Password: "         + password);
+					allRegisterDataFromForm.push_back("First_name: "       + firstName);
+					allRegisterDataFromForm.push_back("Last_name: "        + lastName);
+					allRegisterDataFromForm.push_back("City: "             + city);
+					allRegisterDataFromForm.push_back("Email: "            + email);
+					allRegisterDataFromForm.push_back("Confirm_password: " + confirmPassword);
+					
+					it = allRegisterDataFromForm.begin();
+					/*
+						for (it; it != allRegisterDataFromForm.end(); it++)
+						{
+							cout << *it << endl;
+						}
+					*/
+					username        = "";
+					password        = "";
+					firstName       = "";
+					lastName        = "";
+					city            = "";
+					email           = "";
+					confirmPassword = "";	
+					cout << "Data has been sent." << endl;
+					
+				}
+				else
+				{
+					if      (firstName.empty())
+					{
+						
+						cout << "Please complete correctly your first name" << endl;
+						
+					}
+					else if (lastName.empty())
+					{
+						
+						cout << "Please complete correctly your last name" << endl;
+						
+					}
+					else if (city.empty())
+					{
+						
+						cout << "Please complete correctly your city" << endl;
+						
+					}
+					else if (email.empty())
+					{
+						
+						cout << "Please complete correctly your email" << endl;
+						
+					}
+					else if (password.empty())
+					{
+						
+						cout << "Please complete correctly your password" << endl;
+						
+					}
+					else if (confirmPassword.empty())
+					{
+						
+						cout << "Please complete correctly your password again in [confirm password] option" << endl;
+							
+					}
+					else if (username.empty())
+					{
+						
+						cout << "Please complete correctly your username" << endl;
+						
+					}
+					else if (age.empty())
+					{
+						
+						cout << "Please complete correctly your age" << endl;
+						
+					}
+					else
+						cout << "Please complete all data correctly" << endl;
+				}
+				
 				break;
 			case 'i':
 				cout << "Type Data9" << endl;
+				
+				
 				break;
 			case 'B':
 				cout << endl;
