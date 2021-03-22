@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <cstring>
+#include <vector>
+#include <fstream>
 
 using namespace std;
 
@@ -345,7 +347,72 @@ namespace verifyUsername
 				
 			if(len >= 5 && (k >= 1 || e >= 1 || n >= 1) && j == 0)
 			{	
-				return true;
+				fstream myDatabaseFileHandler;
+				myDatabaseFileHandler.open("database.txt", ios::in);
+				
+				
+				if (myDatabaseFileHandler.is_open())
+				{
+					if (myDatabaseFileHandler.bad())
+					{
+						cout << "A critical error" << endl;
+					}
+					
+					if (myDatabaseFileHandler.fail())
+					{
+						cout << "Failed file" << endl;
+					}
+							
+					if (myDatabaseFileHandler.good())
+					{
+						cout << "The database file is valid" << endl;
+						
+						string tmpBuffer, bufferToUsing;
+						unsigned int usernamesCounter = 0;
+						int i = -1;
+						
+						do 
+						{
+							myDatabaseFileHandler >> tmpBuffer;
+							bufferToUsing += tmpBuffer + '\n';
+									
+						} while (!myDatabaseFileHandler.eof());	
+						
+						
+						char char_arrayForBufferToUsing[bufferToUsing.length() + 1];
+						strcpy(char_arrayForBufferToUsing, bufferToUsing.c_str());
+						
+						
+						cout << char_arrayForBufferToUsing << endl;
+						cout << bufferToUsing.length();
+						while(i < bufferToUsing.length() - 8)
+						{
+							i++;
+							
+							if((char_arrayForBufferToUsing[i]     == 'U') &&
+							   (char_arrayForBufferToUsing[i + 1] == 's') &&
+							   (char_arrayForBufferToUsing[i + 2] == 'e') &&
+							   (char_arrayForBufferToUsing[i + 3] == 'r') &&
+							   (char_arrayForBufferToUsing[i + 4] == 'n') &&
+							   (char_arrayForBufferToUsing[i + 5] == 'a') &&
+							   (char_arrayForBufferToUsing[i + 6] == 'm') &&
+							   (char_arrayForBufferToUsing[i + 7] == 'e') &&
+							   (char_arrayForBufferToUsing[i + 8] == ':'))
+							{
+								usernamesCounter++;
+							}
+						}
+						
+						
+						cout << "usernamesCounter: " << usernamesCounter << endl;
+						return true;		
+					}
+					myDatabaseFileHandler.close();
+				}
+				else
+				{
+					cout << "The file was not opened properly" << endl;	
+				}
 			}
 			else 
 			{
@@ -419,5 +486,56 @@ namespace verifyAge
 	}
 }
 
+
+namespace saveDataFromRegisterForm
+{
+	void saveDataFromRegisterForm(string * error_msg, vector<string>::iterator * it, vector<string> * allRegisterDataFromFormVector)
+	{
+		
+		cout << "The following data will be saved to the database: " << endl;
+		for (*it; *it != (*allRegisterDataFromFormVector).end(); (*it)++)
+		{
+			cout << (**it) << endl;
+		}
+		cout << endl;
+		cout << "Writing to the file is in progress..." << endl;
+		
+		
+		fstream myDatabaseFileHandler;
+		myDatabaseFileHandler.open("database.txt", ios::out | ios::app);
+		
+		
+		if (myDatabaseFileHandler.is_open())
+		{
+			if (myDatabaseFileHandler.bad())
+			{
+				cout << "A critical error" << endl;
+			}
+			
+			if (myDatabaseFileHandler.fail())
+			{
+				cout << "Failed file" << endl;
+			}
+					
+			if (myDatabaseFileHandler.good())
+			{
+				cout << "The database file is valid" << endl;
+				
+				*it = (*allRegisterDataFromFormVector).begin();
+				for (*it; *it != (*allRegisterDataFromFormVector).end(); (*it)++)
+				{
+					myDatabaseFileHandler << (**it) << endl;
+				}
+				myDatabaseFileHandler << endl;			
+			}
+			myDatabaseFileHandler.close();
+		}
+		else
+		{
+			cout << "The file was not opened properly" << endl;	
+		}
+		
+	}
+}
 
 #endif
