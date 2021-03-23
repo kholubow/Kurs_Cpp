@@ -369,7 +369,7 @@ namespace verifyUsername
 						
 						string tmpBuffer, bufferToUsing;
 						unsigned int usernamesCounter = 0;
-						int i = -1;
+						int i = -1, arrayForBufferToUsingLength = 0;
 						
 						do 
 						{
@@ -381,11 +381,10 @@ namespace verifyUsername
 						
 						char char_arrayForBufferToUsing[bufferToUsing.length() + 1];
 						strcpy(char_arrayForBufferToUsing, bufferToUsing.c_str());
+						arrayForBufferToUsingLength = bufferToUsing.length() - 10;
+					
 						
-						
-						cout << char_arrayForBufferToUsing << endl;
-						cout << bufferToUsing.length();
-						while(i < bufferToUsing.length() - 8)
+						while(i < arrayForBufferToUsingLength)
 						{
 							i++;
 							
@@ -404,10 +403,69 @@ namespace verifyUsername
 						}
 						
 						
-						cout << "usernamesCounter: " << usernamesCounter << endl;
-						return true;		
+						string * string_arrayWithUsernames = new string[usernamesCounter];
+						
+						
+						i = -1;
+						int j = 0, usernameCounter = usernamesCounter - 1;
+						string tmpStringForUsername;
+						while(i < arrayForBufferToUsingLength)
+						{
+							i++;
+							
+							if((char_arrayForBufferToUsing[i]     == 'U') &&
+							   (char_arrayForBufferToUsing[i + 1] == 's') &&
+							   (char_arrayForBufferToUsing[i + 2] == 'e') &&
+							   (char_arrayForBufferToUsing[i + 3] == 'r') &&
+							   (char_arrayForBufferToUsing[i + 4] == 'n') &&
+							   (char_arrayForBufferToUsing[i + 5] == 'a') &&
+							   (char_arrayForBufferToUsing[i + 6] == 'm') &&
+							   (char_arrayForBufferToUsing[i + 7] == 'e') &&
+							   (char_arrayForBufferToUsing[i + 8] == ':'))
+							{
+								j = (i + 10);
+								do
+								{
+									tmpStringForUsername += char_arrayForBufferToUsing[j];
+									
+									j++;	
+								}
+								while(char_arrayForBufferToUsing[j] != '\n');	
+								j = 0;
+								
+								
+								string_arrayWithUsernames[usernameCounter] = tmpStringForUsername;
+								usernameCounter--;
+								tmpStringForUsername = "";
+							}
+						}	
+						
+						
+						int a = 0;
+						for (int i = 0; i < usernamesCounter; i++)
+						{
+							if (string_arrayWithUsernames[i] == *username)
+								a++;
+								
+							if (a > 0)
+								break;
+						}
+						
+						
+						if(a > 0)
+						{
+							cout << *error_msg << endl;
+							myDatabaseFileHandler.close();
+							delete [] string_arrayWithUsernames;
+							return false;	
+						}
+						else
+						{
+							myDatabaseFileHandler.close();
+							delete [] string_arrayWithUsernames;
+							return true;
+						}		
 					}
-					myDatabaseFileHandler.close();
 				}
 				else
 				{

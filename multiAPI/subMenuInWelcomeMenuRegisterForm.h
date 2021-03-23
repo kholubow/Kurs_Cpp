@@ -7,6 +7,7 @@
 #include <conio.h>
 #include <vector>
 #include <string>
+#include "hmac.h"
 
 using namespace std;
 
@@ -25,38 +26,55 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 	char character;
 	char ch;
 	
+	
 	string error_msg = "Please insert data again.";
 	string * pointerToErrorMsg = &error_msg;
+	
 	
 	string firstName = "";
 	string * pointerToFirstNameValue = &firstName;
 	
+	
 	string lastName = "";
 	string * pointerToLastNameValue = &lastName;
+	
 	
 	string city = "";
 	string * pointerToCityValue = &city;
 	
+	
 	string email = "";
 	string * pointerToEmailValue = &email;
+	
 	
 	string password = "";
 	string * pointerToPasswordValue = &password;
 	
+	
 	string confirmPassword = "";
 	string * pointerToConfirmPasswordValue = &confirmPassword;
+	
 	
 	string username = "";
 	string * pointerToUsernameValue = &username;
 	
+	
 	string age = "";
 	string * pointerToAgeValue = &age;
+	
 	
 	vector<string> allRegisterDataFromForm;
 	vector<string>::iterator it = allRegisterDataFromForm.begin();
 	
+	
 	vector<string> * pointerToAllRegisterDataFromFormVectorValue = &allRegisterDataFromForm;
 	vector<string>::iterator * pointerToIteratorIt = &it; 
+	
+	
+	string cryptographicallySecuredPassword = "";
+	string cryptographicallySecuredConfirmPassword = "";
+	string key = "Sup3RSecREtK3Y";
+	
 		
 	do
 	{
@@ -344,13 +362,18 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 					
 					allRegisterDataFromForm.clear();
 					
+					
+					cryptographicallySecuredPassword        = hmac::get_hmac(key, password,        hmac::TypeHash::SHA512);
+					cryptographicallySecuredConfirmPassword = hmac::get_hmac(key, confirmPassword, hmac::TypeHash::SHA512);
+				
+					
 					allRegisterDataFromForm.push_back("Username: "         + username);
-					allRegisterDataFromForm.push_back("Password: "         + password);
+					allRegisterDataFromForm.push_back("Password: "         + cryptographicallySecuredPassword);
 					allRegisterDataFromForm.push_back("First_name: "       + firstName);
 					allRegisterDataFromForm.push_back("Last_name: "        + lastName);
 					allRegisterDataFromForm.push_back("City: "             + city);
 					allRegisterDataFromForm.push_back("Email: "            + email);
-					allRegisterDataFromForm.push_back("Confirm_password: " + confirmPassword);
+					allRegisterDataFromForm.push_back("Confirm_password: " + cryptographicallySecuredConfirmPassword);
 					
 					it = allRegisterDataFromForm.begin();
 					saveDataFromRegisterForm::saveDataFromRegisterForm(pointerToErrorMsg,pointerToIteratorIt,pointerToAllRegisterDataFromFormVectorValue);
@@ -361,7 +384,11 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 					lastName        = "";
 					city            = "";
 					email           = "";
-					confirmPassword = "";	
+					confirmPassword = "";
+					cryptographicallySecuredPassword        = "";	
+					cryptographicallySecuredConfirmPassword = "";
+					
+					
 					cout << "Data has been sent." << endl;
 					
 				}
@@ -438,13 +465,18 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 					
 					allRegisterDataFromForm.clear();
 					
+					
+					cryptographicallySecuredPassword        = hmac::get_hmac(key, password,        hmac::TypeHash::SHA512);
+					cryptographicallySecuredConfirmPassword = hmac::get_hmac(key, confirmPassword, hmac::TypeHash::SHA512);
+				
+					
 					allRegisterDataFromForm.push_back("Username: "         + username);
-					allRegisterDataFromForm.push_back("Password: "         + password);
+					allRegisterDataFromForm.push_back("Password: "         + cryptographicallySecuredPassword);
 					allRegisterDataFromForm.push_back("First_name: "       + firstName);
 					allRegisterDataFromForm.push_back("Last_name: "        + lastName);
 					allRegisterDataFromForm.push_back("City: "             + city);
 					allRegisterDataFromForm.push_back("Email: "            + email);
-					allRegisterDataFromForm.push_back("Confirm_password: " + confirmPassword);
+					allRegisterDataFromForm.push_back("Confirm_password: " + cryptographicallySecuredConfirmPassword);
 					
 					it = allRegisterDataFromForm.begin();
 					saveDataFromRegisterForm::saveDataFromRegisterForm(pointerToErrorMsg,pointerToIteratorIt,pointerToAllRegisterDataFromFormVectorValue);
@@ -455,7 +487,11 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 					lastName        = "";
 					city            = "";
 					email           = "";
-					confirmPassword = "";	
+					confirmPassword = "";
+					cryptographicallySecuredPassword        = "";	
+					cryptographicallySecuredConfirmPassword = "";
+					
+					
 					cout << "Data has been sent." << endl;
 					
 				}
