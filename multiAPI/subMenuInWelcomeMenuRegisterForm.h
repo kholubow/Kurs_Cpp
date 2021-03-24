@@ -31,6 +31,38 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 	string * pointerToErrorMsg = &error_msg;
 	
 	
+	string firstNameError_msg = "Your first name is incorrect. Please try again.";
+	string * pointerToFirstNameErrorMsg = &firstNameError_msg;
+	
+	
+	string lastNameError_msg = "Your last name is incorrect. Please try again.";
+	string * pointerToLastNameErrorMsg = &lastNameError_msg;
+	
+	
+	string cityError_msg = "Your city is incorrect. Please try again.";
+	string * pointerToCityErrorMsg = &cityError_msg;
+	
+	
+	string emailError_msg = "Your email is incorrect. Please try again.";
+	string * pointerToEmailErrorMsg = &emailError_msg;
+	
+	
+	string passwordError_msg = "Your password is incorrect. Please try again.";
+	string * pointerToPasswordErrorMsg = &passwordError_msg;
+	
+	
+	string confirmPasswordError_msg = "Your confirm password option is incorrect. Please try again.";
+	string * pointerToConfirmPasswordErrorMsg = &confirmPasswordError_msg;
+	
+	
+	string usernameError_msg = "Your username is incorrect. Please try again.";
+	string * pointerToUsernameErrorMsg = &usernameError_msg;
+	
+	
+	string ageError_msg = "Your age is incorrect. Please try again.";
+	string * pointerToAgeErrorMsg = &ageError_msg;
+	
+	
 	string firstName = "";
 	string * pointerToFirstNameValue = &firstName;
 	
@@ -99,80 +131,80 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 				do 
 				{ 
 				
-					cout << "Please insert your first name" << endl; 
-					cin >> firstName; 
+					cout << "Please insert your first name: " << endl; 
+					cin  >> firstName; 
 				
-				}while(!verifyFirstName::verifyFirstNameFunction(pointerToErrorMsg,pointerToFirstNameValue));
+				}while(!verifyFirstName::verifyFirstNameFunction(pointerToFirstNameErrorMsg,pointerToFirstNameValue));
 				break;
 			case 'a':
 				cout << "First name have to have only letters ('a - z' and 'A - Z')" << endl;
 				do 
 				{ 
 				
-					cout << "Please insert your first name" << endl; 
-					cin >> firstName; 
+					cout << "Please insert your first name: " << endl; 
+					cin  >> firstName; 
 				
-				}while(!verifyFirstName::verifyFirstNameFunction(pointerToErrorMsg,pointerToFirstNameValue));				
+				}while(!verifyFirstName::verifyFirstNameFunction(pointerToFirstNameErrorMsg,pointerToFirstNameValue));				
 				break;	
 			case 'T':
 				cout << "Last name have to have only letters ('a - z' and 'A - Z')" << endl;
 				do 
 				{ 
 				
-					cout << "Please insert your last name" << endl; 
-					cin >> lastName; 
+					cout << "Please insert your last name: " << endl; 
+					cin  >> lastName; 
 				
-				}while(!verifyLastName::verifyLastNameFunction(pointerToErrorMsg,pointerToLastNameValue));			
+				}while(!verifyLastName::verifyLastNameFunction(pointerToLastNameErrorMsg,pointerToLastNameValue));			
 				break;
 			case 't':
 				cout << "Last name have to have only letters ('a - z' and 'A - Z')" << endl;
 				do 
 				{ 
 				
-					cout << "Please insert your last name" << endl; 
-					cin >> lastName; 
+					cout << "Please insert your last name: " << endl; 
+					cin  >> lastName; 
 				
-				}while(!verifyLastName::verifyLastNameFunction(pointerToErrorMsg,pointerToLastNameValue));
+				}while(!verifyLastName::verifyLastNameFunction(pointerToLastNameErrorMsg,pointerToLastNameValue));
 				break;
 			case 'C':
 				cout << "City have to have only letters ('a - z' and 'A - Z')" << endl;
 				do 
 				{ 
 				
-					cout << "Please insert your city" << endl; 
-					cin >> city;
+					cout << "Please insert your city: " << endl; 
+					cin  >> city;
 				
-				}while(!verifyCity::verifyCityFunction(pointerToErrorMsg,pointerToCityValue));
+				}while(!verifyCity::verifyCityFunction(pointerToCityErrorMsg,pointerToCityValue));
 				break;
 			case 'c':
 				cout << "City have to have only letters ('a - z' and 'A - Z')" << endl;
 				do 
 				{ 
 				
-					cout << "Please insert your city" << endl; 
-					cin >> city; 
+					cout << "Please insert your city: " << endl; 
+					cin  >> city; 
 				
-				}while(!verifyCity::verifyCityFunction(pointerToErrorMsg,pointerToCityValue));
+				}while(!verifyCity::verifyCityFunction(pointerToCityErrorMsg,pointerToCityValue));
 				break;
 			case 'D':
 				cout << "E-mail have to have only letters ('a - z' and 'A - Z') with numbers ('0' to '9') and also have to have ONE @ symbol" << endl;
 				do 
 				{ 
 				
-					cout << "Please insert your e-mail" << endl; 
-					cin >> email; 
+					cout << "Please insert your e-mail: " << endl; 
+					cin  >> email; 
 				
-				}while(!verifyEmail::verifyEmailFunction(pointerToErrorMsg,pointerToEmailValue));
+				}while(!verifyEmail::verifyEmailFunction(pointerToEmailErrorMsg,pointerToEmailValue));
 				break;
 			case 'd':
 				cout << "E-mail have to have only letters ('a - z' and 'A - Z') with numbers ('0' to '9') and also have to have ONE @ symbol" << endl;
 				do 
 				{ 
 				
-					cout << "Please insert your e-mail" << endl; 
-					cin >> email; 
+					cout << "Please insert your e-mail: " << endl; 
+					cin  >> email; 
 				
-				}while(!verifyEmail::verifyEmailFunction(pointerToErrorMsg,pointerToEmailValue));
+				}while(!verifyEmail::verifyEmailFunction(pointerToEmailErrorMsg,pointerToEmailValue));
 				break;	
 			case 'E':
 				cout << "Password can have all kind of symbols, letters, numbers. " << endl;
@@ -181,7 +213,7 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 				{
 					
 					password = "";
-					cout << "Please insert your password" << endl; 
+					cout << "Please insert your password: " << endl; 
 					ch = _getch();
 					while(ch != 13)
 					{
@@ -203,7 +235,7 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 					}
 					cout << endl;
 					
-				}while(!verifyPassword::verifyPasswordFunction(pointerToErrorMsg,pointerToPasswordValue));
+				}while(!verifyPassword::verifyPasswordFunction(pointerToPasswordErrorMsg,pointerToPasswordValue));
 				break;
 			case 'e':
 				cout << "Password can have all kind of symbols, letters, numbers. " << endl;
@@ -212,7 +244,7 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 				{ 
 					
 					password = "";
-					cout << "Please insert your password" << endl; 
+					cout << "Please insert your password: " << endl; 
 					ch = _getch();
 					while(ch != 13)
 					{
@@ -234,7 +266,7 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 					}
 					cout << endl;
 					
-				}while(!verifyPassword::verifyPasswordFunction(pointerToErrorMsg,pointerToPasswordValue));
+				}while(!verifyPassword::verifyPasswordFunction(pointerToPasswordErrorMsg,pointerToPasswordValue));
 				break;	
 			case 'F':
 				cout << "Confirm password. " << endl;
@@ -243,7 +275,7 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 				{	
 				
 					confirmPassword = "";
-					cout << "Please insert your password again" << endl; 
+					cout << "Please insert your password again: " << endl; 
 					ch = _getch();
 					while(ch != 13)
 					{
@@ -265,7 +297,7 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 					}
 					cout << endl;
 					
-				}while(!verifyConfirmPassword::verifyConfirmPasswordFunction(pointerToErrorMsg,pointerToConfirmPasswordValue,pointerToPasswordValue));
+				}while(!verifyConfirmPassword::verifyConfirmPasswordFunction(pointerToConfirmPasswordErrorMsg,pointerToConfirmPasswordValue,pointerToPasswordValue));
 				break;
 			case 'f':
 				cout << "Confirm password. " << endl;
@@ -274,7 +306,7 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 				{	
 				
 					confirmPassword = "";
-					cout << "Please insert your password again" << endl; 
+					cout << "Please insert your password again: " << endl; 
 					ch = _getch();
 					while(ch != 13)
 					{
@@ -296,7 +328,7 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 					}
 					cout << endl;
 					
-				}while(!verifyConfirmPassword::verifyConfirmPasswordFunction(pointerToErrorMsg,pointerToConfirmPasswordValue,pointerToPasswordValue));
+				}while(!verifyConfirmPassword::verifyConfirmPasswordFunction(pointerToConfirmPasswordErrorMsg,pointerToConfirmPasswordValue,pointerToPasswordValue));
 				break;	
 			case 'G':
 				cout << "Username can have all kind of letters, numbers. " << endl;
@@ -305,10 +337,10 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 				do 
 				{ 
 					
-					cout << "Please insert your username" << endl; 
-					cin >> username;
+					cout << "Please insert your username: " << endl; 
+					cin  >> username;
 					
-				}while(!verifyUsername::verifyUsernameFunction(pointerToErrorMsg,pointerToUsernameValue));
+				}while(!verifyUsername::verifyUsernameFunction(pointerToUsernameErrorMsg,pointerToUsernameValue));
 				break;
 			case 'g':
 				cout << "Username can have all kind of letters, numbers. " << endl;
@@ -317,10 +349,10 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 				do 
 				{ 
 					
-					cout << "Please insert your username" << endl; 
-					cin >> username;
+					cout << "Please insert your username: " << endl; 
+					cin  >> username;
 					
-				}while(!verifyUsername::verifyUsernameFunction(pointerToErrorMsg,pointerToUsernameValue));
+				}while(!verifyUsername::verifyUsernameFunction(pointerToUsernameErrorMsg,pointerToUsernameValue));
 				break;
 			case 'H':
 				cout << "Age have to have only numbers." << endl;
@@ -328,10 +360,10 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 				do 
 				{ 
 					
-					cout << "Please insert your age" << endl; 
-					cin >> age;
+					cout << "Please insert your age: " << endl; 
+					cin  >> age;
 					
-				}while(!verifyAge::verifyAgeFunction(pointerToErrorMsg,pointerToAgeValue));
+				}while(!verifyAge::verifyAgeFunction(pointerToAgeErrorMsg,pointerToAgeValue));
 				break;
 			case 'h':
 				cout << "Age have to have only numbers." << endl;
@@ -339,10 +371,10 @@ void SubMenuInWelcomeMenuRegisterForm<T>::subMenuInWelcomeMenuRegisterForm()
 				do 
 				{ 
 					
-					cout << "Please insert your age" << endl; 
-					cin >> age;
+					cout << "Please insert your age: " << endl; 
+					cin  >> age;
 					
-				}while(!verifyAge::verifyAgeFunction(pointerToErrorMsg,pointerToAgeValue));
+				}while(!verifyAge::verifyAgeFunction(pointerToAgeErrorMsg,pointerToAgeValue));
 				break;
 			case 'I':
 				cout << "All data have to be completed." << endl;
