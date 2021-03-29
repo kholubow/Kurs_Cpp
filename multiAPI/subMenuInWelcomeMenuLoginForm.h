@@ -169,8 +169,8 @@ void SubMenuInWelcomeMenuLoginForm<T>::subMenuInWelcomeMenuLoginForm()
 					cryptographicallySecuredPassword = hmac::get_hmac(key, password, hmac::TypeHash::SHA512);
 				
 					
-					allLoginDataFromForm.push_back("Username: " + username);
-					allLoginDataFromForm.push_back("Password: " + cryptographicallySecuredPassword);
+					allLoginDataFromForm.push_back(username);
+					allLoginDataFromForm.push_back(cryptographicallySecuredPassword);
 					
 					itLogin = allLoginDataFromForm.begin();
 					checkDataFromLoginForm::checkDataFromLoginForm(pointerToErrorMsg,pointerToIteratorItLogin,pointerToAllLoginDataFromFormVectorValue);

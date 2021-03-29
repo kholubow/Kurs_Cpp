@@ -5,6 +5,7 @@
 #include <conio.h>
 #include <cstring>
 #include <vector>
+#include <fstream>
 
 using namespace std;
 
@@ -121,7 +122,7 @@ namespace verifyPasswordInLoginForm
 
 namespace checkDataFromLoginForm
 {
-	void checkDataFromLoginForm(string * error_msg, vector<string>::iterator * itLogin, vector<string> * allLoginDataFromFormVector)
+	bool checkDataFromLoginForm(string * error_msg, vector<string>::iterator * itLogin, vector<string> * allLoginDataFromFormVector)
 	{
 		
 		cout << "The following data will be checked: " << endl;
@@ -132,6 +133,113 @@ namespace checkDataFromLoginForm
 		cout << endl;
 		cout << "Checking login data is in progress..." << endl;
 		
+		
+		string username, password;
+		username = *allLoginDataFromFormVector[0]; 
+		password = *allLoginDataFromFormVector[1];
+		cout << "Username: " << username << endl << "Password: " << password << endl;
+		
+		
+		fstream myDatabaseFileHandler;
+		myDatabaseFileHandler.open("database.txt", ios::in);
+				
+				
+		if (myDatabaseFileHandler.is_open())
+		{
+			if (myDatabaseFileHandler.bad())
+			{
+				cout << "A critical error" << endl;
+			}
+					
+			if (myDatabaseFileHandler.fail())
+			{
+				cout << "Failed file" << endl;
+			}
+							
+			if (myDatabaseFileHandler.good())
+			{
+				
+				cout << "The database file is valid" << endl;
+				
+						
+				string tmpBuffer, bufferToUsing;
+				int arrayForBufferToUsingLength = 0;
+				
+						
+				do 
+				{
+					
+					myDatabaseFileHandler >> tmpBuffer;
+					bufferToUsing += tmpBuffer + '\n';
+									
+				} while (!myDatabaseFileHandler.eof());	
+						
+						
+				char char_arrayForBufferToUsing[bufferToUsing.length() + 1];
+				strcpy(char_arrayForBufferToUsing, bufferToUsing.c_str());
+				arrayForBufferToUsingLength = bufferToUsing.length() - 10;
+					
+					
+				int i = -1;
+				int j = 0;
+				string tmpStringForUsername;	
+				while(i < arrayForBufferToUsingLength)
+				{
+					i++;
+							
+					if((char_arrayForBufferToUsing[i]     == 'U') &&
+					   (char_arrayForBufferToUsing[i + 1] == 's') &&
+				       (char_arrayForBufferToUsing[i + 2] == 'e') &&
+					   (char_arrayForBufferToUsing[i + 3] == 'r') &&
+					   (char_arrayForBufferToUsing[i + 4] == 'n') &&
+					   (char_arrayForBufferToUsing[i + 5] == 'a') &&
+					   (char_arrayForBufferToUsing[i + 6] == 'm') &&
+					   (char_arrayForBufferToUsing[i + 7] == 'e') &&
+					   (char_arrayForBufferToUsing[i + 8] == ':'))
+					{
+						j = (i + 10);
+						do
+						{
+							tmpStringForUsername += char_arrayForBufferToUsing[j];
+									
+							j++;	
+						}
+						while(char_arrayForBufferToUsing[j] != '\n');	
+						j = 0;
+								
+						
+						if (tmpStringForUsername == username)
+						{
+							cout << "Username exist. Checking password..." << endl;
+							
+							/*	
+								myDatabaseFileHandler.close();
+								tmpStringForUsername = "";
+								return true;
+							*/
+						}
+						else
+						{
+							if (i == arrayForBufferToUsingLength)
+							{
+								cout << *error_msg << endl;
+								myDatabaseFileHandler.close();
+								tmpStringForUsername = "";
+								return false;								
+							}		
+						}
+						
+						tmpStringForUsername = "";
+					}
+				}
+								
+			}
+		}
+		else
+		{
+			cout << "The file was not opened properly" << endl;	
+		}
+			
 	}
 }
 
