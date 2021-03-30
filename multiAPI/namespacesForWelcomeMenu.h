@@ -10,6 +10,14 @@
 using namespace std;
 
 
+#include "menuWithMainOptionsAfterSignIn.h"
+namespace menuWithMainOptionsAfterSignInDeclaration
+{
+	typedef MenuWithMainOptionsAfterSignIn<int> MenuWithMainOptionsAfterSignIn;
+	MenuWithMainOptionsAfterSignIn menuWithMainOptions;	
+}
+
+
 namespace verifyUsernameInLoginForm
 {
 	bool verifyUsernameInLoginFormFunction(string * error_msg, string * username)
@@ -135,8 +143,10 @@ namespace checkDataFromLoginForm
 		
 		
 		string username, password;
-		username = *allLoginDataFromFormVector[0]; 
-		password = *allLoginDataFromFormVector[1];
+		*itLogin = (*allLoginDataFromFormVector).begin();
+		username = **itLogin; 
+		(*itLogin)++;
+		password = **itLogin;
 		cout << "Username: " << username << endl << "Password: " << password << endl;
 		
 		
@@ -182,7 +192,7 @@ namespace checkDataFromLoginForm
 					
 				int i = -1;
 				int j = 0;
-				string tmpStringForUsername;	
+				string tmpStringForUsername, tmpStringForPassword;	
 				while(i < arrayForBufferToUsingLength)
 				{
 					i++;
@@ -205,33 +215,78 @@ namespace checkDataFromLoginForm
 							j++;	
 						}
 						while(char_arrayForBufferToUsing[j] != '\n');	
-						j = 0;
 								
 						
 						if (tmpStringForUsername == username)
 						{
 							cout << "Username exist. Checking password..." << endl;
 							
-							/*	
-								myDatabaseFileHandler.close();
-								tmpStringForUsername = "";
-								return true;
-							*/
-						}
-						else
-						{
-							if (i == arrayForBufferToUsingLength)
+							
+							j += 1;
+							
+							
+							if((char_arrayForBufferToUsing[j]     == 'P') &&
+							   (char_arrayForBufferToUsing[j + 1] == 'a') &&
+						       (char_arrayForBufferToUsing[j + 2] == 's') &&
+							   (char_arrayForBufferToUsing[j + 3] == 's') &&
+							   (char_arrayForBufferToUsing[j + 4] == 'w') &&
+							   (char_arrayForBufferToUsing[j + 5] == 'o') &&
+							   (char_arrayForBufferToUsing[j + 6] == 'r') &&
+							   (char_arrayForBufferToUsing[j + 7] == 'd') &&
+							   (char_arrayForBufferToUsing[j + 8] == ':'))
+							{
+								
+								j += 10;
+									
+							
+								do
+								{
+									tmpStringForPassword += char_arrayForBufferToUsing[j];
+											
+									j++;	
+								}
+								while(char_arrayForBufferToUsing[j] != '\n');
+								
+								
+								if (tmpStringForPassword == password)
+								{
+									cout << "Password is correct. Welcome." << endl;
+									
+									myDatabaseFileHandler.close();
+									tmpStringForUsername = "";
+									tmpStringForPassword = "";
+									return true;
+								}
+								else
+								{
+									cout << *error_msg << endl;
+									myDatabaseFileHandler.close();
+									tmpStringForUsername = "";
+									tmpStringForPassword = "";
+									return false;		
+								}
+							
+							}
+							else
 							{
 								cout << *error_msg << endl;
 								myDatabaseFileHandler.close();
 								tmpStringForUsername = "";
-								return false;								
-							}		
+								return false;					
+							}
 						}
 						
 						tmpStringForUsername = "";
+						j = 0;
 					}
 				}
+				
+				
+				cout << *error_msg << endl;
+				myDatabaseFileHandler.close();
+				tmpStringForUsername = "";
+				return false;
+				
 								
 			}
 		}

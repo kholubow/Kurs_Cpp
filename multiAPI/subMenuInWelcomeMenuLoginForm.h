@@ -173,7 +173,12 @@ void SubMenuInWelcomeMenuLoginForm<T>::subMenuInWelcomeMenuLoginForm()
 					allLoginDataFromForm.push_back(cryptographicallySecuredPassword);
 					
 					itLogin = allLoginDataFromForm.begin();
-					checkDataFromLoginForm::checkDataFromLoginForm(pointerToErrorMsg,pointerToIteratorItLogin,pointerToAllLoginDataFromFormVectorValue);
+					if(checkDataFromLoginForm::checkDataFromLoginForm(pointerToErrorMsg,pointerToIteratorItLogin,pointerToAllLoginDataFromFormVectorValue))
+					{
+						requireEnter::requireEnterMainMethodInWelcomeMenu();
+						system("cls");
+						menuWithMainOptionsAfterSignInDeclaration::menuWithMainOptions.menuWithMainOptionsAfterSignIn();
+					}
 
 					username        = "";
 					password        = "";
@@ -204,7 +209,59 @@ void SubMenuInWelcomeMenuLoginForm<T>::subMenuInWelcomeMenuLoginForm()
 				}
 				break;
 			case 'i':
-				cout << "Finish login" << endl;
+				cout << "All data have to be completed." << endl;
+				cout << "==============================" << endl;
+				cout << endl;
+				cout << endl;								
+				
+				if (!password.empty() &&
+					!username.empty())
+				{
+					
+					allLoginDataFromForm.clear();
+					
+					
+					cryptographicallySecuredPassword = hmac::get_hmac(key, password, hmac::TypeHash::SHA512);
+				
+					
+					allLoginDataFromForm.push_back(username);
+					allLoginDataFromForm.push_back(cryptographicallySecuredPassword);
+					
+					itLogin = allLoginDataFromForm.begin();
+					if(checkDataFromLoginForm::checkDataFromLoginForm(pointerToErrorMsg,pointerToIteratorItLogin,pointerToAllLoginDataFromFormVectorValue))
+					{
+						requireEnter::requireEnterMainMethodInWelcomeMenu();
+						system("cls");
+						menuWithMainOptionsAfterSignInDeclaration::menuWithMainOptions.menuWithMainOptionsAfterSignIn();
+					}
+
+					username        = "";
+					password        = "";
+					cryptographicallySecuredPassword = "";
+					
+					
+					cout << "Data has been sent." << endl;
+					
+				}
+				else
+				{
+					
+					if (password.empty())
+					{
+						
+						cout << "Please complete correctly your password" << endl;
+						
+					}
+					else if (username.empty())
+					{
+						
+						cout << "Please complete correctly your username" << endl;
+						
+					}
+					else
+						cout << "Please complete all data correctly" << endl;
+						
+				}
 				break;
 			case 'B':
 				cout << endl;
