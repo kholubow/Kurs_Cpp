@@ -20,4 +20,12 @@ namespace requireEnter
 }
 
 
+#include "DecimalToBinaryBinaryToDecimal.h"
+namespace decimalToBinaryBinaryToDecimalDeclaration
+{
+	typedef DecimalToBinaryBinaryToDecimal<int> DecimalToBinaryBinaryToDecimal;
+	DecimalToBinaryBinaryToDecimal decimalToBinaryBinaryToDecimalMenu;
+}
+
+
 #endif

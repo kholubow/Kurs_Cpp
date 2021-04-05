@@ -30,7 +30,7 @@ void MenuWithMainOptionsAfterSignIn<T>::menuWithMainOptionsAfterSignIn()
 	do
 	{
 		cout << "------------------------------------------------------------------" << endl;
-		cout << "| A - Option 1                                                   |" << endl;
+		cout << "| A - Decimal to binary / binary to decimal algorithm            |" << endl;
 		cout << "| B - Option 2                                                   |" << endl;
 		cout << "| C - Option 3                                                   |" << endl;
 		cout << "| D - Option 4                                                   |" << endl;
@@ -41,10 +41,12 @@ void MenuWithMainOptionsAfterSignIn<T>::menuWithMainOptionsAfterSignIn()
 		switch(character)
 		{
 			case 'A':
-				cout << "Option 1." << endl;
+				system("cls");
+				decimalToBinaryBinaryToDecimalDeclaration::decimalToBinaryBinaryToDecimalMenu.decimalToBinaryBinaryToDecimal();
 				break;
 			case 'a':
-				cout << "Option 1." << endl;
+				system("cls");
+				decimalToBinaryBinaryToDecimalDeclaration::decimalToBinaryBinaryToDecimalMenu.decimalToBinaryBinaryToDecimal();
 				break;				
 			case 'B':
 				cout << "Option 2." << endl;
