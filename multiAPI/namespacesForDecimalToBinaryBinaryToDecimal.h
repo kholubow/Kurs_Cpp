@@ -138,25 +138,91 @@ namespace verifyDataFunctions
 			}	
 		}		
 	}
+	
+	
+	void verifyNumberToConvertToBinaryPolymorphismFunction(vector<string>::iterator * itCollectionOfAddresses, vector<string> * collectionOfAddressesIn_decimalToBinaryBinaryToDecimalHeader_VectorSTL_Container)
+	{
+		cout << "The following data is known as addresses from 'decimalToBinaryBinaryToDecimal' header file: " << endl;
+		cout << "The following addresses are hexadecimal values." << endl;
+		for (*itCollectionOfAddresses; *itCollectionOfAddresses != (*collectionOfAddressesIn_decimalToBinaryBinaryToDecimalHeader_VectorSTL_Container).end(); (*itCollectionOfAddresses)++)
+		{
+			cout << (**itCollectionOfAddresses) << endl;
+		}
+		cout << endl;
+	}
+
+
+	int verifyNumberToConvertToBinaryPolymorphismFunction(string * error_msg, string textToEncryptionViaCaesarCipher)
+	{
+		int j = 0, k = 0, i = -1;
+		short len = 0;	
+		while(true)
+		{
+			j = 0; k = 0; i = -1;
+			len = textToEncryptionViaCaesarCipher.length();
+			char char_array[len + 1];
+			strcpy(char_array, textToEncryptionViaCaesarCipher.c_str());
+			while(i < len)
+			{
+				i++;
+				
+				if((char_array[i] >= ' ') && (char_array[i] <= '/'))
+					j++;
+			
+				if((char_array[i] >= '0') && (char_array[i] <= '9'))
+					j++;
+							
+				if((char_array[i] >= ':') && (char_array[i] <= '@'))
+					j++;
+				
+				if((char_array[i] >= 'A') && (char_array[i] <= 'Z'))
+					k++;
+					
+				if((char_array[i] >= '[') && (char_array[i] <= '`'))
+					j++;
+				
+				if((char_array[i] >= 'a') && (char_array[i] <= 'z'))
+					j++;
+					
+				if((char_array[i] >= '{') && (char_array[i] <= '~'))
+					j++;
+					
+				if(j != 0)
+					break;
+			}	
+				
+			if(len >= 1 && k >= 1 && j == 0)
+			{	
+				return 202;
+			}
+			else 
+			{
+				cout << *error_msg << endl;
+				return 0;					
+			}	
+		}		
+	}
+	
+	
 }
 
 
 namespace convertAddress
 {
 	template <typename T>
-	std::string convertPointerToStringAddress(const T* obj)
+	string convertPointerToStringAddress(T obj)
 	{
-	  int address(reinterpret_cast<int>(obj));
-	  std::stringstream ss;
+	  T address(reinterpret_cast<T>(obj));
+	  stringstream ss;
 	  ss << address;
 	  return ss.str();
 	}
 	
 	
 	template <typename T>
-	T* convertAddressStringToPointer(const std::string& address)
+	T* convertAddressStringToPointer(const std::string &address)
 	{
-	  std::stringstream ss;
+	  stringstream ss;
 	  ss << address;
 	  int tmp(0);
 	  if(!(ss >> tmp)) throw cout << "Failed - invalid address!" << endl;
