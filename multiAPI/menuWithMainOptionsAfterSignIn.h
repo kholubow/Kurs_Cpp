@@ -31,7 +31,7 @@ void MenuWithMainOptionsAfterSignIn<T>::menuWithMainOptionsAfterSignIn()
 	{
 		cout << "------------------------------------------------------------------" << endl;
 		cout << "| A - Decimal to binary / binary to decimal algorithm            |" << endl;
-		cout << "|     + Caesar cipher                                            |" << endl;
+		cout << "|     + Caesar cipher + bubble sort                              |" << endl;
 		cout << "|                                                                |" << endl;
 		cout << "| B - Option 2                                                   |" << endl;
 		cout << "| C - Option 3                                                   |" << endl;

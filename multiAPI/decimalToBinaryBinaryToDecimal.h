@@ -65,6 +65,20 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 	string textToEncryptionViaCaesarCipher_Error_msg          = "You can do encryption via Caesar cipher only with uppercase letters A - Z. Please try again.";
 	string * pointerToTextToEncryptionViaCaesarCipherErrorMsg = &textToEncryptionViaCaesarCipher_Error_msg;
 	
+	
+	string textToDecryptionViaCaesarCipher                    = "";
+	string textToDecryptionViaCaesarCipher_Error_msg          = "You can do decryption via Caesar cipher only with uppercase letters A - Z. Please try again.";
+	string * pointerToTextToDecryptionViaCaesarCipherErrorMsg = &textToDecryptionViaCaesarCipher_Error_msg;
+	
+	
+	int k = 0;
+	int arrayWithNumbersToSortViaBubbleSortAlgorithm[9];
+	string numberToArrayToSortViaBubbleSortAlgorithm            = "";
+	string bubbleSortAlgorithm_Error_msg                        = "You can do sort via bubble sort only with the numbers. Please try again.";
+	string * pointerToNumberToArrayToSortViaBubbleSortAlgorithm = &numberToArrayToSortViaBubbleSortAlgorithm;
+	string * pointerToBubbleSortAlgorithmErrorMsg               = &bubbleSortAlgorithm_Error_msg;
+	int * pointerToArrayWithNumbersToSortViaBubbleSortAlgorithm = arrayWithNumbersToSortViaBubbleSortAlgorithm;
+	
 		
 	do
 	{
@@ -73,6 +87,8 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 		cout << "| B - Binary to decimal algorithm                                |" << endl;
 		cout << "| C - Check addresses [First use A and B options]                |" << endl;
 		cout << "| D - Caesar cipher [encryption]                                 |" << endl;
+		cout << "| E - Caesar cipher [decryption]                                 |" << endl;
+		cout << "| F - Bubble sort                                                |" << endl;
 		cout << "| ESC - Exit                                                     |" << endl;
 		cout << "------------------------------------------------------------------" << endl;	
 		character = getch();
@@ -507,10 +523,105 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 				}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToTextToEncryptionViaCaesarCipherErrorMsg,textToEncryptionViaCaesarCipher));
 				
 				
-				cout << textToEncryptionViaCaesarCipher << endl;
+				cout << "Encrypted data: "     << encryptionAlgorithms::doEncryptionTextDataViaCaesarCipherAlgorithm(textToEncryptionViaCaesarCipher) << endl;
+				cout << "===============================================================================" << endl;
+				cout << "Original text data: " << encryptionAlgorithms::doDecryptionTextDataViaCaesarCipherAlgorithm(encryptionAlgorithms::doEncryptionTextDataViaCaesarCipherAlgorithm(textToEncryptionViaCaesarCipher)) << endl;
 				break;
 			case 'd':
-				cout << "Caesar cipher." << endl;
+				cout << "Caesar cipher algorithm"                                  << endl;
+				cout << "Enter a text to encryption via Caesar cipher algorithm: " << endl;
+				cout << "========================================================" << endl;
+				cout << "The text must contain only the uppercase letters A - Z."  << endl;
+				do 
+				{ 
+						
+					cout << "Please enter the text to encryption via Caesar cipher algorithm: " << endl; 
+					cin  >> textToEncryptionViaCaesarCipher;
+						
+				}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToTextToEncryptionViaCaesarCipherErrorMsg,textToEncryptionViaCaesarCipher));
+				
+				
+				cout << "Encrypted data: "     << encryptionAlgorithms::doEncryptionTextDataViaCaesarCipherAlgorithm(textToEncryptionViaCaesarCipher) << endl;
+				cout << "===============================================================================" << endl;
+				cout << "Original text data: " << encryptionAlgorithms::doDecryptionTextDataViaCaesarCipherAlgorithm(encryptionAlgorithms::doEncryptionTextDataViaCaesarCipherAlgorithm(textToEncryptionViaCaesarCipher)) << endl;
+				break;
+			case 'E':
+				cout << "Caesar cipher algorithm"                                  << endl;
+				cout << "Enter a text to decryption via Caesar cipher algorithm: " << endl;
+				cout << "========================================================" << endl;
+				cout << "The text must contain only the uppercase letters A - Z."  << endl;
+				do 
+				{ 
+						
+					cout << "Please enter the text to decryption via Caesar cipher algorithm: " << endl; 
+					cin  >> textToDecryptionViaCaesarCipher;
+						
+				}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToTextToDecryptionViaCaesarCipherErrorMsg,textToDecryptionViaCaesarCipher));
+				
+				
+				cout << "Decrypted data: "     << encryptionAlgorithms::doDecryptionTextDataViaCaesarCipherAlgorithm(textToDecryptionViaCaesarCipher) << endl;
+				cout << "===============================================================================" << endl;
+				cout << "Original text data: " << encryptionAlgorithms::doEncryptionTextDataViaCaesarCipherAlgorithm(encryptionAlgorithms::doDecryptionTextDataViaCaesarCipherAlgorithm(textToDecryptionViaCaesarCipher)) << endl;
+				break;
+			case 'e':
+				cout << "Caesar cipher algorithm"                                  << endl;
+				cout << "Enter a text to decryption via Caesar cipher algorithm: " << endl;
+				cout << "========================================================" << endl;
+				cout << "The text must contain only the uppercase letters A - Z."  << endl;
+				do 
+				{ 
+						
+					cout << "Please enter the text to decryption via Caesar cipher algorithm: " << endl; 
+					cin  >> textToDecryptionViaCaesarCipher;
+						
+				}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToTextToDecryptionViaCaesarCipherErrorMsg,textToDecryptionViaCaesarCipher));
+				
+				
+				cout << "Decrypted data: "     << encryptionAlgorithms::doDecryptionTextDataViaCaesarCipherAlgorithm(textToDecryptionViaCaesarCipher) << endl;
+				cout << "===============================================================================" << endl;
+				cout << "Original text data: " << encryptionAlgorithms::doEncryptionTextDataViaCaesarCipherAlgorithm(encryptionAlgorithms::doDecryptionTextDataViaCaesarCipherAlgorithm(textToDecryptionViaCaesarCipher)) << endl;
+				break;
+			case 'F':
+				cout << "Bubble sort algorithm with steps"                    << endl;
+				cout << "Enter a numbers to sort via bubble sort algorithm: " << endl;
+				cout << "==========================================="         << endl;
+				cout << "Numbers must be equal to or greater than 0."         << endl;
+				cout << "You have to enter 10 numbers."                       << endl;
+				k = 0;
+				do
+				{
+
+
+					cout << "\n\nYou are trying to enter a number: " << (k + 1) << endl;
+					do 
+					{ 
+						
+						cout << "Please enter the number to sort via bubble sort: " << endl; 
+						cin  >> numberToArrayToSortViaBubbleSortAlgorithm;
+						
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToBubbleSortAlgorithmErrorMsg,pointerToNumberToArrayToSortViaBubbleSortAlgorithm));
+					
+					arrayWithNumbersToSortViaBubbleSortAlgorithm[k] = stoi(numberToArrayToSortViaBubbleSortAlgorithm);
+					k++;
+					
+			
+				}while(k < 10);
+					
+				
+				cout << "The state of the array before sorting: " << endl;
+				bubbleSortAlgorithms::showTheCurrentStateOfTheArray(pointerToArrayWithNumbersToSortViaBubbleSortAlgorithm);
+				cout << endl;
+				
+				
+				
+				
+				
+				cout << "The state of the array after sorting: " << endl;
+				bubbleSortAlgorithms::showTheCurrentStateOfTheArray(pointerToArrayWithNumbersToSortViaBubbleSortAlgorithm);
+				cout << endl;
+				break;
+			case 'f':
+				cout << "." << endl;
 				break;
 		}
 		
