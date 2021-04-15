@@ -204,6 +204,58 @@ namespace verifyDataFunctions
 	}
 	
 	
+	bool verifyNumberToConvertToBinaryPolymorphismFunction(string error_msg, string textToConvertFromRomanNumbersToArabicNumbers)
+	{
+		int j = 0, k = 0, i = -1;
+		short len = 0;	
+		while(true)
+		{
+			j = 0; k = 0; i = -1;
+			len = textToConvertFromRomanNumbersToArabicNumbers.length();
+			char char_array[len + 1];
+			strcpy(char_array, textToConvertFromRomanNumbersToArabicNumbers.c_str());
+			while(i < len)
+			{
+				i++;
+
+				if((char_array[i] == 'C') && (char_array[i+1] == 'M') ||
+				   (char_array[i] == 'C') && (char_array[i+1] == 'D') ||
+				   (char_array[i] == 'X') && (char_array[i+1] == 'C') ||
+				   (char_array[i] == 'X') && (char_array[i+1] == 'L') ||
+				   (char_array[i] == 'I') && (char_array[i+1] == 'X') ||
+				   (char_array[i] == 'I') && (char_array[i+1] == 'V'))
+				   {
+				   		k++;
+				   		i++;
+				   }
+				else if((char_array[i] == 'M') || 
+					    (char_array[i] == 'D') || 
+					    (char_array[i] == 'C') || 
+					    (char_array[i] == 'L') || 
+					    (char_array[i] == 'X') || 
+					    (char_array[i] == 'V') || 
+					    (char_array[i] == 'I'))
+							k++;
+				else if ((char_array[i] != NULL) && 
+						 (char_array[i] != '\0'))
+							j++;
+							
+				
+				if(j != 0)
+					break;
+			}	
+				
+			if(len >= 1 && k >= 1 && j == 0)
+			{	
+				return true;
+			}
+			else 
+			{
+				cout << error_msg << endl;
+				return false;					
+			}	
+		}		
+	}
 }
 
 
@@ -393,8 +445,37 @@ namespace bubbleSortAlgorithms
 		{
 			cout << (i+1) << ". = " << pointerToArrayWithNumbersToSortViaBubbleSortAlgorithm[i] << endl;
 		}
+	}
+	
+	
+	template <typename T>
+	void sortArrayValuesViaBubbleSortAlgorithm(T * pointerToArrayWithNumbersToSortViaBubbleSortAlgorithm)
+	{
+		auto temp = 0;
 		
-		
+		for (auto i = 0; i < sizeof(pointerToArrayWithNumbersToSortViaBubbleSortAlgorithm) + 1; i++)
+		{
+			cout << "Sort number: " << i << endl;
+			showTheCurrentStateOfTheArray(pointerToArrayWithNumbersToSortViaBubbleSortAlgorithm);
+			
+			
+			for (auto j = 0; j < sizeof(pointerToArrayWithNumbersToSortViaBubbleSortAlgorithm) + 1; j++)
+			{
+				if (pointerToArrayWithNumbersToSortViaBubbleSortAlgorithm[j] > pointerToArrayWithNumbersToSortViaBubbleSortAlgorithm[j+1])
+				{
+					temp = pointerToArrayWithNumbersToSortViaBubbleSortAlgorithm[j];
+					
+					pointerToArrayWithNumbersToSortViaBubbleSortAlgorithm[j]   = pointerToArrayWithNumbersToSortViaBubbleSortAlgorithm[j+1];
+					pointerToArrayWithNumbersToSortViaBubbleSortAlgorithm[j+1] = temp;
+				}
+			}
+		}		
+	}
+	
+
+	template <typename T>
+	void exerciseWithVector(T irrelevantNumber)
+	{
 		cout << "\n\n\n\n\nExercise with vector: " << endl;
 		cout << "size vector = 3 but capacity = 4. After adding another item, capacity still remains = 4."                 << endl;
 		cout << "Generally vector reserves a little more space in memory than it currently needs."                         << endl;
@@ -467,10 +548,59 @@ namespace bubbleSortAlgorithms
 		cout << "After add tenth item" << endl;
 		cout << "Size:     " << exerciseVector.size()     << endl;
 		cout << "Capacity: " << exerciseVector.capacity() << endl;
-		exerciseVector.clear();
+		exerciseVector.clear();	
 	}
 	
 	
+}
+
+
+namespace findMinMaxValuesInArray
+{
+	template <typename T, typename T2>
+	T2 findMinValueInArray(T * pointerToArrayWithNumbersToFindMinMaxValuesViaAlgorithm, T2 irrelevantNumber)
+	{
+		auto minx = 0;
+		
+		
+		for (auto i = 0; i < sizeof(pointerToArrayWithNumbersToFindMinMaxValuesViaAlgorithm) + 2; i++)
+		{
+			if (i == 0)
+			{
+				minx = pointerToArrayWithNumbersToFindMinMaxValuesViaAlgorithm[i];
+			} 
+			else if (pointerToArrayWithNumbersToFindMinMaxValuesViaAlgorithm[i] < minx)
+			{
+				minx = pointerToArrayWithNumbersToFindMinMaxValuesViaAlgorithm[i];
+			}
+		}
+		
+		
+		return minx;		
+	}
+	
+	
+	template <typename T, typename T2>
+	T2 findMaxValueInArray(T * pointerToArrayWithNumbersToFindMinMaxValuesViaAlgorithm, T2 irrelevantNumber)
+	{
+		auto maxx = 0;
+		
+		
+		for (auto i = 0; i < sizeof(pointerToArrayWithNumbersToFindMinMaxValuesViaAlgorithm) + 2; i++)
+		{
+			if (i == 0)
+			{
+				maxx = pointerToArrayWithNumbersToFindMinMaxValuesViaAlgorithm[i];
+			} 
+			else if (pointerToArrayWithNumbersToFindMinMaxValuesViaAlgorithm[i] > maxx)
+			{
+				maxx = pointerToArrayWithNumbersToFindMinMaxValuesViaAlgorithm[i];
+			}
+		}
+		
+		
+		return maxx;	
+	}
 }
 
 

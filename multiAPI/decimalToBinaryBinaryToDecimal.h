@@ -79,6 +79,19 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 	string * pointerToBubbleSortAlgorithmErrorMsg               = &bubbleSortAlgorithm_Error_msg;
 	int * pointerToArrayWithNumbersToSortViaBubbleSortAlgorithm = arrayWithNumbersToSortViaBubbleSortAlgorithm;
 	
+	
+	int k2 = 0;
+	int arrayWithNumbersToFindMinMaxValuesViaAlgorithm[9];
+	string numberToArrayToFindMinMaxValuesViaAlgorithm            = "";
+	string findMinMaxValuesInArrayAlgorithm_Error_msg             = "You can find min/max value via algorithm only with the numbers. Please try again.";
+	string * pointerToNumberToArrayToFindMinMaxValuesViaAlgorithm = &numberToArrayToFindMinMaxValuesViaAlgorithm;
+	string * pointerToFindMinMaxValuesInArrayAlgorithmErrorMsg    = &findMinMaxValuesInArrayAlgorithm_Error_msg;
+	int * pointerToArrayWithNumbersToFindMinMaxValuesViaAlgorithm = arrayWithNumbersToFindMinMaxValuesViaAlgorithm;
+	
+	
+	string textToConvertFromRomanNumbersToArabicNumbers            = "";
+	string textToConvertFromRomanNumbersToArabicNumbers_Error_msg  = "You can convert from roman numbers to arabic numbers only 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'. Please try again.";
+	
 		
 	do
 	{
@@ -89,6 +102,8 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 		cout << "| D - Caesar cipher [encryption]                                 |" << endl;
 		cout << "| E - Caesar cipher [decryption]                                 |" << endl;
 		cout << "| F - Bubble sort                                                |" << endl;
+		cout << "| G - Find min/max values algorithm                              |" << endl;
+		cout << "| H - Roman numerals                                             |" << endl;
 		cout << "| ESC - Exit                                                     |" << endl;
 		cout << "------------------------------------------------------------------" << endl;	
 		character = getch();
@@ -606,6 +621,9 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 					
 			
 				}while(k < 10);
+				
+				
+				bubbleSortAlgorithms::exerciseWithVector(5);
 					
 				
 				cout << "The state of the array before sorting: " << endl;
@@ -613,7 +631,7 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 				cout << endl;
 				
 				
-				
+				bubbleSortAlgorithms::sortArrayValuesViaBubbleSortAlgorithm(pointerToArrayWithNumbersToSortViaBubbleSortAlgorithm);
 				
 				
 				cout << "The state of the array after sorting: " << endl;
@@ -621,6 +639,127 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 				cout << endl;
 				break;
 			case 'f':
+				cout << "Bubble sort algorithm with steps"                    << endl;
+				cout << "Enter a numbers to sort via bubble sort algorithm: " << endl;
+				cout << "==========================================="         << endl;
+				cout << "Numbers must be equal to or greater than 0."         << endl;
+				cout << "You have to enter 10 numbers."                       << endl;
+				k = 0;
+				do
+				{
+
+
+					cout << "\n\nYou are trying to enter a number: " << (k + 1) << endl;
+					do 
+					{ 
+						
+						cout << "Please enter the number to sort via bubble sort: " << endl; 
+						cin  >> numberToArrayToSortViaBubbleSortAlgorithm;
+						
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToBubbleSortAlgorithmErrorMsg,pointerToNumberToArrayToSortViaBubbleSortAlgorithm));
+					
+					arrayWithNumbersToSortViaBubbleSortAlgorithm[k] = stoi(numberToArrayToSortViaBubbleSortAlgorithm);
+					k++;
+					
+			
+				}while(k < 10);
+				
+				
+				bubbleSortAlgorithms::exerciseWithVector(5);
+					
+				
+				cout << "The state of the array before sorting: " << endl;
+				bubbleSortAlgorithms::showTheCurrentStateOfTheArray(pointerToArrayWithNumbersToSortViaBubbleSortAlgorithm);
+				cout << endl;
+				
+				
+				bubbleSortAlgorithms::sortArrayValuesViaBubbleSortAlgorithm(pointerToArrayWithNumbersToSortViaBubbleSortAlgorithm);
+				
+				
+				cout << "The state of the array after sorting: " << endl;
+				bubbleSortAlgorithms::showTheCurrentStateOfTheArray(pointerToArrayWithNumbersToSortViaBubbleSortAlgorithm);
+				cout << endl;
+				break;
+			case 'G':
+				cout << "Find min/max values in array algorithm"                 << endl;
+				cout << "Enter a numbers to find min/max values via algorithm: " << endl;
+				cout << "==========================================="            << endl;
+				cout << "Numbers must be equal to or greater than 0."            << endl;
+				cout << "You have to enter 10 numbers."                          << endl;
+				k2 = 0;
+				do
+				{
+
+
+					cout << "\n\nYou are trying to enter a number: " << (k2 + 1) << endl;
+					do 
+					{ 
+						
+						cout << "Please enter the number to find min/max values via algorithm: " << endl; 
+						cin  >> numberToArrayToFindMinMaxValuesViaAlgorithm;
+						
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToFindMinMaxValuesInArrayAlgorithmErrorMsg,pointerToNumberToArrayToFindMinMaxValuesViaAlgorithm));
+					
+					arrayWithNumbersToFindMinMaxValuesViaAlgorithm[k2] = stoi(numberToArrayToFindMinMaxValuesViaAlgorithm);
+					k2++;
+					
+			
+				}while(k2 < 10);
+				
+				
+				cout << "Minimum value in array is: " << to_string(findMinMaxValuesInArray::findMinValueInArray(pointerToArrayWithNumbersToFindMinMaxValuesViaAlgorithm,0)) << endl;
+				cout << "Maximum value in array is: " << to_string(findMinMaxValuesInArray::findMaxValueInArray(pointerToArrayWithNumbersToFindMinMaxValuesViaAlgorithm,0)) << endl;
+				
+				
+				break;
+			case 'g':
+				cout << "Find min/max values in array algorithm"                 << endl;
+				cout << "Enter a numbers to find min/max values via algorithm: " << endl;
+				cout << "==========================================="            << endl;
+				cout << "Numbers must be equal to or greater than 0."            << endl;
+				cout << "You have to enter 10 numbers."                          << endl;
+				k2 = 0;
+				do
+				{
+
+
+					cout << "\n\nYou are trying to enter a number: " << (k2 + 1) << endl;
+					do 
+					{ 
+						
+						cout << "Please enter the number to find min/max values via algorithm: " << endl; 
+						cin  >> numberToArrayToFindMinMaxValuesViaAlgorithm;
+						
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToFindMinMaxValuesInArrayAlgorithmErrorMsg,pointerToNumberToArrayToFindMinMaxValuesViaAlgorithm));
+					
+					arrayWithNumbersToFindMinMaxValuesViaAlgorithm[k2] = stoi(numberToArrayToFindMinMaxValuesViaAlgorithm);
+					k2++;
+					
+			
+				}while(k2 < 10);
+				
+				
+				cout << "Minimum value in array is: " << to_string(findMinMaxValuesInArray::findMinValueInArray(pointerToArrayWithNumbersToFindMinMaxValuesViaAlgorithm,0)) << endl;
+				cout << "Maximum value in array is: " << to_string(findMinMaxValuesInArray::findMaxValueInArray(pointerToArrayWithNumbersToFindMinMaxValuesViaAlgorithm,0)) << endl;
+				
+				
+				break;
+			case 'H':
+				cout << "Convert from roman numbers to arabic numbers algorithm"                                                      << endl;
+				cout << "Enter a roman numeral to convert to arabic number via algorithm: "                                           << endl;
+				cout << "========================================================"                                                    << endl;
+				cout << "The roman numeral must contain only 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'."  << endl;
+				do 
+				{ 
+						
+					cout << "Please enter the roman numeral to convert to arabic number via algorithm: " << endl; 
+					cin  >> textToConvertFromRomanNumbersToArabicNumbers;
+						
+				}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(textToConvertFromRomanNumbersToArabicNumbers_Error_msg,textToConvertFromRomanNumbersToArabicNumbers));
+				
+				
+				break;
+			case 'h':
 				cout << "." << endl;
 				break;
 		}
