@@ -218,7 +218,13 @@ namespace verifyDataFunctions
 			{
 				i++;
 
-				if((char_array[i] == 'C') && (char_array[i+1] == 'M') ||
+				if((char_array[i] == 'M') && (char_array[i+1] == '_') ||
+				   (char_array[i] == 'D') && (char_array[i+1] == '_') ||
+				   (char_array[i] == 'C') && (char_array[i+1] == '_') ||
+				   (char_array[i] == 'L') && (char_array[i+1] == '_') ||
+				   (char_array[i] == 'X') && (char_array[i+1] == '_') ||
+			       (char_array[i] == 'V') && (char_array[i+1] == '_') ||
+				   (char_array[i] == 'C') && (char_array[i+1] == 'M') ||
 				   (char_array[i] == 'C') && (char_array[i+1] == 'D') ||
 				   (char_array[i] == 'X') && (char_array[i+1] == 'C') ||
 				   (char_array[i] == 'X') && (char_array[i+1] == 'L') ||
@@ -255,6 +261,134 @@ namespace verifyDataFunctions
 				return false;					
 			}	
 		}		
+	}
+	
+	
+	void verifyNumberToConvertToBinaryPolymorphismFunction(string textToConvertFromRomanNumbersToArabicNumbers)
+	{
+		int arabicNumbersArray[]                      = { 1000000, 500000, 100000, 50000, 10000, 5000, 1000, 900,  500, 400,  100, 90,   50,  40,   10,  9,    5,   4,    1};
+		char * pointerToPointerToRomanNumeralsArray[] = { "M_",    "D_",   "C_",   "L_",  "X_",  "V_", "M",  "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};	
+			
+			
+		long int  counterFromRomanNumbersToArabicNumbers = 0;
+		auto  i   = -1;
+		short len = 0;	
+
+
+		i   = -1;
+		len = textToConvertFromRomanNumbersToArabicNumbers.length();
+		char char_array[len + 1];
+		strcpy(char_array, textToConvertFromRomanNumbersToArabicNumbers.c_str());
+		while(i < len)
+		{
+			i++;
+	
+			if((char_array[i] == 'M') && (char_array[i+1] == '_'))
+			{
+				counterFromRomanNumbersToArabicNumbers += 1000000;
+				i++;
+				continue;
+			}
+			
+			if((char_array[i] == 'D') && (char_array[i+1] == '_'))
+			{
+				counterFromRomanNumbersToArabicNumbers += 500000;
+				i++;
+				continue;
+			}
+			
+			if((char_array[i] == 'C') && (char_array[i+1] == '_'))
+			{
+				counterFromRomanNumbersToArabicNumbers += 100000;
+				i++;
+				continue;
+			}
+			
+			if((char_array[i] == 'L') && (char_array[i+1] == '_'))
+			{
+				counterFromRomanNumbersToArabicNumbers += 50000;
+				i++;
+				continue;
+			}
+			
+			if((char_array[i] == 'X') && (char_array[i+1] == '_'))
+			{
+				counterFromRomanNumbersToArabicNumbers += 10000;
+				i++;
+				continue;
+			}
+			
+			if((char_array[i] == 'V') && (char_array[i+1] == '_'))
+			{
+				counterFromRomanNumbersToArabicNumbers += 5000;
+				i++;
+				continue;
+			}
+			
+			if((char_array[i] == 'C') && (char_array[i+1] == 'M'))
+			{
+				counterFromRomanNumbersToArabicNumbers += 900;
+				i++;
+				continue;
+			}
+							
+			if((char_array[i] == 'C') && (char_array[i+1] == 'D'))
+			{
+				counterFromRomanNumbersToArabicNumbers += 400;
+				i++;
+				continue;
+			}
+							
+			if((char_array[i] == 'X') && (char_array[i+1] == 'C'))
+			{
+				counterFromRomanNumbersToArabicNumbers += 90;
+				i++;
+				continue;
+			}
+						
+			if((char_array[i] == 'X') && (char_array[i+1] == 'L'))
+			{
+				counterFromRomanNumbersToArabicNumbers += 40;
+				i++;
+				continue;
+			}
+						
+			if((char_array[i] == 'I') && (char_array[i+1] == 'X'))
+			{
+				counterFromRomanNumbersToArabicNumbers += 9;
+				i++;
+				continue;
+			}
+					
+			if((char_array[i] == 'I') && (char_array[i+1] == 'V'))
+			{
+				counterFromRomanNumbersToArabicNumbers += 4;
+				i++;
+				continue;
+			}
+						
+			if((char_array[i] == 'M'))
+				counterFromRomanNumbersToArabicNumbers += 1000;
+						
+			if((char_array[i] == 'D'))
+				counterFromRomanNumbersToArabicNumbers += 500;
+						
+			if((char_array[i] == 'C'))
+				counterFromRomanNumbersToArabicNumbers += 100;
+						
+			if((char_array[i] == 'L'))
+				counterFromRomanNumbersToArabicNumbers += 50;
+					
+			if((char_array[i] == 'X'))
+				counterFromRomanNumbersToArabicNumbers += 10;
+						
+			if((char_array[i] == 'V'))
+				counterFromRomanNumbersToArabicNumbers += 5;	
+						
+			if((char_array[i] == 'I'))
+				counterFromRomanNumbersToArabicNumbers += 1;	
+		}
+		cout << to_string(counterFromRomanNumbersToArabicNumbers) << endl;	
 	}
 }
 

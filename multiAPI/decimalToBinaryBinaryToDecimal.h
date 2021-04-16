@@ -90,7 +90,7 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 	
 	
 	string textToConvertFromRomanNumbersToArabicNumbers            = "";
-	string textToConvertFromRomanNumbersToArabicNumbers_Error_msg  = "You can convert from roman numbers to arabic numbers only 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'. Please try again.";
+	string textToConvertFromRomanNumbersToArabicNumbers_Error_msg  = "You can convert from roman numbers to arabic numbers only 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'. The roman numeral can contain also 'V_' = 5 000, 'X_' = 10 000, 'L_' = 50 000, 'C_' = 100 000, 'D_' = 500 000, 'M_' = 1 000 000. Please try again.";
 	
 		
 	do
@@ -745,10 +745,11 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 				
 				break;
 			case 'H':
-				cout << "Convert from roman numbers to arabic numbers algorithm"                                                      << endl;
-				cout << "Enter a roman numeral to convert to arabic number via algorithm: "                                           << endl;
-				cout << "========================================================"                                                    << endl;
-				cout << "The roman numeral must contain only 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'."  << endl;
+				cout << "Convert from roman numbers to arabic numbers algorithm"                                                                            << endl;
+				cout << "Enter a roman numeral to convert to arabic number via algorithm: "                                                                 << endl;
+				cout << "========================================================"                                                                          << endl;
+				cout << "The roman numeral must contain only 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'."                        << endl;
+				cout << "The roman numeral can contain also 'V_' = 5 000, 'X_' = 10 000, 'L_' = 50 000, 'C_' = 100 000, 'D_' = 500 000, 'M_' = 1 000 000."  << endl;
 				do 
 				{ 
 						
@@ -758,9 +759,30 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 				}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(textToConvertFromRomanNumbersToArabicNumbers_Error_msg,textToConvertFromRomanNumbersToArabicNumbers));
 				
 				
+				cout << "The roman number: " << textToConvertFromRomanNumbersToArabicNumbers << " converted to arabic number is equal: ";
+				verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(textToConvertFromRomanNumbersToArabicNumbers);
+				
+				
 				break;
 			case 'h':
-				cout << "." << endl;
+				cout << "Convert from roman numbers to arabic numbers algorithm"                                                                            << endl;
+				cout << "Enter a roman numeral to convert to arabic number via algorithm: "                                                                 << endl;
+				cout << "========================================================"                                                                          << endl;
+				cout << "The roman numeral must contain only 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'."                        << endl;
+				cout << "The roman numeral can contain also 'V_' = 5 000, 'X_' = 10 000, 'L_' = 50 000, 'C_' = 100 000, 'D_' = 500 000, 'M_' = 1 000 000."  << endl;
+				do 
+				{ 
+						
+					cout << "Please enter the roman numeral to convert to arabic number via algorithm: " << endl; 
+					cin  >> textToConvertFromRomanNumbersToArabicNumbers;
+						
+				}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(textToConvertFromRomanNumbersToArabicNumbers_Error_msg,textToConvertFromRomanNumbersToArabicNumbers));
+				
+				
+				cout << "The roman number: " << textToConvertFromRomanNumbersToArabicNumbers << " converted to arabic number is equal: ";
+				verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(textToConvertFromRomanNumbersToArabicNumbers);
+				
+				
 				break;
 		}
 		
