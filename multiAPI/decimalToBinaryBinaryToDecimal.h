@@ -92,6 +92,20 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 	string textToConvertFromRomanNumbersToArabicNumbers            = "";
 	string textToConvertFromRomanNumbersToArabicNumbers_Error_msg  = "You can convert from roman numbers to arabic numbers only 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'. The roman numeral can contain also 'V_' = 5 000, 'X_' = 10 000, 'L_' = 50 000, 'C_' = 100 000, 'D_' = 500 000, 'M_' = 1 000 000. Please try again.";
 	
+	
+	int sizeXForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt               = 0;
+	int sizeYForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt               = 0;
+	string sizeXForDynamicAllocated2DArrayInMultiplicationTableOption                 = "";
+	string sizeYForDynamicAllocated2DArrayInMultiplicationTableOption                 = "";
+	string sizeXForDA2DAInMTOptionValue_Error_msg                                     = "You can set the size X for the multiplication table 2D array only with the numbers which are equal to or greater than 0. Please try again.";
+	string sizeYForDA2DAInMTOptionValue_Error_msg                                     = "You can set the size Y for the multiplication table 2D array only with the numbers which are equal to or greater than 0. Please try again.";
+	string * pointerToSizeXForDynamicAllocated2DArrayInMultiplicationTableOptionValue = &sizeXForDynamicAllocated2DArrayInMultiplicationTableOption;
+	string * pointerToSizeYForDynamicAllocated2DArrayInMultiplicationTableOptionValue = &sizeYForDynamicAllocated2DArrayInMultiplicationTableOption;
+	string * pointerToSizeXForDA2DAInMTOptionValueErrorMsg                            = &sizeXForDA2DAInMTOptionValue_Error_msg;
+	string * pointerToSizeYForDA2DAInMTOptionValueErrorMsg                            = &sizeYForDA2DAInMTOptionValue_Error_msg;
+	int * pointerToSizeXForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt    = &sizeXForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt;
+	int * pointerToSizeYForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt    = &sizeYForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt;
+	
 		
 	do
 	{
@@ -104,6 +118,7 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 		cout << "| F - Bubble sort                                                |" << endl;
 		cout << "| G - Find min/max values algorithm                              |" << endl;
 		cout << "| H - Roman numerals                                             |" << endl;
+		cout << "| I - Multiplication table                                       |" << endl;
 		cout << "| ESC - Exit                                                     |" << endl;
 		cout << "------------------------------------------------------------------" << endl;	
 		character = getch();
@@ -783,6 +798,74 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 				verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(textToConvertFromRomanNumbersToArabicNumbers);
 				
 				
+				break;
+			case 'I':
+			{
+				cout << "Multiplication table with setable dynamic allocated memory size by user"           << endl;
+				cout << "========================================================================"          << endl;
+				cout << "The number for size must be equal to or greater than 0."                           << endl;
+				cout << "Multiplication table using dynamic allocated, 2d array via using 'new' structure." << endl;
+				
+				
+				do 
+				{ 
+						
+					cout << "Please enter the number for sizeX of the multiplication table array: " << endl; 
+					cin  >> sizeXForDynamicAllocated2DArrayInMultiplicationTableOption;
+						
+				}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeXForDA2DAInMTOptionValueErrorMsg,pointerToSizeXForDynamicAllocated2DArrayInMultiplicationTableOptionValue));	
+				
+				
+				do 
+				{ 
+						
+					cout << "Please enter the number for sizeY of the multiplication table array: " << endl; 
+					cin  >> sizeYForDynamicAllocated2DArrayInMultiplicationTableOption;
+						
+				}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeYForDA2DAInMTOptionValueErrorMsg,pointerToSizeYForDynamicAllocated2DArrayInMultiplicationTableOptionValue));			
+				
+				
+				sizeXForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt = stoi(sizeXForDynamicAllocated2DArrayInMultiplicationTableOption);		
+				sizeYForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt = stoi(sizeYForDynamicAllocated2DArrayInMultiplicationTableOption);	
+				
+				
+				int ** pointerToPointerTo_2DArrayWithDynamicAllocatedMemory = verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeXForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt,pointerToSizeYForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt);
+				
+
+				for (int i = 0; i <= sizeYForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt; i++)
+				{
+					for (int j = 0; j <= sizeXForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt; j++)
+					{
+						if (pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j] != 0)
+						{
+							cout.width(6);
+							cout << pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j];
+						}
+					}
+					cout << endl;
+				}
+		
+		
+				// TEST
+				cout << "[1] Error here?" << endl;
+				cout << "Y: " << sizeYForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt << endl;
+				for(int i = 0; i < sizeYForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt; i++) {
+				    delete [] pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i];
+					// TEST
+					cout << "[2] Error here?";
+				}
+				// TEST
+				cout << "[2.5] Error here?";				
+				delete [] pointerToPointerTo_2DArrayWithDynamicAllocatedMemory;
+				// TEST
+				cout << "[3] Error here?";
+				pointerToPointerTo_2DArrayWithDynamicAllocatedMemory = 0;
+				
+				
+			}
+			break;
+			case 'i':
+				cout << "." << endl;
 				break;
 		}
 		

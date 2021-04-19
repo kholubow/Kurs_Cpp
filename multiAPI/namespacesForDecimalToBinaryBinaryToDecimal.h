@@ -390,6 +390,27 @@ namespace verifyDataFunctions
 		}
 		cout << to_string(counterFromRomanNumbersToArabicNumbers) << endl;	
 	}
+	
+	
+	int ** verifyNumberToConvertToBinaryPolymorphismFunction(int * pointerToSizeXForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt, int * pointerToSizeYForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt)
+	{
+		int **_2DArrayWithDynamicAllocatedMemory  = new int*[*pointerToSizeYForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt];
+		for(int i = 0; i <= (*pointerToSizeYForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt); ++i) {
+		    _2DArrayWithDynamicAllocatedMemory[i] = new int[*pointerToSizeXForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt];
+		}	
+		
+		
+		for (int i = 0; i <= (*pointerToSizeYForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt); i++)
+		{
+			for (int j = 0; j <= (*pointerToSizeXForDynamicAllocated2DArrayInMultiplicationTableOptionAsInt); j++)
+			{
+				_2DArrayWithDynamicAllocatedMemory[i][j] = i*j;
+			}
+		}
+		
+	
+		return _2DArrayWithDynamicAllocatedMemory;	
+	}
 }
 
 

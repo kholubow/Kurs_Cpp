@@ -30,9 +30,15 @@ void MenuWithMainOptionsAfterSignIn<T>::menuWithMainOptionsAfterSignIn()
 	do
 	{
 		cout << "------------------------------------------------------------------" << endl;
-		cout << "| A - Decimal to binary / binary to decimal algorithm            |" << endl;
-		cout << "|     + Caesar cipher + bubble sort + find min/max values        |" << endl;
-		cout << "|	   algorithm + roman numerals                                 |" << endl;
+		cout << "| A - Options list:                                              |" << endl;
+		cout << "|     * Decimal to binary algorithm                              |" << endl;
+		cout << "|     * Binary to decimal algorithm                              |" << endl;
+		cout << "|     * Caesar cipher                                            |" << endl;
+		cout << "|     * Bubble sort                                              |" << endl;
+		cout << "|     * Find min/max values algorithm                            |" << endl;
+		cout << "|     * Roman numerals                                           |" << endl;
+		cout << "|     * Multiplication table                                     |" << endl;
+		cout << "|                                                                |" << endl;
 		cout << "|                                                                |" << endl;
 		cout << "| B - Option 2                                                   |" << endl;
 		cout << "| C - Option 3                                                   |" << endl;
