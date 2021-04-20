@@ -38,6 +38,7 @@ void MenuWithMainOptionsAfterSignIn<T>::menuWithMainOptionsAfterSignIn()
 		cout << "|     * Find min/max values algorithm                            |" << endl;
 		cout << "|     * Roman numerals                                           |" << endl;
 		cout << "|     * Multiplication table                                     |" << endl;
+		cout << "|     * Exponentiation table                                     |" << endl;
 		cout << "|                                                                |" << endl;
 		cout << "|                                                                |" << endl;
 		cout << "| B - Option 2                                                   |" << endl;
