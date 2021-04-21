@@ -39,6 +39,9 @@ void MenuWithMainOptionsAfterSignIn<T>::menuWithMainOptionsAfterSignIn()
 		cout << "|     * Roman numerals                                           |" << endl;
 		cout << "|     * Multiplication table                                     |" << endl;
 		cout << "|     * Exponentiation table                                     |" << endl;
+		cout << "|     * A root of any degree                                     |" << endl;
+		cout << "|     * Logarithmic table                                        |" << endl;
+		cout << "|     *                                                          |" << endl;
 		cout << "|                                                                |" << endl;
 		cout << "|                                                                |" << endl;
 		cout << "| B - Option 2                                                   |" << endl;

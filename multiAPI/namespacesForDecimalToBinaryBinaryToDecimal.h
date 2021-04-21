@@ -414,11 +414,11 @@ namespace verifyDataFunctions
 	}
 	
 	
-	int ** verifyNumberToConvertToBinaryPolymorphismFunction(int sizeXForDynamicAllocated2DArrayInExponentiationTableOptionAsInt, int sizeYForDynamicAllocated2DArrayInExponentiationTableOptionAsInt)
+	long long int ** verifyNumberToConvertToBinaryPolymorphismFunction(int sizeXForDynamicAllocated2DArrayInExponentiationTableOptionAsInt, int sizeYForDynamicAllocated2DArrayInExponentiationTableOptionAsInt)
 	{
-		int **_2DArrayWithDynamicAllocatedMemory  = new int*[sizeYForDynamicAllocated2DArrayInExponentiationTableOptionAsInt];
+		long long int **_2DArrayWithDynamicAllocatedMemory  = new long long int*[sizeYForDynamicAllocated2DArrayInExponentiationTableOptionAsInt];
 		for(int i = 0; i < sizeYForDynamicAllocated2DArrayInExponentiationTableOptionAsInt; ++i) {
-		    _2DArrayWithDynamicAllocatedMemory[i] = new int[sizeXForDynamicAllocated2DArrayInExponentiationTableOptionAsInt];
+		    _2DArrayWithDynamicAllocatedMemory[i]           = new long long int[sizeXForDynamicAllocated2DArrayInExponentiationTableOptionAsInt];
 		}	
 		
 		
@@ -426,7 +426,49 @@ namespace verifyDataFunctions
 		{
 			for (int j = 0; j < sizeXForDynamicAllocated2DArrayInExponentiationTableOptionAsInt; ++j)
 			{
-				_2DArrayWithDynamicAllocatedMemory[i][j] = pow(i,j);
+				_2DArrayWithDynamicAllocatedMemory[i][j] = pow(j,i);
+			}
+		}
+		
+	
+		return _2DArrayWithDynamicAllocatedMemory;
+	}
+	
+	
+	long double ** verifyNumberToConvertToBinaryPolymorphismFunction(int * pointerToSizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt, int sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt)
+	{
+		long double **_2DArrayWithDynamicAllocatedMemory = new long double*[sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt];
+		for(int i = 0; i < sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt; ++i) {
+		    _2DArrayWithDynamicAllocatedMemory[i]        = new long double[*pointerToSizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt];
+		}	
+		
+		
+		for (int i = 0; i < sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt; ++i)
+		{
+			for (int j = 0; j < *pointerToSizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt; ++j)
+			{
+				_2DArrayWithDynamicAllocatedMemory[i][j] = pow(j,(1/static_cast<long double>(i)));
+			}
+		}
+		
+	
+		return _2DArrayWithDynamicAllocatedMemory;
+	}
+	
+	
+	long double ** verifyNumberToConvertToBinaryPolymorphismFunction(int sizeXForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt, int * pointerToSizeYForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt)
+	{
+		long double **_2DArrayWithDynamicAllocatedMemory = new long double*[*pointerToSizeYForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt];
+		for(int i = 0; i < *pointerToSizeYForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt; ++i) {
+		    _2DArrayWithDynamicAllocatedMemory[i]        = new long double[sizeXForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt];
+		}	
+		
+		
+		for (int i = 0; i < *pointerToSizeYForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt; ++i)
+		{
+			for (int j = 0; j < sizeXForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt; ++j)
+			{
+				_2DArrayWithDynamicAllocatedMemory[i][j] = (log(static_cast<long double>(j)) / log(static_cast<long double>(i)));
 			}
 		}
 		

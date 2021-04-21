@@ -119,6 +119,32 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 	string * pointerToSizeYForDA2DAInETOptionValueErrorMsg                            = &sizeYForDA2DAInETOptionValue_Error_msg;
 	
 		
+	int sizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt               = 0;
+	int sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt               = 0;	
+	string sizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOption                 = "";
+	string sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOption                 = "";
+	string sizeXForDA2DAInAROADOptionValue_Error_msg                               = "You can set the size X for the root table 2D array only with the numbers which are equal to or greater than 0. Please try again.";
+	string sizeYForDA2DAInAROADOptionValue_Error_msg                               = "You can set the size Y for the root table 2D array only with the numbers which are equal to or greater than 0. Please try again.";
+	string * pointerToSizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOptionValue = &sizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOption;
+	string * pointerToSizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOptionValue = &sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOption;
+	string * pointerToSizeXForDA2DAInAROADOptionValueErrorMsg                      = &sizeXForDA2DAInAROADOptionValue_Error_msg;
+	string * pointerToSizeYForDA2DAInAROADOptionValueErrorMsg                      = &sizeYForDA2DAInAROADOptionValue_Error_msg;
+	int * pointerToSizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt    = &sizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt;
+	
+	
+	int sizeXForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt               = 0;
+	int sizeYForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt               = 0;	
+	string sizeXForDynamicAllocated2DArrayInLogarithmicTableOption                 = "";
+	string sizeYForDynamicAllocated2DArrayInLogarithmicTableOption                 = "";
+	string sizeXForDA2DAInLTOptionValue_Error_msg                                  = "You can set the size X for the logarithmic table 2D array only with the numbers which are equal to or greater than 0. Please try again.";
+	string sizeYForDA2DAInLTOptionValue_Error_msg                                  = "You can set the size Y for the logarithmic table 2D array only with the numbers which are equal to or greater than 0. Please try again.";
+	string * pointerToSizeXForDynamicAllocated2DArrayInLogarithmicTableOptionValue = &sizeXForDynamicAllocated2DArrayInLogarithmicTableOption;
+	string * pointerToSizeYForDynamicAllocated2DArrayInLogarithmicTableOptionValue = &sizeYForDynamicAllocated2DArrayInLogarithmicTableOption;
+	string * pointerToSizeXForDA2DAInLTOptionValueErrorMsg                         = &sizeXForDA2DAInLTOptionValue_Error_msg;
+	string * pointerToSizeYForDA2DAInLTOptionValueErrorMsg                         = &sizeYForDA2DAInLTOptionValue_Error_msg;
+	int * pointerToSizeYForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt    = &sizeYForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt;
+	
+	
 	do
 	{
 		cout << "------------------------------------------------------------------" << endl;
@@ -132,6 +158,9 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 		cout << "| H - Roman numerals                                             |" << endl;
 		cout << "| I - Multiplication table                                       |" << endl;
 		cout << "| J - Exponentiation table                                       |" << endl;
+		cout << "| K - A root of any degree                                       |" << endl;
+		cout << "| L - Logarithmic table                                          |" << endl;
+		cout << "| M -                                                            |" << endl;
 		cout << "| ESC - Exit                                                     |" << endl;
 		cout << "------------------------------------------------------------------" << endl;	
 		character = getch();
@@ -954,29 +983,35 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 					sizeYForDynamicAllocated2DArrayInExponentiationTableOptionAsInt++;	
 					
 					
-					int ** pointerToPointerTo_2DArrayWithDynamicAllocatedMemory = verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(sizeXForDynamicAllocated2DArrayInExponentiationTableOptionAsInt,sizeYForDynamicAllocated2DArrayInExponentiationTableOptionAsInt);	
+					long long int ** pointerToPointerTo_2DArrayWithDynamicAllocatedMemory = verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(sizeXForDynamicAllocated2DArrayInExponentiationTableOptionAsInt,sizeYForDynamicAllocated2DArrayInExponentiationTableOptionAsInt);	
 					
 					
 					cout << "base^exponent. base = x, exponent = y." << endl;
+					cout << "base = col, exponent = row."            << endl;
+					for (int j = 0; j < sizeXForDynamicAllocated2DArrayInExponentiationTableOptionAsInt; ++j)
+					{
+						if (j != 0)
+						{
+							cout.width(14);
+							cout << j << "^...";							
+						}
+						else
+						{
+							cout.width(14);
+							cout << " ";
+						}
+					}
+					cout << endl;
+					
+					
 					for (int i = 0; i < sizeYForDynamicAllocated2DArrayInExponentiationTableOptionAsInt; ++i)
 					{
 						for (int j = 0; j < sizeXForDynamicAllocated2DArrayInExponentiationTableOptionAsInt; ++j)
 						{
-							if (i == 0)
-							{
-								cout.width(14);
-								if ((j != 0) &&
-									(j != 1))
-									cout << j << "^...";
-								if (j == 1)
-									cout << " ";	
-							}
-							if ((pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j] != 0) &&
-								(pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j] != 1))
-							{
-								cout.width(18);
-								cout << pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j];
-							} 
+							if (j == 0)
+								pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j] = i;
+							cout.width(18);
+							cout << pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j];			
 						}
 						cout << endl;
 					}
@@ -989,7 +1024,412 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 				}
 				break;
 			case 'j':
-				cout << "." << endl;
+				{
+					cout << "Exponentiation table with setable dynamic allocated memory size by user"           << endl;
+					cout << "========================================================================"          << endl;
+					cout << "The number for size must be equal to or greater than 0."                           << endl;
+					cout << "Exponentiation table using dynamic allocated, 2d array via using 'new' structure." << endl;
+					
+					
+					do 
+					{ 
+							
+						cout << "Please enter the number for sizeX of the exponentiation table array: " << endl; 
+						cin  >> sizeXForDynamicAllocated2DArrayInExponentiationTableOption;
+							
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeXForDA2DAInETOptionValueErrorMsg,pointerToSizeXForDynamicAllocated2DArrayInExponentiationTableOptionValue));	
+					
+					
+					do 
+					{ 
+							
+						cout << "Please enter the number for sizeY of the exponentiation table array: " << endl; 
+						cin  >> sizeYForDynamicAllocated2DArrayInExponentiationTableOption;
+							
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeYForDA2DAInETOptionValueErrorMsg,pointerToSizeYForDynamicAllocated2DArrayInExponentiationTableOptionValue));
+					
+					
+					sizeXForDynamicAllocated2DArrayInExponentiationTableOptionAsInt = stoi(sizeXForDynamicAllocated2DArrayInExponentiationTableOption);		
+					sizeYForDynamicAllocated2DArrayInExponentiationTableOptionAsInt = stoi(sizeYForDynamicAllocated2DArrayInExponentiationTableOption);	
+					sizeXForDynamicAllocated2DArrayInExponentiationTableOptionAsInt++;
+					sizeYForDynamicAllocated2DArrayInExponentiationTableOptionAsInt++;	
+					
+					
+					long long int ** pointerToPointerTo_2DArrayWithDynamicAllocatedMemory = verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(sizeXForDynamicAllocated2DArrayInExponentiationTableOptionAsInt,sizeYForDynamicAllocated2DArrayInExponentiationTableOptionAsInt);	
+					
+					
+					cout << "base^exponent. base = x, exponent = y." << endl;
+					cout << "base = col, exponent = row."            << endl;
+					for (int j = 0; j < sizeXForDynamicAllocated2DArrayInExponentiationTableOptionAsInt; ++j)
+					{
+						if (j != 0)
+						{
+							cout.width(14);
+							cout << j << "^...";							
+						}
+						else
+						{
+							cout.width(14);
+							cout << " ";
+						}
+					}
+					cout << endl;
+					
+					
+					for (int i = 0; i < sizeYForDynamicAllocated2DArrayInExponentiationTableOptionAsInt; ++i)
+					{
+						for (int j = 0; j < sizeXForDynamicAllocated2DArrayInExponentiationTableOptionAsInt; ++j)
+						{
+							if (j == 0)
+								pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j] = i;
+							cout.width(18);
+							cout << pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j];			
+						}
+						cout << endl;
+					}
+					
+					
+					for(int i = 0; i < sizeYForDynamicAllocated2DArrayInExponentiationTableOptionAsInt; ++i) {
+						delete [] pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i];		
+					}			
+					delete [] pointerToPointerTo_2DArrayWithDynamicAllocatedMemory;					
+				}
+				break;
+			case 'K':
+				{
+					cout << "Root table with setable dynamic allocated memory size by user"            << endl;
+					cout << "========================================================================" << endl;
+					cout << "The number for size must be equal to or greater than 0."                  << endl;
+					cout << "Root table using dynamic allocated, 2d array via using 'new' structure."  << endl;	
+					
+					
+					do 
+					{ 
+							
+						cout << "Please enter the number for sizeX of the root table array: " << endl; 
+						cin  >> sizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOption;
+							
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeXForDA2DAInAROADOptionValueErrorMsg,pointerToSizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOptionValue));	
+					
+					
+					do 
+					{ 
+							
+						cout << "Please enter the number for sizeY of the root table array: " << endl; 
+						cin  >> sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOption;
+							
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeYForDA2DAInAROADOptionValueErrorMsg,pointerToSizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOptionValue));
+					
+					
+					sizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt = stoi(sizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOption);		
+					sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt = stoi(sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOption);	
+					sizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt++;
+					sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt++;	
+					
+					
+					long double ** pointerToPointerTo_2DArrayWithDynamicAllocatedMemory = verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt,sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt);	
+					
+					
+					cout << "root = x,   of degree = y."   << endl;
+					cout << "root = col, of degree = row." << endl;
+					for (int j = 0; j < sizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt; ++j)
+					{
+						if (j != 0)
+						{
+							cout.width(17);
+							cout << "root of " << j;							
+						}
+						else
+						{
+							cout.width(17);
+							cout << " ";
+						}
+					}
+					cout << endl;
+					
+					
+					for (int i = 0; i < sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt; ++i)
+					{
+						for (int j = 0; j < sizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt; ++j)
+						{
+							if (j == 0)
+								pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j] = i;
+							if (isinf(pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j]))
+							{
+								cout.width(18);
+								cout << "divided by 0";
+							}
+							else
+							{
+								cout.width(18);
+								cout << pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j];			
+							}		
+						}
+						cout << endl;
+					}
+					
+					
+					for(int i = 0; i < sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt; ++i) {
+						delete [] pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i];		
+					}			
+					delete [] pointerToPointerTo_2DArrayWithDynamicAllocatedMemory;						
+				}
+				break;
+			case 'k':
+				{
+					cout << "Root table with setable dynamic allocated memory size by user"            << endl;
+					cout << "========================================================================" << endl;
+					cout << "The number for size must be equal to or greater than 0."                  << endl;
+					cout << "Root table using dynamic allocated, 2d array via using 'new' structure."  << endl;	
+					
+					
+					do 
+					{ 
+							
+						cout << "Please enter the number for sizeX of the root table array: " << endl; 
+						cin  >> sizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOption;
+							
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeXForDA2DAInAROADOptionValueErrorMsg,pointerToSizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOptionValue));	
+					
+					
+					do 
+					{ 
+							
+						cout << "Please enter the number for sizeY of the root table array: " << endl; 
+						cin  >> sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOption;
+							
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeYForDA2DAInAROADOptionValueErrorMsg,pointerToSizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOptionValue));
+					
+					
+					sizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt = stoi(sizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOption);		
+					sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt = stoi(sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOption);	
+					sizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt++;
+					sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt++;	
+					
+					
+					long double ** pointerToPointerTo_2DArrayWithDynamicAllocatedMemory = verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt,sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt);	
+					
+					
+					cout << "root = x,   of degree = y."   << endl;
+					cout << "root = col, of degree = row." << endl;
+					for (int j = 0; j < sizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt; ++j)
+					{
+						if (j != 0)
+						{
+							cout.width(17);
+							cout << "root of " << j;							
+						}
+						else
+						{
+							cout.width(17);
+							cout << " ";
+						}
+					}
+					cout << endl;
+					
+					
+					for (int i = 0; i < sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt; ++i)
+					{
+						for (int j = 0; j < sizeXForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt; ++j)
+						{
+							if (j == 0)
+								pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j] = i;
+							if (isinf(pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j]))
+							{
+								cout.width(18);
+								cout << "divided by 0";
+							}
+							else
+							{
+								cout.width(18);
+								cout << pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j];			
+							}		
+						}
+						cout << endl;
+					}
+					
+					
+					for(int i = 0; i < sizeYForDynamicAllocated2DArrayInARootOfAnyDegreeOptionAsInt; ++i) {
+						delete [] pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i];		
+					}			
+					delete [] pointerToPointerTo_2DArrayWithDynamicAllocatedMemory;						
+				}
+				break;	
+			case 'L':
+				{
+					cout << "logarithmic table with setable dynamic allocated memory size by user"           << endl;
+					cout << "========================================================================"       << endl;
+					cout << "The number for size must be equal to or greater than 0."                        << endl;
+					cout << "logarithmic table using dynamic allocated, 2d array via using 'new' structure." << endl;	
+					
+					
+					do 
+					{ 
+							
+						cout << "Please enter the number for sizeX of the logarithmic table array: " << endl; 
+						cin  >> sizeXForDynamicAllocated2DArrayInLogarithmicTableOption;
+							
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeXForDA2DAInLTOptionValueErrorMsg,pointerToSizeXForDynamicAllocated2DArrayInLogarithmicTableOptionValue));	
+					
+					
+					do 
+					{ 
+							
+						cout << "Please enter the number for sizeY of the logarithmic table array: " << endl; 
+						cin  >> sizeYForDynamicAllocated2DArrayInLogarithmicTableOption;
+							
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeYForDA2DAInLTOptionValueErrorMsg,pointerToSizeYForDynamicAllocated2DArrayInLogarithmicTableOptionValue));
+					
+					
+					sizeXForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt = stoi(sizeXForDynamicAllocated2DArrayInLogarithmicTableOption);		
+					sizeYForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt = stoi(sizeYForDynamicAllocated2DArrayInLogarithmicTableOption);	
+					sizeXForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt++;
+					sizeYForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt++;	
+					
+					
+					long double ** pointerToPointerTo_2DArrayWithDynamicAllocatedMemory = verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(sizeXForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt,pointerToSizeYForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt);	
+					
+					
+					cout << "log of = x,   to base = y."   << endl;
+					cout << "log of = col, to base = row." << endl;
+					for (int j = 0; j < sizeXForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt; ++j)
+					{
+						if (j != 0)
+						{
+							cout.width(17);
+							cout << "log of " << j;							
+						}
+						else
+						{
+							cout.width(17);
+							cout << " ";
+						}
+					}
+					cout << endl;
+					
+					
+					for (int i = 0; i < sizeYForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt; ++i)
+					{
+						for (int j = 0; j < sizeXForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt; ++j)
+						{
+							if (j == 0)
+								pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j] = i;
+							if (isinf(pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j]))
+							{
+								cout.width(18);
+								cout << "divided by 0";
+							}
+							else if (isnan(pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j]))
+							{
+								cout.width(18);
+								cout << "not a number";								
+							}
+							else
+							{
+								cout.width(18);
+								cout << pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j];			
+							}						
+						}
+						cout << endl;
+					}
+					
+					
+					for(int i = 0; i < sizeYForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt; ++i) {
+						delete [] pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i];		
+					}			
+					delete [] pointerToPointerTo_2DArrayWithDynamicAllocatedMemory;						
+				}
+				break;	
+			case 'l':
+				{
+					cout << "logarithmic table with setable dynamic allocated memory size by user"           << endl;
+					cout << "========================================================================"       << endl;
+					cout << "The number for size must be equal to or greater than 0."                        << endl;
+					cout << "logarithmic table using dynamic allocated, 2d array via using 'new' structure." << endl;	
+					
+					
+					do 
+					{ 
+							
+						cout << "Please enter the number for sizeX of the logarithmic table array: " << endl; 
+						cin  >> sizeXForDynamicAllocated2DArrayInLogarithmicTableOption;
+							
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeXForDA2DAInLTOptionValueErrorMsg,pointerToSizeXForDynamicAllocated2DArrayInLogarithmicTableOptionValue));	
+					
+					
+					do 
+					{ 
+							
+						cout << "Please enter the number for sizeY of the logarithmic table array: " << endl; 
+						cin  >> sizeYForDynamicAllocated2DArrayInLogarithmicTableOption;
+							
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeYForDA2DAInLTOptionValueErrorMsg,pointerToSizeYForDynamicAllocated2DArrayInLogarithmicTableOptionValue));
+					
+					
+					sizeXForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt = stoi(sizeXForDynamicAllocated2DArrayInLogarithmicTableOption);		
+					sizeYForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt = stoi(sizeYForDynamicAllocated2DArrayInLogarithmicTableOption);	
+					sizeXForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt++;
+					sizeYForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt++;	
+					
+					
+					long double ** pointerToPointerTo_2DArrayWithDynamicAllocatedMemory = verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(sizeXForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt,pointerToSizeYForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt);	
+					
+					
+					cout << "log of = x,   to base = y."   << endl;
+					cout << "log of = col, to base = row." << endl;
+					for (int j = 0; j < sizeXForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt; ++j)
+					{
+						if (j != 0)
+						{
+							cout.width(17);
+							cout << "log of " << j;							
+						}
+						else
+						{
+							cout.width(17);
+							cout << " ";
+						}
+					}
+					cout << endl;
+					
+					
+					for (int i = 0; i < sizeYForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt; ++i)
+					{
+						for (int j = 0; j < sizeXForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt; ++j)
+						{
+							if (j == 0)
+								pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j] = i;
+							if (isinf(pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j]))
+							{
+								cout.width(18);
+								cout << "divided by 0";
+							}
+							else if (isnan(pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j]))
+							{
+								cout.width(18);
+								cout << "not a number";								
+							}
+							else
+							{
+								cout.width(18);
+								cout << pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i][j];			
+							}						
+						}
+						cout << endl;
+					}
+					
+					
+					for(int i = 0; i < sizeYForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt; ++i) {
+						delete [] pointerToPointerTo_2DArrayWithDynamicAllocatedMemory[i];		
+					}			
+					delete [] pointerToPointerTo_2DArrayWithDynamicAllocatedMemory;						
+				}
+				break;
+			case 'M':
+				cout << "M" << endl;
+				break;
+			case 'm':
+				cout << "m" << endl;
 				break;
 		}
 		
