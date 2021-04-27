@@ -145,7 +145,6 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 	int * pointerToSizeYForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt    = &sizeYForDynamicAllocated2DArrayInLogarithmicTableOptionAsInt;
 	
 	
-	/*
 	int sizeXForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt               = 0;
 	int sizeYForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt               = 0;	
 	int sizeZForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt               = 0;	
@@ -164,7 +163,6 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 	int * pointerToSizeXForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt    = &sizeXForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt;
 	int * pointerToSizeYForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt	  = &sizeYForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt;
 	int * pointerToSizeZForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt	  = &sizeZForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt;
-	*/
 	
 	
 	do
@@ -1449,8 +1447,6 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 				}
 				break;
 			case 'M':
-				cout << "M" << endl;
-				/*
 				{
 					cout << "Root with the result of the multiplication table with setable dynamic allocated memory size by user"           << endl;
 					cout << "========================================================================"                                      << endl;
@@ -1479,7 +1475,7 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 					do 
 					{ 
 							
-						cout << "Please enter the number for sizeY of the root with the result of the multiplication array: " << endl; 
+						cout << "Please enter the number for sizeZ of the root with the result of the multiplication array: " << endl; 
 						cin  >> sizeZForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOption;
 							
 					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeZForDA3DAInAROADWTROTRMBZOptionValueErrorMsg,pointerToSizeZForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionValue));		
@@ -1501,53 +1497,72 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 					cout << "A root of any degree multiplied by " << sizeZForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOption << ", 'Z' number." << endl;
 					for (int j = 0; j < sizeXForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt; ++j)
 					{
-						if (j != 0)
+						if (j == 0)
 						{
-							cout.width(17);
+							cout.width(10);
+							cout << "degree ";						
+						}
+						else if (j != 0)
+						{
+							cout.width(10);
 							cout << "root of " << j;							
 						}
 						else
 						{
-							cout.width(17);
+							cout.width(10);
 							cout << " ";
 						}
+						for (int i = 0; i < sizeZForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt; ++i)
+						{
+							cout.width(10);
+							cout << " ";								
+						}						
 					}
 					cout << endl;	
 					
 					
+					int c = 0;
 					for (int i = 0; i < sizeYForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt; ++i)
 					{
 						for (int j = 0; j < sizeXForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt; ++j)
-						{
-							if (j == 0)
-								pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j] = i;
+						{	
 							for (int k = 0; k < sizeZForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt; ++k)
 							{
-								if (isinf(pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j][k]))
+								if (j == 0)
+									pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j][k] = i;
+								if (k != 0)
 								{
-									cout.width(18);
-									cout << "divided by 0";
+									if (isinf(pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j][k]))
+									{
+										cout.width(14);
+										cout << "divided by 0";
+									}
+									else if (isnan(pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j][k]))
+									{
+										cout.width(14);
+										cout << "not a number";								
+									}
+									else
+									{
+										cout.width(14);
+										cout << pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j][k];			
+									}										
 								}
-								else
-								{
-									cout.width(18);
-									cout << pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j][k];			
-								}							
 							}
+							cout << "    |#|";
 						}
 						cout << endl;
 					}
 					
 					
-					for (i = 0; i < sizeYForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt; i++)
+					for (int i = 0; i < sizeYForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt; i++)
 					{
-					    for (j = 0; j < sizeXForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt; j++)
+					    for (int j = 0; j < sizeXForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt; j++)
 					        delete[] pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j];
 					    delete[] pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i];
 					}
 					delete[] pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory;			
 				}
-				*/
 				break;
 			case 'm':
 				cout << "m" << endl;

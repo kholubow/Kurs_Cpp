@@ -477,15 +477,14 @@ namespace verifyDataFunctions
 	}
 	
 	
-	/*
 	long double *** verifyNumberToConvertToBinaryPolymorphismFunction(int * pointerToSizeXForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt, int * pointerToSizeYForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt, int * pointerToSizeZForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt)
 	{
-	    long double ***_3DArrayWithDynamicAllocatedMemory = new long double **[*pointerToSizeYForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt]();
-	    for (i = 0; i < *pointerToSizeYForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt; i++)
+	    long double ***_3DArrayWithDynamicAllocatedMemory = new long double **[*pointerToSizeYForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt];
+	    for (int i = 0; i < *pointerToSizeYForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt; i++)
 	    {
-	        _3DArrayWithDynamicAllocatedMemory[i] = new long double *[*pointerToSizeXForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt]();
-	        for (j = 0; j < *pointerToSizeXForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt; j++)
-	            _3DArrayWithDynamicAllocatedMemory[i][j] = new long double [*pointerToSizeZForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt]();
+	        _3DArrayWithDynamicAllocatedMemory[i] = new long double *[*pointerToSizeXForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt];
+	        for (int j = 0; j < *pointerToSizeXForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt; j++)
+	            _3DArrayWithDynamicAllocatedMemory[i][j] = new long double [*pointerToSizeZForDynamicAllocated3DArrayInARootOfAnyDegreeWithTheResultOfTheRootMultipliedByZOptionAsInt];
 	    }
 		
 		
@@ -503,7 +502,6 @@ namespace verifyDataFunctions
 	
 		return _3DArrayWithDynamicAllocatedMemory;
 	}	
-	*/
 }
 
 
