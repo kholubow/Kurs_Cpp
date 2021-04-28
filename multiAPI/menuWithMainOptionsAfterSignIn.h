@@ -42,6 +42,8 @@ void MenuWithMainOptionsAfterSignIn<T>::menuWithMainOptionsAfterSignIn()
 		cout << "|     * A root of any degree                                               |" << endl;
 		cout << "|     * Logarithmic table                                                  |" << endl;
 		cout << "|     * A root of any degree with the result of the root multiplied by 'Z' |" << endl;
+		cout << "|     * Multiplication table with values divided by the number 'Z'         |" << endl;
+		cout << "|     * Logarithmic table with values divided by the number 'Z'            |" << endl;
 		cout << "|     *                                                                    |" << endl;
 		cout << "|                                                                          |" << endl;
 		cout << "|                                                                          |" << endl;

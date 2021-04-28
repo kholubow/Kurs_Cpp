@@ -501,7 +501,63 @@ namespace verifyDataFunctions
 		
 	
 		return _3DArrayWithDynamicAllocatedMemory;
+	}
+	
+	
+	long double *** verifyNumberToConvertToBinaryPolymorphismFunction(int sizeXForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt, int sizeYForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt, int sizeZForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt)
+	{
+	    long double ***_3DArrayWithDynamicAllocatedMemory = new long double **[sizeYForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt];
+	    for (int i = 0; i < sizeYForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt; i++)
+	    {
+	        _3DArrayWithDynamicAllocatedMemory[i] = new long double *[sizeXForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt];
+	        for (int j = 0; j < sizeXForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt; j++)
+	            _3DArrayWithDynamicAllocatedMemory[i][j] = new long double [sizeZForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt];
+	    }
+		
+		
+		for (int i = 0; i < sizeYForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt; ++i)
+		{
+			for (int j = 0; j < sizeXForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt; ++j)
+			{
+				for (int k = 0; k < sizeZForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt; ++k)
+				{
+					_3DArrayWithDynamicAllocatedMemory[i][j][k] = (i*j) / static_cast<long double>(k);
+				}
+			}
+		}
+		
+	
+		return _3DArrayWithDynamicAllocatedMemory;
+	}
+	
+	
+	/*
+	long double *** verifyNumberToConvertToBinaryPolymorphismFunction(int * pointerToSizeXForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt, int * pointerToSizeYForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt, int sizeZForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt)
+	{
+	    long double ***_3DArrayWithDynamicAllocatedMemory = new long double **[*pointerToSizeYForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt];
+	    for (int i = 0; i < *pointerToSizeYForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt; i++)
+	    {
+	        _3DArrayWithDynamicAllocatedMemory[i] = new long double *[*pointerToSizeXForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt];
+	        for (int j = 0; j < *pointerToSizeXForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt; j++)
+	            _3DArrayWithDynamicAllocatedMemory[i][j] = new long double [sizeZForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt];
+	    }
+		
+		
+		for (int i = 0; i < *pointerToSizeYForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt; ++i)
+		{
+			for (int j = 0; j < *pointerToSizeXForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt; ++j)
+			{
+				for (int k = 0; k < sizeZForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt; ++k)
+				{
+					_3DArrayWithDynamicAllocatedMemory[i][j][k] = (log(static_cast<long double>(j)) / log(static_cast<long double>(i))) / static_cast<long double>(k);
+				}
+			}
+		}
+		
+	
+		return _3DArrayWithDynamicAllocatedMemory;
 	}	
+	*/	
 }
 
 
