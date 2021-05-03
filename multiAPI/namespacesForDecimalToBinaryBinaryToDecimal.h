@@ -531,7 +531,6 @@ namespace verifyDataFunctions
 	}
 	
 	
-	/*
 	long double *** verifyNumberToConvertToBinaryPolymorphismFunction(int * pointerToSizeXForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt, int * pointerToSizeYForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt, int sizeZForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt)
 	{
 	    long double ***_3DArrayWithDynamicAllocatedMemory = new long double **[*pointerToSizeYForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt];
@@ -557,6 +556,34 @@ namespace verifyDataFunctions
 	
 		return _3DArrayWithDynamicAllocatedMemory;
 	}	
+	
+	
+	/*
+	long long int *** verifyNumberToConvertToBinaryPolymorphismFunction(int * pointerToSizeX, int SizeYAsInt, int sizeZAsInt)
+	{
+	    long long int ***_3DArrayWithDynamicAllocatedMemory = new long long int **[SizeYAsInt];
+	    for (int i = 0; i < SizeYAsInt; i++)
+	    {
+	        _3DArrayWithDynamicAllocatedMemory[i] = new long long int *[*pointerToSizeX];
+	        for (int j = 0; j < *pointerToSizeX; j++)
+	            _3DArrayWithDynamicAllocatedMemory[i][j] = new long long int [sizeZAsInt];
+	    }
+		
+		
+		for (int i = 0; i < SizeYAsInt; ++i)
+		{
+			for (int j = 0; j < *pointerToSizeX; ++j)
+			{
+				for (int k = 0; k < sizeZAsInt; ++k)
+				{
+					_3DArrayWithDynamicAllocatedMemory[i][j][k] = pow(j,i);
+				}
+			}
+		}
+		
+	
+		return _3DArrayWithDynamicAllocatedMemory;
+	}
 	*/	
 }
 

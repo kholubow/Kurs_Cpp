@@ -182,7 +182,6 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 	string * pointerToSizeZForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionValue = &sizeZForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOption;
 	
 	
-	/*
 	int sizeXForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt               = 0;
 	int sizeYForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt               = 0;	
 	int sizeZForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt               = 0;	
@@ -200,6 +199,28 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 	string * pointerToSizeZForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionValue = &sizeZForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOption;
 	int * pointerToSizeXForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt    = &sizeXForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt;
 	int * pointerToSizeYForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt    = &sizeYForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt;		
+
+	
+	/*
+	Exponentiation table with values multiplied by 'Z'
+	ExponentiationTableWithValuesMultipliedByZ
+	ETWVMBZ
+	int sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt               = 0;
+	int sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt               = 0;	
+	int sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt               = 0;	
+	string sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption                 = "";
+	string sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption                 = "";
+	string sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption                 = "";
+	string sizeXForDA3DAInETWVMBZOptionValue_Error_msg                                                       = "You can set the size X for the exponentiation table with values multiplied by 'Z', 3D array only with the numbers which are equal to or greater than 0. Please try again.";
+	string sizeYForDA3DAInETWVMBZOptionValue_Error_msg                                                       = "You can set the size Y for the exponentiation table with values multiplied by 'Z', 3D array only with the numbers which are equal to or greater than 0. Please try again.";
+	string sizeZForDA3DAInETWVMBZOptionValue_Error_msg                                                       = "You can set the size Z for the exponentiation table with values multiplied by 'Z', 3D array only with the numbers which are equal to or greater than 0. Please try again.";
+	string * pointerToSizeXForDA3DAInETWVMBZOptionValueErrorMsg                                              = &sizeXForDA3DAInETWVMBZOptionValue_Error_msg;
+	string * pointerToSizeYForDA3DAInETWVMBZOptionValueErrorMsg                                              = &sizeYForDA3DAInETWVMBZOptionValue_Error_msg;
+	string * pointerToSizeZForDA3DAInETWVMBZOptionValueErrorMsg                                              = &sizeZForDA3DAInETWVMBZOptionValue_Error_msg;
+	string * pointerToSizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionValue = &sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption;
+	string * pointerToSizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionValue = &sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption;
+	string * pointerToSizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionValue = &sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption;
+	int * pointerToSizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt    = &sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt;	
 	*/
 	
 	
@@ -221,7 +242,7 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 		cout << "| M - A root of any degree with the result of the root multiplied by 'Z' |" << endl;
 		cout << "| N - Multiplication table with values divided by the number 'Z'         |" << endl;
 		cout << "| O - Logarithmic table with values divided by the number 'Z'            |" << endl;
-		cout << "| P -                                                                    |" << endl;
+		cout << "| P - Exponentiation table with values multiplied by 'Z'                 |" << endl;
 		cout << "| ESC - Exit                                                             |" << endl;
 		cout << "--------------------------------------------------------------------------" << endl;	
 		character = getch();
@@ -1814,7 +1835,7 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 					long double *** pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory = verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(sizeXForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt,sizeYForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt,sizeZForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt);
 					
 					
-					cout << "Multiplication table with values divided by " << sizeZForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt << ", 'Z' number." << endl;
+					cout << "Multiplication table with values divided by " << (sizeZForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt - 1) << ", 'Z' number." << endl;
 					for (int j = 0; j < sizeXForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt; ++j)
 					{
 						if (j == 0)
@@ -1953,7 +1974,7 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 					long double *** pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory = verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(sizeXForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt,sizeYForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt,sizeZForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt);
 					
 					
-					cout << "Multiplication table with values divided by " << sizeZForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt << ", 'Z' number." << endl;
+					cout << "Multiplication table with values divided by " << (sizeZForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt - 1) << ", 'Z' number." << endl;
 					for (int j = 0; j < sizeXForDynamicAllocated3DArrayInMultiplicationTableWithValuesDividedByTheNumberZOptionAsInt; ++j)
 					{
 						if (j == 0)
@@ -2047,8 +2068,6 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 				}
 				break;
 			case 'O':
-				cout << "O" << endl;
-				/*
 				{
 					cout << "Logarithmic table with values divided by the number 'Z' with setable dynamic allocated memory size by user"           << endl;
 					cout << "========================================================================"                                             << endl;
@@ -2096,7 +2115,7 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 					
 					cout << "log of = x,   to base = y."   << endl;
 					cout << "log of = col, to base = row." << endl;
-					cout << "Logarithmic table with values divided by " << sizeZForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt << ", 'Z' number." << endl;
+					cout << "Logarithmic table with values divided by " << (sizeZForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt - 1) << ", 'Z' number." << endl;
 					for (int j = 0; j < sizeXForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt; ++j)
 					{
 						if (j == 0)
@@ -2188,13 +2207,161 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 					}
 					delete[] pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory;	
 				}
-				*/
 				break;
 			case 'o':
-				cout << "o" << endl;
+				{
+					cout << "Logarithmic table with values divided by the number 'Z' with setable dynamic allocated memory size by user"           << endl;
+					cout << "========================================================================"                                             << endl;
+					cout << "The number for size must be equal to or greater than 0."                                                              << endl;
+					cout << "Logarithmic table with values divided by the number 'Z' using dynamic allocated, 3d array via using 'new' structure." << endl;	
+					
+					
+					do 
+					{ 
+							
+						cout << "Please enter the number for sizeX of the logarithmic table with values divided by the number 'Z' array: " << endl; 
+						cin  >> sizeXForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOption;
+							
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeXForDA3DAInLTWVDBTNZOptionValueErrorMsg,pointerToSizeXForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionValue));	
+					
+					
+					do 
+					{ 
+							
+						cout << "Please enter the number for sizeY of the logarithmic table with values divided by the number 'Z' array: " << endl; 
+						cin  >> sizeYForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOption;
+							
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeYForDA3DAInLTWVDBTNZOptionValueErrorMsg,pointerToSizeYForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionValue));	
+					
+					
+					do 
+					{ 
+							
+						cout << "Please enter the number for sizeZ of the logarithmic table with values divided by the number 'Z' array: " << endl; 
+						cin  >> sizeZForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOption;
+							
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeZForDA3DAInLTWVDBTNZOptionValueErrorMsg,pointerToSizeZForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionValue));
+					
+					
+					sizeXForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt = stoi(sizeXForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOption);		
+					sizeYForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt = stoi(sizeYForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOption);	
+					sizeZForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt = stoi(sizeZForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOption);
+					sizeXForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt++;
+					sizeYForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt++;	
+					sizeZForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt++;
+					
+					
+					long double *** pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory = verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeXForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt,pointerToSizeYForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt,sizeZForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt);
+					
+					
+					cout << "log of = x,   to base = y."   << endl;
+					cout << "log of = col, to base = row." << endl;
+					cout << "Logarithmic table with values divided by " << (sizeZForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt - 1) << ", 'Z' number." << endl;
+					for (int j = 0; j < sizeXForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt; ++j)
+					{
+						if (j == 0)
+						{
+							cout.width(9);
+							cout << "to base ";						
+						}
+						else if (j != 0)
+						{
+							cout.width(9);
+							cout << "log of " << j;							
+						}
+						else
+						{
+							cout.width(9);
+							cout << " ";
+						}
+						for (int i = 0; i < sizeZForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt; ++i)
+						{
+							cout.width(9);
+							cout << " ";								
+						}						
+					}
+					cout << endl;
+					
+					
+					for (int j = 0; j < sizeXForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt; ++j)
+					{
+						if (j == 0)
+						{
+							cout.width(10);
+							cout << "  divided by " << endl;
+							cout.width(10);
+							for (int k = 0; k < sizeZForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt; ++k)
+							{
+								if (k != 0)
+									cout << "/" << k << "           ";		
+							}													
+						}
+						else
+						{
+							cout.width(17);
+							cout << " ";						
+						}
+					
+					}
+					cout << endl;
+					
+					
+					int c = 0;
+					for (int i = 0; i < sizeYForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt; ++i)
+					{
+						for (int j = 0; j < sizeXForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt; ++j)
+						{	
+							for (int k = 0; k < sizeZForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt; ++k)
+							{
+								if (j == 0)
+									pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j][k] = i;
+								if (k != 0)
+								{
+									if (isinf(pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j][k]))
+									{
+										cout.width(14);
+										cout << "divided by 0";
+									}
+									else if (isnan(pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j][k]))
+									{
+										cout.width(14);
+										cout << "not a number";								
+									}
+									else
+									{
+										cout.width(14);
+										cout << pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j][k];			
+									}										
+								}
+							}
+							cout << "    |#|";
+						}
+						cout << endl;
+					}
+					
+					
+					for (int i = 0; i < sizeYForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt; i++)
+					{
+					    for (int j = 0; j < sizeXForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt; j++)
+					        delete[] pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j];
+					    delete[] pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i];
+					}
+					delete[] pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory;	
+				}
 				break;
 			case 'P':
 				cout << "P" << endl;
+				/*
+				{
+					cout << "Exponentiation table with values multiplied by 'Z' with setable dynamic allocated memory size by user"           << endl;
+					cout << "========================================================================"                                        << endl;
+					cout << "The number for size must be equal to or greater than 0."                                                         << endl;
+					cout << "Exponentiation table with values multiplied by 'Z' using dynamic allocated, 3d array via using 'new' structure." << endl;	
+					
+					
+										
+				}
+				*/
 				break;
 			case 'p':
 				cout << "p" << endl;
