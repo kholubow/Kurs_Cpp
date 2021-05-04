@@ -558,33 +558,31 @@ namespace verifyDataFunctions
 	}	
 	
 	
-	/*
-	long long int *** verifyNumberToConvertToBinaryPolymorphismFunction(int * pointerToSizeX, int SizeYAsInt, int sizeZAsInt)
+	long long int *** verifyNumberToConvertToBinaryPolymorphismFunction(int * pointerToSizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt, int sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt, int sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt)
 	{
-	    long long int ***_3DArrayWithDynamicAllocatedMemory = new long long int **[SizeYAsInt];
-	    for (int i = 0; i < SizeYAsInt; i++)
+	    long long int ***_3DArrayWithDynamicAllocatedMemory = new long long int **[sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt];
+	    for (int i = 0; i < sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; i++)
 	    {
-	        _3DArrayWithDynamicAllocatedMemory[i] = new long long int *[*pointerToSizeX];
-	        for (int j = 0; j < *pointerToSizeX; j++)
-	            _3DArrayWithDynamicAllocatedMemory[i][j] = new long long int [sizeZAsInt];
+	        _3DArrayWithDynamicAllocatedMemory[i] = new long long int *[*pointerToSizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt];
+	        for (int j = 0; j < *pointerToSizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; j++)
+	            _3DArrayWithDynamicAllocatedMemory[i][j] = new long long int [sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt];
 	    }
 		
 		
-		for (int i = 0; i < SizeYAsInt; ++i)
+		for (int i = 0; i < sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; ++i)
 		{
-			for (int j = 0; j < *pointerToSizeX; ++j)
+			for (int j = 0; j < *pointerToSizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; ++j)
 			{
-				for (int k = 0; k < sizeZAsInt; ++k)
+				for (int k = 0; k < sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; ++k)
 				{
-					_3DArrayWithDynamicAllocatedMemory[i][j][k] = pow(j,i);
+					_3DArrayWithDynamicAllocatedMemory[i][j][k] = pow(j,i) * k;
 				}
 			}
 		}
 		
 	
 		return _3DArrayWithDynamicAllocatedMemory;
-	}
-	*/	
+	}	
 }
 
 

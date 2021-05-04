@@ -28,4 +28,12 @@ namespace decimalToBinaryBinaryToDecimalDeclaration
 }
 
 
+#include "aSetOfMainProgramOptionsAssignedToTheBOptionList.h"
+namespace aSetOfMainProgramOptionsAssignedToTheBOptionListDeclaration
+{
+	typedef ASetOfMainProgramOptionsAssignedToTheBOptionList<int> ASetOfMainProgramOptionsAssignedToTheBOptionList;
+	ASetOfMainProgramOptionsAssignedToTheBOptionList aSetOfMainProgramOptionsAssignedToTheBOptionListMenu;
+}
+
+
 #endif

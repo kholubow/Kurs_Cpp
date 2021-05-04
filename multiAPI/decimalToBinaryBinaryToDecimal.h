@@ -201,10 +201,6 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 	int * pointerToSizeYForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt    = &sizeYForDynamicAllocated3DArrayInLogarithmicTableWithValuesDividedByTheNumberZOptionAsInt;		
 
 	
-	/*
-	Exponentiation table with values multiplied by 'Z'
-	ExponentiationTableWithValuesMultipliedByZ
-	ETWVMBZ
 	int sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt               = 0;
 	int sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt               = 0;	
 	int sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt               = 0;	
@@ -221,7 +217,6 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 	string * pointerToSizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionValue = &sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption;
 	string * pointerToSizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionValue = &sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption;
 	int * pointerToSizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt    = &sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt;	
-	*/
 	
 	
 	do
@@ -2350,8 +2345,6 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 				}
 				break;
 			case 'P':
-				cout << "P" << endl;
-				/*
 				{
 					cout << "Exponentiation table with values multiplied by 'Z' with setable dynamic allocated memory size by user"           << endl;
 					cout << "========================================================================"                                        << endl;
@@ -2359,12 +2352,279 @@ void DecimalToBinaryBinaryToDecimal<T>::decimalToBinaryBinaryToDecimal()
 					cout << "Exponentiation table with values multiplied by 'Z' using dynamic allocated, 3d array via using 'new' structure." << endl;	
 					
 					
-										
+					do 
+					{ 
+							
+						cout << "Please enter the number for sizeX of the exponentiation table with values multiplied by 'Z' array: " << endl; 
+						cin  >> sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption;
+							
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeXForDA3DAInETWVMBZOptionValueErrorMsg,pointerToSizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionValue));	
+					
+					
+					do 
+					{ 
+							
+						cout << "Please enter the number for sizeY of the exponentiation table with values multiplied by 'Z' array: " << endl; 
+						cin  >> sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption;
+							
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeYForDA3DAInETWVMBZOptionValueErrorMsg,pointerToSizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionValue));	
+					
+					
+					do 
+					{ 
+							
+						cout << "Please enter the number for sizeZ of the exponentiation table with values multiplied by 'Z' array: " << endl; 
+						cin  >> sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption;
+							
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeZForDA3DAInETWVMBZOptionValueErrorMsg,pointerToSizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionValue));					
+					
+					
+					sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt = stoi(sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption);		
+					sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt = stoi(sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption);	
+					sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt = stoi(sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption);
+					sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt++;
+					sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt++;	
+					sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt++;
+					
+					
+					long long int *** pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory = verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt,sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt,sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt);
+					
+					
+					cout << "base^exponent. base = x,   exponent = y."         << endl;
+					cout << "               base = col, exponent = row."       << endl;
+					cout << "Exponentiation table with values multiplied by "  << (sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt - 1) << ", 'Z' number." << endl;
+					for (int j = 0; j < sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; ++j)
+					{
+						if (j == 0)
+						{
+							cout.width(9);
+							cout << "base ^...";						
+						}
+						else if (j != 0)
+						{
+							cout.width(9);
+							cout << j << "^...";							
+						}
+						else
+						{
+							cout.width(9);
+							cout << " ";
+						}
+						for (int i = 0; i < sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; ++i)
+						{
+							cout.width(9);
+							cout << " ";								
+						}						
+					}
+					cout << endl;
+					
+					
+					for (int j = 0; j < sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; ++j)
+					{
+						if (j == 0)
+						{
+							cout.width(10);
+							cout << "  multiplied by " << endl;
+							cout.width(10);
+							for (int k = 0; k < sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; ++k)
+							{
+								if (k != 0)
+									cout << "*" << k << "           ";		
+							}													
+						}
+						else
+						{
+							cout.width(17);
+							cout << " ";						
+						}
+					
+					}
+					cout << endl;
+					
+					
+					int c = 0;
+					for (int i = 0; i < sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; ++i)
+					{
+						for (int j = 0; j < sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; ++j)
+						{	
+							for (int k = 0; k < sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; ++k)
+							{
+								if (j == 0)
+									pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j][k] = i;
+								if (k != 0)
+								{
+									if (isinf(pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j][k]))
+									{
+										cout.width(14);
+										cout << "divided by 0";
+									}
+									else if (isnan(pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j][k]))
+									{
+										cout.width(14);
+										cout << "not a number";								
+									}
+									else
+									{
+										cout.width(14);
+										cout << pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j][k];			
+									}										
+								}
+							}
+							cout << "    |#|";
+						}
+						cout << endl;
+					}
+					
+					
+					for (int i = 0; i < sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; i++)
+					{
+					    for (int j = 0; j < sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; j++)
+					        delete[] pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j];
+					    delete[] pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i];
+					}
+					delete[] pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory;	
 				}
-				*/
 				break;
 			case 'p':
-				cout << "p" << endl;
+				{
+					cout << "Exponentiation table with values multiplied by 'Z' with setable dynamic allocated memory size by user"           << endl;
+					cout << "========================================================================"                                        << endl;
+					cout << "The number for size must be equal to or greater than 0."                                                         << endl;
+					cout << "Exponentiation table with values multiplied by 'Z' using dynamic allocated, 3d array via using 'new' structure." << endl;	
+					
+					
+					do 
+					{ 
+							
+						cout << "Please enter the number for sizeX of the exponentiation table with values multiplied by 'Z' array: " << endl; 
+						cin  >> sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption;
+							
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeXForDA3DAInETWVMBZOptionValueErrorMsg,pointerToSizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionValue));	
+					
+					
+					do 
+					{ 
+							
+						cout << "Please enter the number for sizeY of the exponentiation table with values multiplied by 'Z' array: " << endl; 
+						cin  >> sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption;
+							
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeYForDA3DAInETWVMBZOptionValueErrorMsg,pointerToSizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionValue));	
+					
+					
+					do 
+					{ 
+							
+						cout << "Please enter the number for sizeZ of the exponentiation table with values multiplied by 'Z' array: " << endl; 
+						cin  >> sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption;
+							
+					}while(!verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeZForDA3DAInETWVMBZOptionValueErrorMsg,pointerToSizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionValue));					
+					
+					
+					sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt = stoi(sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption);		
+					sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt = stoi(sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption);	
+					sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt = stoi(sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOption);
+					sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt++;
+					sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt++;	
+					sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt++;
+					
+					
+					long long int *** pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory = verifyDataFunctions::verifyNumberToConvertToBinaryPolymorphismFunction(pointerToSizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt,sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt,sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt);
+					
+					
+					cout << "base^exponent. base = x,   exponent = y."         << endl;
+					cout << "               base = col, exponent = row."       << endl;
+					cout << "Exponentiation table with values multiplied by "  << (sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt - 1) << ", 'Z' number." << endl;
+					for (int j = 0; j < sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; ++j)
+					{
+						if (j == 0)
+						{
+							cout.width(9);
+							cout << "base ^...";						
+						}
+						else if (j != 0)
+						{
+							cout.width(9);
+							cout << j << "^...";							
+						}
+						else
+						{
+							cout.width(9);
+							cout << " ";
+						}
+						for (int i = 0; i < sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; ++i)
+						{
+							cout.width(9);
+							cout << " ";								
+						}						
+					}
+					cout << endl;
+					
+					
+					for (int j = 0; j < sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; ++j)
+					{
+						if (j == 0)
+						{
+							cout.width(10);
+							cout << "  multiplied by " << endl;
+							cout.width(10);
+							for (int k = 0; k < sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; ++k)
+							{
+								if (k != 0)
+									cout << "*" << k << "           ";		
+							}													
+						}
+						else
+						{
+							cout.width(17);
+							cout << " ";						
+						}
+					
+					}
+					cout << endl;
+					
+					
+					int c = 0;
+					for (int i = 0; i < sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; ++i)
+					{
+						for (int j = 0; j < sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; ++j)
+						{	
+							for (int k = 0; k < sizeZForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; ++k)
+							{
+								if (j == 0)
+									pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j][k] = i;
+								if (k != 0)
+								{
+									if (isinf(pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j][k]))
+									{
+										cout.width(14);
+										cout << "divided by 0";
+									}
+									else if (isnan(pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j][k]))
+									{
+										cout.width(14);
+										cout << "not a number";								
+									}
+									else
+									{
+										cout.width(14);
+										cout << pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j][k];			
+									}										
+								}
+							}
+							cout << "    |#|";
+						}
+						cout << endl;
+					}
+					
+					
+					for (int i = 0; i < sizeYForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; i++)
+					{
+					    for (int j = 0; j < sizeXForDynamicAllocated3DArrayInExponentiationTableWithValuesMultipliedByZOptionAsInt; j++)
+					        delete[] pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i][j];
+					    delete[] pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory[i];
+					}
+					delete[] pointerToPointerToPointerTo_3DArrayWithDynamicAllocatedMemory;	
+				}
 				break;
 		}
 		

@@ -73,10 +73,12 @@ void MenuWithMainOptionsAfterSignIn<T>::menuWithMainOptionsAfterSignIn()
 				decimalToBinaryBinaryToDecimalDeclaration::decimalToBinaryBinaryToDecimalMenu.decimalToBinaryBinaryToDecimal();
 				break;				
 			case 'B':
-				cout << "Option 2." << endl;
+				system("cls");
+				aSetOfMainProgramOptionsAssignedToTheBOptionListDeclaration::aSetOfMainProgramOptionsAssignedToTheBOptionListMenu.aSetOfMainProgramOptionsAssignedToTheBOptionList();
 				break;
 			case 'b':
-				cout << "Option 2." << endl;
+				system("cls");
+				aSetOfMainProgramOptionsAssignedToTheBOptionListDeclaration::aSetOfMainProgramOptionsAssignedToTheBOptionListMenu.aSetOfMainProgramOptionsAssignedToTheBOptionList();
 				break;
 			case 'C':
 				cout << "Option 3." << endl;
