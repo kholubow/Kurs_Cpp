@@ -29,37 +29,37 @@ void MenuWithMainOptionsAfterSignIn<T>::menuWithMainOptionsAfterSignIn()
 		
 	do
 	{
-		cout << "----------------------------------------------------------------------------" << endl;
-		cout << "| A - Options list:                                                        |" << endl;
-		cout << "|     * Decimal to binary algorithm                                        |" << endl;
-		cout << "|     * Binary to decimal algorithm                                        |" << endl;
-		cout << "|     * Caesar cipher                                                      |" << endl;
-		cout << "|     * Bubble sort                                                        |" << endl;
-		cout << "|     * Find min/max values algorithm                                      |" << endl;
-		cout << "|     * Roman numerals                                                     |" << endl;
-		cout << "|     * Multiplication table                                               |" << endl;
-		cout << "|     * Exponentiation table                                               |" << endl;
-		cout << "|     * A root of any degree                                               |" << endl;
-		cout << "|     * Logarithmic table                                                  |" << endl;
-		cout << "|     * A root of any degree with the result of the root multiplied by 'Z' |" << endl;
-		cout << "|     * Multiplication table with values divided by the number 'Z'         |" << endl;
-		cout << "|     * Logarithmic table with values divided by the number 'Z'            |" << endl;
-		cout << "|     * Exponentiation table with values multiplied by 'Z'                 |" << endl;
-		cout << "|                                                                          |" << endl;
-		cout << "|                                                                          |" << endl;
-		cout << "| B - Options list:                                                        |" << endl;
-		cout << "|     *                                                                    |" << endl;
-		cout << "|     *                                                                    |" << endl;
-		cout << "|     *                                                                    |" << endl;
-		cout << "|     *                                                                    |" << endl;
-		cout << "|     *                                                                    |" << endl;
-		cout << "|     *                                                                    |" << endl;
-		cout << "|                                                                          |" << endl;
-		cout << "|                                                                          |" << endl;
-		cout << "| C - Option 3                                                             |" << endl;
-		cout << "| D - Option 4                                                             |" << endl;
-		cout << "| ESC - Exit                                                               |" << endl;
-		cout << "----------------------------------------------------------------------------" << endl;	
+		cout << "--------------------------------------------------------------------------------------------" << endl;
+		cout << "| A - Options list:                                                                        |" << endl;
+		cout << "|     * Decimal to binary algorithm                                                        |" << endl;
+		cout << "|     * Binary to decimal algorithm                                                        |" << endl;
+		cout << "|     * Caesar cipher                                                                      |" << endl;
+		cout << "|     * Bubble sort                                                                        |" << endl;
+		cout << "|     * Find min/max values algorithm                                                      |" << endl;
+		cout << "|     * Roman numerals                                                                     |" << endl;
+		cout << "|     * Multiplication table                                                               |" << endl;
+		cout << "|     * Exponentiation table                                                               |" << endl;
+		cout << "|     * A root of any degree                                                               |" << endl;
+		cout << "|     * Logarithmic table                                                                  |" << endl;
+		cout << "|     * A root of any degree with the result of the root multiplied by 'Z'                 |" << endl;
+		cout << "|     * Multiplication table with values divided by the number 'Z'                         |" << endl;
+		cout << "|     * Logarithmic table with values divided by the number 'Z'                            |" << endl;
+		cout << "|     * Exponentiation table with values multiplied by 'Z'                                 |" << endl;
+		cout << "|                                                                                          |" << endl;
+		cout << "|                                                                                          |" << endl;
+		cout << "| B - Options list:                                                                        |" << endl;
+		cout << "|     * Multiplication table with values added and subtracted by 'Z' number and 'W' number |" << endl;
+		cout << "|     *                                                                                    |" << endl;
+		cout << "|     *                                                                                    |" << endl;
+		cout << "|     *                                                                                    |" << endl;
+		cout << "|     *                                                                                    |" << endl;
+		cout << "|     *                                                                                    |" << endl;
+		cout << "|                                                                                          |" << endl;
+		cout << "|                                                                                          |" << endl;
+		cout << "| C - Option 3                                                                             |" << endl;
+		cout << "| D - Option 4                                                                             |" << endl;
+		cout << "| ESC - Exit                                                                               |" << endl;
+		cout << "--------------------------------------------------------------------------------------------" << endl;	
 		character = getch();
 		
 		switch(character)
