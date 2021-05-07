@@ -86,30 +86,30 @@ namespace aSetOfPolymorphismFunctions
 	
 	
 	/*
-	long long int **** polymorphismFunction(int * pointerToSizeWAsInt, int * pointerToSizeXAsInt, int * pointerToSizeYAsInt, int * pointerToSizeZAsInt)
+	long long int **** polymorphismFunction(int * pointerToSizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt, int * pointerToSizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt, int * pointerToSizeYForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt, int * pointerToSizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt)
 	{
-	    long long int **** _4DArrayWithDynamicAllocatedMemory = new long long int ***[*pointerToSizeYAsInt];
-	    for (int i = 0; i < *pointerToSizeYAsInt; i++)
+	    long long int **** _4DArrayWithDynamicAllocatedMemory = new long long int ***[*pointerToSizeYForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt];
+	    for (int i = 0; i < *pointerToSizeYForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; i++)
 	    {
-	        _4DArrayWithDynamicAllocatedMemory[i] = new long long int **[*pointerToSizeXAsInt];
-	        for (int j = 0; j < *pointerToSizeXAsInt; j++)
+	        _4DArrayWithDynamicAllocatedMemory[i] = new long long int **[*pointerToSizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt];
+	        for (int j = 0; j < *pointerToSizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; j++)
 	        {
-	            _4DArrayWithDynamicAllocatedMemory[i][j] = new long long int *[*pointerToSizeZAsInt];
-	        	for (int k = 0; k < *pointerToSizeZAsInt; k++)
-					 _4DArrayWithDynamicAllocatedMemory[i][j][k] = new long long int [*pointerToSizeWAsInt];   
+	            _4DArrayWithDynamicAllocatedMemory[i][j] = new long long int *[*pointerToSizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt];
+	        	for (int k = 0; k < *pointerToSizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; k++)
+					 _4DArrayWithDynamicAllocatedMemory[i][j][k] = new long long int [*pointerToSizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt];   
 	    	}
 	    }
 		
 		
-		for (int i = 0; i < *pointerToSizeYAsInt; ++i)
+		for (int i = 0; i < *pointerToSizeYForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++i)
 		{
-			for (int j = 0; j < *pointerToSizeXAsInt; ++j)
+			for (int j = 0; j < *pointerToSizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++j)
 			{
-				for (int k = 0; k < *pointerToSizeZAsInt; ++k)
+				for (int k = 0; k < *pointerToSizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++k)
 				{
 					_4DArrayWithDynamicAllocatedMemory[i][j][k] = (i*j) + k;
 				}
-				for (int l = 0; l < *pointerToSizeWAsInt; ++l)
+				for (int l = 0; l < *pointerToSizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++l)
 				{
 					_4DArrayWithDynamicAllocatedMemory[i][j][l] = (i*j) - l;
 				}
