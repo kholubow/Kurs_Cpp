@@ -27,10 +27,6 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 	char character;
 		
 	
-	/*
-	Multiplication table with values added and subtracted by 'Z' number and 'W' number
-	MultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumber
-	MTWVAASBZNAWN
 	int sizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt               = 0;
 	int sizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt               = 0;
 	int sizeYForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt               = 0;	
@@ -55,7 +51,6 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 	int * pointerToSizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt    = &sizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt;	
 	int * pointerToSizeYForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt    = &sizeYForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt;	
 	int * pointerToSizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt    = &sizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt;	
-	*/
 	
 	
 	do
@@ -84,8 +79,6 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 		switch(character)
 		{
 			case 'A':
-				cout << "A" << endl;
-				/*
 				{
 					cout << "Multiplication table with values added and subtracted by 'Z' number and 'W' number with setable dynamic allocated memory size by user"           << endl;
 					cout << "==========================================================================================================================================="     << endl;
@@ -96,57 +89,57 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 					do 
 					{ 
 							
-						cout << "Please enter the number for sizeX of the array: " << endl; 
-						cin  >> sizeXOption;
+						cout << "Please enter the number for sizeX of the multiplication table with values added and subtracted by 'Z' number and 'W' number array: " << endl; 
+						cin  >> sizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOption;
 							
-					}while(!aSetOfPolymorphismFunctions::polymorphismFunction(pointerToSizeXErrorMsg,pointerToSizeXValue));	
+					}while(!aSetOfPolymorphismFunctions::polymorphismFunction(pointerToSizeXForDA4DAInMTWVAASBZNAWNOptionValueErrorMsg,pointerToSizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionValue));	
 					
 					
 					do 
 					{ 
 							
-						cout << "Please enter the number for sizeY of the array: " << endl; 
-						cin  >> sizeYOption;
+						cout << "Please enter the number for sizeY of the multiplication table with values added and subtracted by 'Z' number and 'W' number array: " << endl; 
+						cin  >> sizeYForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOption;
 							
-					}while(!aSetOfPolymorphismFunctions::polymorphismFunction(pointerToSizeYErrorMsg,pointerToSizeYValue));	
+					}while(!aSetOfPolymorphismFunctions::polymorphismFunction(pointerToSizeYForDA4DAInMTWVAASBZNAWNOptionValueErrorMsg,pointerToSizeYForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionValue));	
 					
 					
 					do 
 					{ 
 							
-						cout << "Please enter the number for sizeZ of the array: " << endl; 
-						cin  >> sizeZOption;
+						cout << "Please enter the number for sizeZ of the multiplication table with values added and subtracted by 'Z' number and 'W' number array: " << endl; 
+						cin  >> sizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOption;
 							
-					}while(!aSetOfPolymorphismFunctions::polymorphismFunction(pointerToSizeZErrorMsg,pointerToSizeZValue));	
+					}while(!aSetOfPolymorphismFunctions::polymorphismFunction(pointerToSizeZForDA4DAInMTWVAASBZNAWNOptionValueErrorMsg,pointerToSizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionValue));	
 					
 					
 					do 
 					{ 
 							
-						cout << "Please enter the number for sizeW of the array: " << endl; 
-						cin  >> sizeWOption;
+						cout << "Please enter the number for sizeW of the multiplication table with values added and subtracted by 'Z' number and 'W' number array: " << endl; 
+						cin  >> sizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOption;
 							
-					}while(!aSetOfPolymorphismFunctions::polymorphismFunction(pointerToSizeWErrorMsg,pointerToSizeWValue));				
+					}while(!aSetOfPolymorphismFunctions::polymorphismFunction(pointerToSizeWForDA4DAInMTWVAASBZNAWNOptionValueErrorMsg,pointerToSizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionValue));				
 					
 					
-					sizeXForDynamicAllocated3DArrayInOptionAsInt = stoi(sizeXForDynamicAllocated3DArrayInOption);		
-					sizeYForDynamicAllocated3DArrayInOptionAsInt = stoi(sizeYForDynamicAllocated3DArrayInOption);	
-					sizeZForDynamicAllocated3DArrayInOptionAsInt = stoi(sizeZForDynamicAllocated3DArrayInOption);
-					sizeWForDynamicAllocated3DArrayInOptionAsInt = stoi(sizeWForDynamicAllocated3DArrayInOption);
-					sizeXForDynamicAllocated3DArrayInOptionAsInt++;
-					sizeYForDynamicAllocated3DArrayInOptionAsInt++;	
-					sizeZForDynamicAllocated3DArrayInOptionAsInt++;
-					sizeWForDynamicAllocated3DArrayInOptionAsInt++;
+					sizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt = stoi(sizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOption);		
+					sizeYForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt = stoi(sizeYForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOption);	
+					sizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt = stoi(sizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOption);
+					sizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt = stoi(sizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOption);
+					sizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt++;
+					sizeYForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt++;	
+					sizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt++;
+					sizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt++;
 					
 					
-					long long int **** pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory = aSetOfPolymorphismFunctions::polymorphismFunction(int * pointerToSizeWAsInt, int * pointerToSizeXAsInt, int * pointerToSizeYAsInt, int * pointerToSizeZAsInt);
+					long long int **** pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory = aSetOfPolymorphismFunctions::polymorphismFunction(pointerToSizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt,pointerToSizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt,pointerToSizeYForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt,pointerToSizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt);
 					
 					
 					cout << "x*y . x = col, y = row." << endl;
 					cout << "Multiplication table   " << endl;
-					cout << "Multiplication table with values added by     "  << (sizeZAsInt - 1) << ", 'Z' number." << endl;
-					cout << "Multiplication table with values subtracted by"  << (sizeWAsInt - 1) << ", 'W' number." << endl;
-					for (int j = 0; j < sizeXAsInt; ++j)
+					cout << "Multiplication table with values added by     "  << (sizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt - 1) << ", 'Z' number." << endl;
+					cout << "Multiplication table with values subtracted by"  << (sizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt - 1) << ", 'W' number." << endl;
+					for (int j = 0; j < sizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++j)
 					{
 						if (j == 0)
 						{
@@ -163,7 +156,7 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 							cout.width(9);
 							cout << " ";
 						}
-						for (int i = 0; i < sizeZAsInt; ++i)
+						for (int i = 0; i < sizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++i)
 						{
 							cout.width(9);
 							cout << " ";								
@@ -172,14 +165,14 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 					cout << endl;
 					
 					
-					for (int j = 0; j < sizeXAsInt; ++j)
+					for (int j = 0; j < sizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++j)
 					{
 						if (j == 0)
 						{
 							cout.width(10);
 							cout << "  added by " << endl;
 							cout.width(10);
-							for (int k = 0; k < sizeZAsInt; ++k)
+							for (int k = 0; k < sizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++k)
 							{
 								if (k != 0)
 									cout << "+" << k << "           ";		
@@ -195,14 +188,14 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 					cout << endl;
 					
 					
-					for (int j = 0; j < sizeXAsInt; ++j)
+					for (int j = 0; j < sizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++j)
 					{
 						if (j == 0)
 						{
 							cout.width(10);
 							cout << "  subtracted by " << endl;
 							cout.width(10);
-							for (int k = 0; k < sizeWAsInt; ++k)
+							for (int k = 0; k < sizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++k)
 							{
 								if (k != 0)
 									cout << "-" << k << "           ";		
@@ -219,22 +212,22 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 					
 					
 					int c = 0;
-					for (int i = 0; i < sizeYAsInt; ++i)
+					for (int i = 0; i < sizeYForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++i)
 					{
-						for (int j = 0; j < sizeXAsInt; ++j)
+						for (int j = 0; j < sizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++j)
 						{	
-							for (int k = 0; k < sizeZAsInt; ++k)
+							for (int k = 0; k < sizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++k)
 							{
 								if (j == 0)
-									pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k] = i;
+									*pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k] = i;
 								if (k != 0)
 								{
-									if (isinf(pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k]))
+									if (isinf(*pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k]))
 									{
 										cout.width(14);
 										cout << "divided by 0";
 									}
-									else if (isnan(pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k]))
+									else if (isnan(*pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k]))
 									{
 										cout.width(14);
 										cout << "not a number";								
@@ -248,18 +241,18 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 							}
 							
 							
-							for (int l = 0; l < sizeWAsInt; ++l)
+							for (int l = 0; l < sizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++l)
 							{
 								if (j == 0)
-									pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][l] = i;
+									*pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][l] = i;
 								if (l != 0)
 								{
-									if (isinf(pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][l]))
+									if (isinf(*pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][l]))
 									{
 										cout.width(14);
 										cout << "divided by 0";
 									}
-									else if (isnan(pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][l]))
+									else if (isnan(*pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][l]))
 									{
 										cout.width(14);
 										cout << "not a number";								
@@ -277,11 +270,11 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 					}
 					
 					
-					for (int i = 0; i < sizeYAsInt; i++)
+					for (int i = 0; i < sizeYForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; i++)
 					{
-					    for (int j = 0; j < sizeXAsInt; j++)
+					    for (int j = 0; j < sizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; j++)
 					    {
-					    	for (int k = 0; k < sizeZAsInt; k++)
+					    	for (int k = 0; k < sizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; k++)
 					    		delete[] pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k];
 					    	delete[] pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j];
 						} 
@@ -289,7 +282,6 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 					}
 					delete[] pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory;	
 				}
-				*/
 				break;
 			case 'a':
 				cout << "a" << endl;
