@@ -100,22 +100,40 @@ namespace aSetOfPolymorphismFunctions
 	    }
 		
 		
+		/*
 		for (int i = 0; i < *pointerToSizeYForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++i)
 		{
 			for (int j = 0; j < *pointerToSizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++j)
 			{
 				for (int k = 0; k < *pointerToSizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++k)
 				{
-					*_4DArrayWithDynamicAllocatedMemory[i][j][k] = (i*j) + k;
+					*_4DArrayWithDynamicAllocatedMemory[i][j][k][k] = (i*j) + k;
 				}
 				for (int l = 0; l < *pointerToSizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++l)
 				{
-					*_4DArrayWithDynamicAllocatedMemory[i][j][l] = (i*j) - l;
+					*_4DArrayWithDynamicAllocatedMemory[i][j][l][l] = (i*j) - l;
+				}
+			}
+		}
+		*/
+		
+	
+		for (int i = 0; i < *pointerToSizeYForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++i)
+		{
+			for (int j = 0; j < *pointerToSizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++j)
+			{
+				for (int k = 0; k < *pointerToSizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++k)
+				{
+					for (int l = 0; l < *pointerToSizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++l)
+					{
+						_4DArrayWithDynamicAllocatedMemory[i][j][k][l] = (i*j) - l;
+					}		
+					*_4DArrayWithDynamicAllocatedMemory[i][j][k] = (i*j) + k;
 				}
 			}
 		}
 		
-	
+		
 		return _4DArrayWithDynamicAllocatedMemory;
 	}
 	
