@@ -153,28 +153,28 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 						}
 						else
 						{
-							cout.width(10);
+							cout.width(9);
 							cout << " ";
 						}
 						for (int i = 0; i < sizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++i)
 						{
 							if ((i == 1) || (i == sizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt - 1))
 							{
-								cout.width(15);
+								cout.width(8);
 								cout << " ";								
 							}								
 						}						
 					}
 					cout << endl;
-					
+										
 					
 					for (int j = 0; j < sizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++j)
 					{
 						if (j == 0)
 						{
-							cout.width(8);
+							cout.width(33);
 							cout << "  added by " << endl;
-							cout.width(8);
+							cout.width(25);
 							for (int k = 0; k < sizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++k)
 							{
 								if (k != 0)
@@ -196,9 +196,9 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 					{
 						if (j == 0)
 						{
-							cout.width(33);
+							cout.width(8);
 							cout << "  subtracted by " << endl;
-							cout.width(25);
+							cout.width(8);
 							for (int k = 0; k < sizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++k)
 							{
 								if (k != 0)
@@ -210,74 +210,11 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 						{
 							cout.width(10);
 							cout << " ";						
-						}
-					
+						}	
 					}
 					cout << endl;
 					
-					
-					/*
-					int c = 0;
-					for (int i = 0; i < sizeYForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++i)
-					{
-						for (int j = 0; j < sizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++j)
-						{	
-							for (int k = 0; k < sizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++k)
-							{
-								if (j == 0)
-									*pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k] = i;
-								if (k != 0)
-								{
-									if (isinf(*pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k]))
-									{
-										cout.width(14);
-										cout << "divided by 0";
-									}
-									else if (isnan(*pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k]))
-									{
-										cout.width(14);
-										cout << "not a number";								
-									}
-									else if ((k == 1) || (k == sizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt - 1))
-									{
-										cout.width(8);
-										cout << *pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k];			
-									}										
-								}
-							}
-							
-							
-							for (int l = 0; l < sizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++l)
-							{
-								if (j == 0)
-									*pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][l] = i;
-								if (l != 0)
-								{
-									if (isinf(*pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][l]))
-									{
-										cout.width(14);
-										cout << "divided by 0";
-									}
-									else if (isnan(*pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][l]))
-									{
-										cout.width(14);
-										cout << "not a number";								
-									}
-									else if ((l == 1) || (l == sizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt - 1))
-									{
-										cout.width(8);
-										cout << *pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][l];			
-									}										
-								}
-							}
-							cout << "    |#|";
-						}
-						cout << endl;
-					}
-					*/
-					
-					
-					int c = 0;
+										
 					for (int i = 0; i < sizeYForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++i)
 					{
 						for (int j = 0; j < sizeXForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++j)
@@ -286,14 +223,14 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 							{
 								for (int l = 0; l < sizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt; ++l)
 								{
-									if (j == 0)
-										pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k][l] = i;
-									if ((j == 0) && 
-										(c >= 4))
+									if ((k == 0) && 
+										(j == 0))
 									{
-										cout << pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k][l];
-										c++;
+										cout.width(8);
+										cout << i;	
 									}
+									
+									
 									if (l != 0)
 									{
 										if (isinf(pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k][l]))
@@ -306,27 +243,29 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 											cout.width(14);
 											cout << "not a number";								
 										}
-										else if ((l == 1) || (l == sizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt - 1))
+										else if (l == sizeWForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt - 1)
 										{
 											if (j > 0)
 											{
-												cout.width(8);
-												cout << pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k][l];	
+												if (k == sizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt - 1)
+												{
+													cout.width(8);
+													cout << pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k][l];	
+												}
 											}
 										}										
 									}
 								}
 								
 								
-								c = 0;
-								if (j == 0)
-									*pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k] = i;
-								if ((j == 0) && 
-									(c >= 4))
+								if ((k == 0) && 
+									(j == 0))
 								{
-									cout << *pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k];
-									c++;	
+									cout.width(8);
+									cout << i;	
 								}
+									
+									
 								if (k != 0)
 								{
 									if (isinf(*pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k]))
@@ -339,12 +278,15 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 										cout.width(14);
 										cout << "not a number";								
 									}
-									else if ((k == 1) || (k == sizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt - 1))
+									else if (k == sizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt - 1)
 									{
 										if (j > 0)
 										{
-											cout.width(8);
-											cout << *pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k];											
+											if (k == sizeZForDynamicAllocated4DArrayInMultiplicationTableWithValuesAddedAndSubtractedByZNumberAndWNumberOptionAsInt - 1)
+											{
+												cout.width(8);
+												cout << *pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k];	
+											}
 										}
 									}										
 								}
