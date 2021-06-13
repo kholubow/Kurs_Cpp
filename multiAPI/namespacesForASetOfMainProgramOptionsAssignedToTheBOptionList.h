@@ -120,6 +120,41 @@ namespace aSetOfPolymorphismFunctions
 	}
 	
 	
+	/*
+	long long int **** polymorphismFunction(int sizeWForDynamicAllocated4DArrayInOptionAsInt, int sizeXForDynamicAllocated4DArrayInOptionAsInt, int sizeYForDynamicAllocated4DArrayInOptionAsInt, int sizeZForDynamicAllocated4DArrayInOptionAsInt)
+	{
+	    long long int **** _4DArrayWithDynamicAllocatedMemory = new long long int ***[sizeYForDynamicAllocated4DArrayInOptionAsInt];
+	    for (int i = 0; i < sizeYForDynamicAllocated4DArrayInOptionAsInt; i++)
+	    {
+	        _4DArrayWithDynamicAllocatedMemory[i] = new long long int **[sizeXForDynamicAllocated4DArrayInOptionAsInt];
+	        for (int j = 0; j < sizeXForDynamicAllocated4DArrayInOptionAsInt; j++)
+	        {
+	            _4DArrayWithDynamicAllocatedMemory[i][j] = new long long int *[sizeZForDynamicAllocated4DArrayInOptionAsInt];
+	        	for (int k = 0; k < sizeZForDynamicAllocated4DArrayInOptionAsInt; k++)
+					 _4DArrayWithDynamicAllocatedMemory[i][j][k] = new long long int [sizeWForDynamicAllocated4DArrayInOptionAsInt];   
+	    	}
+	    }
+		
+	
+		for (int i = 0; i < sizeYForDynamicAllocated4DArrayInOptionAsInt; ++i)
+		{
+			for (int j = 0; j < sizeXForDynamicAllocated4DArrayInOptionAsInt; ++j)
+			{
+				for (int k = 0; k < sizeZForDynamicAllocated4DArrayInOptionAsInt; ++k)
+				{
+					for (int l = 0; l < sizeWForDynamicAllocated4DArrayInOptionAsInt; ++l)
+					{
+						_4DArrayWithDynamicAllocatedMemory[i][j][k][l] = ;
+					}		
+					*_4DArrayWithDynamicAllocatedMemory[i][j][k] = ;
+				}
+			}
+		}
+		
+		
+		return _4DArrayWithDynamicAllocatedMemory;
+	}
+	*/
 }
 
 
