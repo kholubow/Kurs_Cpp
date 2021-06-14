@@ -54,27 +54,29 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 	
 	
 	/*
-	int sizeWForDynamicAllocated4DArrayInOptionAsInt               = 0;
-	int sizeXForDynamicAllocated4DArrayInOptionAsInt               = 0;
-	int sizeYForDynamicAllocated4DArrayInOptionAsInt               = 0;	
-	int sizeZForDynamicAllocated4DArrayInOptionAsInt               = 0;
-	string sizeWForDynamicAllocated4DArrayInOption                 = "";	
-	string sizeXForDynamicAllocated4DArrayInOption                 = "";
-	string sizeYForDynamicAllocated4DArrayInOption                 = "";
-	string sizeZForDynamicAllocated4DArrayInOption                 = "";
-	string sizeWForDA4DAInOptionValue_Error_msg                    = "You can set the size W for the , 4D array only with the numbers which are equal to or greater than 0. Please try again.";
-	string sizeXForDA4DAInOptionValue_Error_msg                    = "You can set the size X for the , 4D array only with the numbers which are equal to or greater than 0. Please try again.";
-	string sizeYForDA4DAInOptionValue_Error_msg                    = "You can set the size Y for the , 4D array only with the numbers which are equal to or greater than 0. Please try again.";
-	string sizeZForDA4DAInOptionValue_Error_msg                    = "You can set the size Z for the , 4D array only with the numbers which are equal to or greater than 0. Please try again.";
-	string * pointerToSizeWForDA4DAInOptionValueErrorMsg           = &sizeWForDA4DAInOptionValue_Error_msg;
-	string * pointerToSizeXForDA4DAInOptionValueErrorMsg           = &sizeXForDA4DAInOptionValue_Error_msg;
-	string * pointerToSizeYForDA4DAInOptionValueErrorMsg           = &sizeYForDA4DAInOptionValue_Error_msg;
-	string * pointerToSizeZForDA4DAInOptionValueErrorMsg           = &sizeZForDA4DAInOptionValue_Error_msg;
-	string * pointerToSizeWForDynamicAllocated4DArrayInOptionValue = &sizeWForDynamicAllocated4DArrayInOption;
-	string * pointerToSizeXForDynamicAllocated4DArrayInOptionValue = &sizeXForDynamicAllocated4DArrayInOption;
-	string * pointerToSizeYForDynamicAllocated4DArrayInOptionValue = &sizeYForDynamicAllocated4DArrayInOption;
-	string * pointerToSizeZForDynamicAllocated4DArrayInOptionValue = &sizeZForDynamicAllocated4DArrayInOption;
+	int sizeWForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt               = 0;
+	int sizeXForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt               = 0;
+	int sizeYForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt               = 0;	
+	int sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt               = 0;
+	string sizeWForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOption                 = "";	
+	string sizeXForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOption                 = "";
+	string sizeYForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOption                 = "";
+	string sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOption                 = "";
+	string sizeWForDA4DAInRTWROADWTROTRDBTNZARTTPOANWOptionValue_Error_msg                                                                                              = "You can set the size W for the root table with roots of any degree with the results of the roots divided by the number 'Z' and raised to the power of a number 'W', 4D array only with the numbers which are equal to or greater than 0. Please try again.";
+	string sizeXForDA4DAInRTWROADWTROTRDBTNZARTTPOANWOptionValue_Error_msg                                                                                              = "You can set the size X for the root table with roots of any degree with the results of the roots divided by the number 'Z' and raised to the power of a number 'W', 4D array only with the numbers which are equal to or greater than 0. Please try again.";
+	string sizeYForDA4DAInRTWROADWTROTRDBTNZARTTPOANWOptionValue_Error_msg                                                                                              = "You can set the size Y for the root table with roots of any degree with the results of the roots divided by the number 'Z' and raised to the power of a number 'W', 4D array only with the numbers which are equal to or greater than 0. Please try again.";
+	string sizeZForDA4DAInRTWROADWTROTRDBTNZARTTPOANWOptionValue_Error_msg                                                                                              = "You can set the size Z for the root table with roots of any degree with the results of the roots divided by the number 'Z' and raised to the power of a number 'W', 4D array only with the numbers which are equal to or greater than 0. Please try again.";
+	string * pointerToSizeWForDA4DAInRTWROADWTROTRDBTNZARTTPOANWOptionValueErrorMsg                                                                                     = &sizeWForDA4DAInRTWROADWTROTRDBTNZARTTPOANWOptionValue_Error_msg;
+	string * pointerToSizeXForDA4DAInRTWROADWTROTRDBTNZARTTPOANWOptionValueErrorMsg                                                                                     = &sizeXForDA4DAInRTWROADWTROTRDBTNZARTTPOANWOptionValue_Error_msg;
+	string * pointerToSizeYForDA4DAInRTWROADWTROTRDBTNZARTTPOANWOptionValueErrorMsg                                                                                     = &sizeYForDA4DAInRTWROADWTROTRDBTNZARTTPOANWOptionValue_Error_msg;
+	string * pointerToSizeZForDA4DAInRTWROADWTROTRDBTNZARTTPOANWOptionValueErrorMsg                                                                                     = &sizeZForDA4DAInRTWROADWTROTRDBTNZARTTPOANWOptionValue_Error_msg;
+	string * pointerToSizeWForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionValue = &sizeWForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOption;
+	string * pointerToSizeXForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionValue = &sizeXForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOption;
+	string * pointerToSizeYForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionValue = &sizeYForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOption;
+	string * pointerToSizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionValue = &sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOption;
 	*/
+	
+	
 	do
 	{
 		cout << "-------------------------------------------------------------------------------------------------------------------------------------------" << endl;
@@ -568,85 +570,85 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 				cout << "B - komentarze" << endl;
 				/*
 				{
-					cout << " with setable dynamic allocated memory size by user"          << endl;
-					cout << "=========================================================== " << endl;
-					cout << "The number for size must be equal to or greater than 0."      << endl;
-					cout << "using dynamic allocated, 4d array via using 'new' structure." << endl;	
+					cout << "Root table with roots of any degree with the results of the roots divided by the number 'Z' and raised to the power of a number 'W' with setable dynamic allocated memory size by user"            << endl;
+					cout << "================================================================================================================================================================================================ " << endl;
+					cout << "The number for size must be equal to or greater than 0."                                                                                                                                           << endl;
+					cout << "Root table with roots of any degree with the results of the roots divided by the number 'Z' and raised to the power of a number 'W' using dynamic allocated, 4d array via using 'new' structure."  << endl;	
 					
 					
 					do 
 					{ 
 							
-						cout << "Please enter the number for sizeX of the array: " << endl; 
-						cin  >> sizeXForDynamicAllocated4DArrayInOption;
+						cout << "Please enter the number for sizeX of the root table with roots of any degree with the results of the roots divided by the number 'Z' and raised to the power of a number 'W' array: " << endl; 
+						cin  >> sizeXForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOption;
 							
-					}while(!aSetOfPolymorphismFunctions::polymorphismFunction(pointerToSizeXForDA4DAInOptionValueErrorMsg,pointerToSizeXForDynamicAllocated4DArrayInOptionValue));	
+					}while(!aSetOfPolymorphismFunctions::polymorphismFunction(pointerToSizeXForDA4DAInRTWROADWTROTRDBTNZARTTPOANWOptionValueErrorMsg,pointerToSizeXForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionValue));	
 					
 					
 					do 
 					{ 
 							
-						cout << "Please enter the number for sizeY of the array: " << endl; 
-						cin  >> sizeYForDynamicAllocated4DArrayInOption;
+						cout << "Please enter the number for sizeY of the root table with roots of any degree with the results of the roots divided by the number 'Z' and raised to the power of a number 'W' array: " << endl; 
+						cin  >> sizeYForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOption;
 							
-					}while(!aSetOfPolymorphismFunctions::polymorphismFunction(pointerToSizeYForDA4DAInOptionValueErrorMsg,pointerToSizeYForDynamicAllocated4DArrayInOptionValue));	
+					}while(!aSetOfPolymorphismFunctions::polymorphismFunction(pointerToSizeYForDA4DAInRTWROADWTROTRDBTNZARTTPOANWOptionValueErrorMsg,pointerToSizeYForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionValue));	
 					
 					
 					do 
 					{ 
 							
-						cout << "Please enter the number for sizeZ of the array: " << endl; 
-						cin  >> sizeZForDynamicAllocated4DArrayInOption;
+						cout << "Please enter the number for sizeZ of the root table with roots of any degree with the results of the roots divided by the number 'Z' and raised to the power of a number 'W' array: " << endl; 
+						cin  >> sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOption;
 							
-					}while(!aSetOfPolymorphismFunctions::polymorphismFunction(pointerToSizeZForDA4DAInOptionValueErrorMsg,pointerToSizeZForDynamicAllocated4DArrayInOptionValue));	
+					}while(!aSetOfPolymorphismFunctions::polymorphismFunction(pointerToSizeZForDA4DAInRTWROADWTROTRDBTNZARTTPOANWOptionValueErrorMsg,pointerToSizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionValue));	
 					
 					
 					do 
 					{ 
 							
-						cout << "Please enter the number for sizeW of the array: " << endl; 
-						cin  >> sizeWForDynamicAllocated4DArrayInOption;
+						cout << "Please enter the number for sizeW of the root table with roots of any degree with the results of the roots divided by the number 'Z' and raised to the power of a number 'W' array: " << endl; 
+						cin  >> sizeWForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOption;
 							
-					}while(!aSetOfPolymorphismFunctions::polymorphismFunction(pointerToSizeWForDA4DAInOptionValueErrorMsg,pointerToSizeWForDynamicAllocated4DArrayInOptionValue));				
+					}while(!aSetOfPolymorphismFunctions::polymorphismFunction(pointerToSizeWForDA4DAInRTWROADWTROTRDBTNZARTTPOANWOptionValueErrorMsg,pointerToSizeWForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionValue));				
 					
 					
-					sizeXForDynamicAllocated4DArrayInOptionAsInt = stoi(sizeXForDynamicAllocated4DArrayInOption);		
-					sizeYForDynamicAllocated4DArrayInOptionAsInt = stoi(sizeYForDynamicAllocated4DArrayInOption);	
-					sizeZForDynamicAllocated4DArrayInOptionAsInt = stoi(sizeZForDynamicAllocated4DArrayInOption);
-					sizeWForDynamicAllocated4DArrayInOptionAsInt = stoi(sizeWForDynamicAllocated4DArrayInOption);
-					sizeXForDynamicAllocated4DArrayInOptionAsInt++;
-					sizeYForDynamicAllocated4DArrayInOptionAsInt++;	
-					sizeZForDynamicAllocated4DArrayInOptionAsInt++;
-					sizeWForDynamicAllocated4DArrayInOptionAsInt++;
+					sizeXForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt = stoi(sizeXForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOption);		
+					sizeYForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt = stoi(sizeYForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOption);	
+					sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt = stoi(sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOption);
+					sizeWForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt = stoi(sizeWForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOption);
+					sizeXForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt++;
+					sizeYForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt++;	
+					sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt++;
+					sizeWForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt++;
 					
 					
-					long long int **** pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory = aSetOfPolymorphismFunctions::polymorphismFunction(sizeWForDynamicAllocated4DArrayInOptionAsInt,sizeXForDynamicAllocated4DArrayInOptionAsInt,sizeYForDynamicAllocated4DArrayInOptionAsInt,sizeZForDynamicAllocated4DArrayInOptionAsInt);
+					long double **** pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory = aSetOfPolymorphismFunctions::polymorphismFunction(sizeWForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt,sizeXForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt,sizeYForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt,sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt);
 					
 					
-					cout << ". x = col, y = row." << endl;
-					cout << ""                    << endl;
-					cout << "" << (sizeZForDynamicAllocated4DArrayInOptionAsInt - 1) << ", ." << endl;
-					cout << "" << (sizeWForDynamicAllocated4DArrayInOptionAsInt - 1) << ", ." << endl;
-					for (int j = 0; j < sizeXForDynamicAllocated4DArrayInOptionAsInt; ++j)
+					cout << "   x = col,         y = row." << endl;
+					cout << "root = col, of degree = row." << endl;
+					cout << "Root table with roots of any degree with the results of the roots divided by "               << (sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt - 1) << ", the number 'Z'." << endl;
+					cout << "Root table with roots of any degree with the results of the roots raised to the power of a " << (sizeWForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt - 1) << ", the number 'W'." << endl;
+					for (int j = 0; j < sizeXForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; ++j)
 					{
 						if (j == 0)
 						{
 							cout.width(15);
-							cout << "x *...";						
+							cout << "root of ...";						
 						}
 						else if (j != 0)
 						{
 							cout.width(10);
-							cout << j << "*...";							
+							cout << "root of " << j;							
 						}
 						else
 						{
 							cout.width(11);
 							cout << " ";
 						}
-						for (int i = 0; i < sizeZForDynamicAllocated4DArrayInOptionAsInt; ++i)
+						for (int i = 0; i < sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; ++i)
 						{
-							if ((i == 1) || (i == sizeZForDynamicAllocated4DArrayInOptionAsInt - 1))
+							if ((i == 1) || (i == sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt - 1))
 							{
 								cout.width(12);
 								cout << " ";								
@@ -656,18 +658,18 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 					cout << endl;
 										
 					
-					for (int j = 0; j < sizeXForDynamicAllocated4DArrayInOptionAsInt; ++j)
+					for (int j = 0; j < sizeXForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; ++j)
 					{
 						if (j == 0)
 						{
 							cout.width(33);
-							cout << " by " << endl;
+							cout << "divided by " << endl;
 							cout.width(28);
-							for (int k = 0; k < sizeZForDynamicAllocated4DArrayInOptionAsInt; ++k)
+							for (int k = 0; k < sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; ++k)
 							{
 								if (k != 0)
-									if ((k == sizeZForDynamicAllocated4DArrayInOptionAsInt - 1))
-										cout << " _ " << k << "      ";		
+									if ((k == sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt - 1))
+										cout << " / " << k << "      ";		
 							}													
 						}
 						else
@@ -680,18 +682,18 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 					cout << endl;
 					
 					
-					for (int j = 0; j < sizeXForDynamicAllocated4DArrayInOptionAsInt; ++j)
+					for (int j = 0; j < sizeXForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; ++j)
 					{
 						if (j == 0)
 						{
 							cout.width(8);
-							cout << " by " << endl;
+							cout << "raised to the power " << endl;
 							cout.width(8);
-							for (int k = 0; k < sizeWForDynamicAllocated4DArrayInOptionAsInt; ++k)
+							for (int k = 0; k < sizeWForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; ++k)
 							{
 								if (k != 0)
-									if ((k == sizeWForDynamicAllocated4DArrayInOptionAsInt - 1))
-										cout << " _ " << k << "      ";		
+									if ((k == sizeWForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt - 1))
+										cout << " ^ " << k << "      ";		
 							}													
 						}
 						else
@@ -703,13 +705,13 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 					cout << endl;
 					
 										
-					for (int i = 0; i < sizeYForDynamicAllocated4DArrayInOptionAsInt; ++i)
+					for (int i = 0; i < sizeYForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; ++i)
 					{
-						for (int j = 0; j < sizeXForDynamicAllocated4DArrayInOptionAsInt; ++j)
+						for (int j = 0; j < sizeXForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; ++j)
 						{	
-							for (int k = 0; k < sizeZForDynamicAllocated4DArrayInOptionAsInt; ++k)
+							for (int k = 0; k < sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; ++k)
 							{
-								for (int l = 0; l < sizeWForDynamicAllocated4DArrayInOptionAsInt; ++l)
+								for (int l = 0; l < sizeWForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; ++l)
 								{
 									if ((k == 0) && 
 										(j == 0))
@@ -731,11 +733,11 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 											cout.width(14);
 											cout << "not a number";								
 										}
-										else if (l == sizeWForDynamicAllocated4DArrayInOptionAsInt - 1)
+										else if (l == sizeWForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt - 1)
 										{
 											if (j > 0)
 											{
-												if (k == sizeZForDynamicAllocated4DArrayInOptionAsInt - 1)
+												if (k == sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt - 1)
 												{
 													cout.width(8);
 													cout << pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k][l];	
@@ -766,11 +768,11 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 										cout.width(14);
 										cout << "not a number";								
 									}
-									else if (k == sizeZForDynamicAllocated4DArrayInOptionAsInt - 1)
+									else if (k == sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt - 1)
 									{
 										if (j > 0)
 										{
-											if (k == sizeZForDynamicAllocated4DArrayInOptionAsInt - 1)
+											if (k == sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt - 1)
 											{
 												cout.width(8);
 												cout << *pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k];	
@@ -785,11 +787,11 @@ void ASetOfMainProgramOptionsAssignedToTheBOptionList<T>::aSetOfMainProgramOptio
 					}
 					
 					
-					for (int i = 0; i < sizeYForDynamicAllocated4DArrayInOptionAsInt; i++)
+					for (int i = 0; i < sizeYForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; i++)
 					{
-					    for (int j = 0; j < sizeXForDynamicAllocated4DArrayInOptionAsInt; j++)
+					    for (int j = 0; j < sizeXForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; j++)
 					    {
-					    	for (int k = 0; k < sizeZForDynamicAllocated4DArrayInOptionAsInt; k++)
+					    	for (int k = 0; k < sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; k++)
 					    		delete[] pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j][k];
 					    	delete[] pointerToPointerToPointerToPointerTo_4DArrayWithDynamicAllocatedMemory[i][j];
 						} 

@@ -121,28 +121,28 @@ namespace aSetOfPolymorphismFunctions
 	
 	
 	/*
-	long long int **** polymorphismFunction(int sizeWForDynamicAllocated4DArrayInOptionAsInt, int sizeXForDynamicAllocated4DArrayInOptionAsInt, int sizeYForDynamicAllocated4DArrayInOptionAsInt, int sizeZForDynamicAllocated4DArrayInOptionAsInt)
+	long double **** polymorphismFunction(int sizeWForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt, int sizeXForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt, int sizeYForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt, int sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt)
 	{
-	    long long int **** _4DArrayWithDynamicAllocatedMemory = new long long int ***[sizeYForDynamicAllocated4DArrayInOptionAsInt];
-	    for (int i = 0; i < sizeYForDynamicAllocated4DArrayInOptionAsInt; i++)
+	    long double **** _4DArrayWithDynamicAllocatedMemory = new long double ***[sizeYForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt];
+	    for (int i = 0; i < sizeYForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; i++)
 	    {
-	        _4DArrayWithDynamicAllocatedMemory[i] = new long long int **[sizeXForDynamicAllocated4DArrayInOptionAsInt];
-	        for (int j = 0; j < sizeXForDynamicAllocated4DArrayInOptionAsInt; j++)
+	        _4DArrayWithDynamicAllocatedMemory[i] = new long double **[sizeXForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt];
+	        for (int j = 0; j < sizeXForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; j++)
 	        {
-	            _4DArrayWithDynamicAllocatedMemory[i][j] = new long long int *[sizeZForDynamicAllocated4DArrayInOptionAsInt];
-	        	for (int k = 0; k < sizeZForDynamicAllocated4DArrayInOptionAsInt; k++)
-					 _4DArrayWithDynamicAllocatedMemory[i][j][k] = new long long int [sizeWForDynamicAllocated4DArrayInOptionAsInt];   
+	            _4DArrayWithDynamicAllocatedMemory[i][j] = new long double *[sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt];
+	        	for (int k = 0; k < sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; k++)
+					 _4DArrayWithDynamicAllocatedMemory[i][j][k] = new long double [sizeWForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt];   
 	    	}
 	    }
 		
 	
-		for (int i = 0; i < sizeYForDynamicAllocated4DArrayInOptionAsInt; ++i)
+		for (int i = 0; i < sizeYForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; ++i)
 		{
-			for (int j = 0; j < sizeXForDynamicAllocated4DArrayInOptionAsInt; ++j)
+			for (int j = 0; j < sizeXForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; ++j)
 			{
-				for (int k = 0; k < sizeZForDynamicAllocated4DArrayInOptionAsInt; ++k)
+				for (int k = 0; k < sizeZForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; ++k)
 				{
-					for (int l = 0; l < sizeWForDynamicAllocated4DArrayInOptionAsInt; ++l)
+					for (int l = 0; l < sizeWForDynamicAllocated4DArrayInRootTableWithRootsOfAnyDegreeWithTheResultsOfTheRootsDividedByTheNumberZAndRaisedToThePowerOfANumberWOptionAsInt; ++l)
 					{
 						_4DArrayWithDynamicAllocatedMemory[i][j][k][l] = ;
 					}		
